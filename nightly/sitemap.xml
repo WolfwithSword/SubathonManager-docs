@@ -53,15 +53,31 @@
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://wolfwithsword.github.io/SubathonManager-docs/latest/config/External/</loc>
-         <lastmod>2026-04-04</lastmod>
-    </url>
-    <url>
-         <loc>https://wolfwithsword.github.io/SubathonManager-docs/latest/config/Streaming/</loc>
-         <lastmod>2026-04-04</lastmod>
-    </url>
-    <url>
          <loc>https://wolfwithsword.github.io/SubathonManager-docs/latest/config/Webhooks/</loc>
+         <lastmod>2026-04-04</lastmod>
+    </url>
+    <url>
+         <loc>https://wolfwithsword.github.io/SubathonManager-docs/latest/config/setup/Custom/</loc>
+         <lastmod>2026-04-04</lastmod>
+    </url>
+    <url>
+         <loc>https://wolfwithsword.github.io/SubathonManager-docs/latest/config/setup/GoAffPro/</loc>
+         <lastmod>2026-04-04</lastmod>
+    </url>
+    <url>
+         <loc>https://wolfwithsword.github.io/SubathonManager-docs/latest/config/setup/KoFi/</loc>
+         <lastmod>2026-04-04</lastmod>
+    </url>
+    <url>
+         <loc>https://wolfwithsword.github.io/SubathonManager-docs/latest/config/setup/Picarto/</loc>
+         <lastmod>2026-04-04</lastmod>
+    </url>
+    <url>
+         <loc>https://wolfwithsword.github.io/SubathonManager-docs/latest/config/setup/Twitch/</loc>
+         <lastmod>2026-04-04</lastmod>
+    </url>
+    <url>
+         <loc>https://wolfwithsword.github.io/SubathonManager-docs/latest/config/setup/YouTube/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
@@ -78,6 +94,10 @@
     </url>
     <url>
          <loc>https://wolfwithsword.github.io/SubathonManager-docs/latest/widgets/Structure/</loc>
+         <lastmod>2026-04-04</lastmod>
+    </url>
+    <url>
+         <loc>https://wolfwithsword.github.io/SubathonManager-docs/latest/widgets/troubleshooting/Troubleshooting/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
 </urlset>

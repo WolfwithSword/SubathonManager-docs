@@ -9,31 +9,31 @@
         <meta name="author" content="WolfwithSword">
       
       
-        <link rel="canonical" href="https://wolfwithsword.github.io/SubathonManager-docs/latest/widgets/Structure/">
+        <link rel="canonical" href="https://wolfwithsword.github.io/SubathonManager-docs/latest/config/setup/KoFi/">
       
       
-        <link rel="prev" href="../Porting/">
+        <link rel="prev" href="../GoAffPro/">
       
       
-        <link rel="next" href="../Data/">
+        <link rel="next" href="../Custom/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/icon.png">
+      <link rel="icon" href="../../../assets/icon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Structure - Subathon Manager</title>
+        <title>KoFi - Subathon Manager</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -52,17 +52,17 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/extra.css">
+      <link rel="stylesheet" href="../../../assets/extra.css">
     
-      <link rel="stylesheet" href="../../css/drawio-darkmode.css">
+      <link rel="stylesheet" href="../../../css/drawio-darkmode.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#metadata" class="md-skip">
+        <a href="#streamerbot-setup" class="md-skip">
           Skip to content
         </a>
       
@@ -111,9 +111,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Subathon Manager" class="md-header__button md-logo" aria-label="Subathon Manager" data-md-component="logo">
+    <a href="../../.." title="Subathon Manager" class="md-header__button md-logo" aria-label="Subathon Manager" data-md-component="logo">
       
-  <img src="../../assets/icon.png" alt="logo">
+  <img src="../../../assets/icon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -130,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Structure
+              KoFi
             
           </span>
         </div>
@@ -237,7 +237,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -258,7 +258,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Installation/" class="md-tabs__link">
+        <a href="../../../Installation/" class="md-tabs__link">
           
   
   
@@ -276,11 +276,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../Configuration/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../Configuration/" class="md-tabs__link">
           
   
   
@@ -302,7 +304,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../develop/Setup/" class="md-tabs__link">
+        <a href="../../../develop/Setup/" class="md-tabs__link">
           
   
   
@@ -320,13 +322,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../Widget-Development/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../Widget-Development/" class="md-tabs__link">
           
   
   
@@ -346,7 +346,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../FAQ/" class="md-tabs__link">
+      <a href="../../../FAQ/" class="md-tabs__link">
         
   
   
@@ -365,7 +365,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../Credits/" class="md-tabs__link">
+      <a href="../../../Credits/" class="md-tabs__link">
         
   
   
@@ -406,9 +406,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Subathon Manager" class="md-nav__button md-logo" aria-label="Subathon Manager" data-md-component="logo">
+    <a href="../../.." title="Subathon Manager" class="md-nav__button md-logo" aria-label="Subathon Manager" data-md-component="logo">
       
-  <img src="../../assets/icon.png" alt="logo">
+  <img src="../../../assets/icon.png" alt="logo">
 
     </a>
     Subathon Manager
@@ -435,7 +435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -522,7 +522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Installation/" class="md-nav__link">
+      <a href="../../../Installation/" class="md-nav__link">
         
   
   
@@ -550,7 +550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Usage/" class="md-nav__link">
+      <a href="../../../Usage/" class="md-nav__link">
         
   
   
@@ -582,8 +582,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -605,21 +607,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3">
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -637,7 +640,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -655,7 +658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Configuration/" class="md-nav__link">
+      <a href="../../../Configuration/" class="md-nav__link">
         
   
   
@@ -683,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../config/App/" class="md-nav__link">
+      <a href="../../App/" class="md-nav__link">
         
   
   
@@ -725,10 +728,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -737,7 +743,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3">
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
             
   
   
@@ -773,7 +779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../config/setup/Twitch/" class="md-nav__link">
+      <a href="../Twitch/" class="md-nav__link">
         
   
   
@@ -801,7 +807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../config/setup/YouTube/" class="md-nav__link">
+      <a href="../YouTube/" class="md-nav__link">
         
   
   
@@ -829,7 +835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../config/setup/Picarto/" class="md-nav__link">
+      <a href="../Picarto/" class="md-nav__link">
         
   
   
@@ -865,7 +871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../config/Extensions/" class="md-nav__link">
+      <a href="../../Extensions/" class="md-nav__link">
         
   
   
@@ -890,8 +896,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -906,20 +914,21 @@
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
         
           
+          
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5">
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked="">
         
           
-          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
             
   
   
@@ -937,7 +946,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -955,7 +964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../config/setup/GoAffPro/" class="md-nav__link">
+      <a href="../GoAffPro/" class="md-nav__link">
         
   
   
@@ -980,10 +989,35 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../config/setup/KoFi/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KoFi
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -999,6 +1033,48 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#streamerbot-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StreamerBot Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1011,7 +1087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../config/setup/Custom/" class="md-nav__link">
+      <a href="../Custom/" class="md-nav__link">
         
   
   
@@ -1047,7 +1123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../config/Commands/" class="md-nav__link">
+      <a href="../../Commands/" class="md-nav__link">
         
   
   
@@ -1075,7 +1151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../config/Webhooks/" class="md-nav__link">
+      <a href="../../Webhooks/" class="md-nav__link">
         
   
   
@@ -1172,7 +1248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../develop/Setup/" class="md-nav__link">
+      <a href="../../../develop/Setup/" class="md-nav__link">
         
   
   
@@ -1200,7 +1276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Development/" class="md-nav__link">
+      <a href="../../../Development/" class="md-nav__link">
         
   
   
@@ -1288,7 +1364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Design/" class="md-nav__link">
+      <a href="../../../Design/" class="md-nav__link">
         
   
   
@@ -1316,7 +1392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Design-Interactive/" class="md-nav__link">
+      <a href="../../../Design-Interactive/" class="md-nav__link">
         
   
   
@@ -1356,10 +1432,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -1377,22 +1451,21 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked="">
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -1410,7 +1483,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1428,7 +1501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Widget-Development/" class="md-nav__link">
+      <a href="../../../Widget-Development/" class="md-nav__link">
         
   
   
@@ -1456,7 +1529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Porting/" class="md-nav__link">
+      <a href="../../../widgets/Porting/" class="md-nav__link">
         
   
   
@@ -1481,35 +1554,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Structure
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../widgets/Structure/" class="md-nav__link">
         
   
   
@@ -1525,76 +1573,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#metadata" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Metadata
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Metadata">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#css-metadata" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CSS Metadata
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#js-variable-injection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        JS Variable Injection
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#css" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CSS
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1607,7 +1585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Data/" class="md-nav__link">
+      <a href="../../../widgets/Data/" class="md-nav__link">
         
   
   
@@ -1635,7 +1613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../troubleshooting/Troubleshooting/" class="md-nav__link">
+      <a href="../../../widgets/troubleshooting/Troubleshooting/" class="md-nav__link">
         
   
   
@@ -1670,7 +1648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../FAQ/" class="md-nav__link">
+      <a href="../../../FAQ/" class="md-nav__link">
         
   
   
@@ -1697,7 +1675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Credits/" class="md-nav__link">
+      <a href="../../../Credits/" class="md-nav__link">
         
   
   
@@ -1744,49 +1722,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#metadata" class="md-nav__link">
+  <a href="#streamerbot-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Metadata
+        StreamerBot Setup
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Metadata">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#css-metadata" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CSS Metadata
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#js-variable-injection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        JS Variable Injection
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#css" class="md-nav__link">
+  <a href="#configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        CSS
+        Configuration
       
     </span>
   </a>
@@ -1810,197 +1760,52 @@
 
 
 
-  <h1>Structure</h1>
+  <h1>KoFi</h1>
 
-<p>When imported into SubathonManager, only a single <code>.html</code> file is imported. Any relative imports to media files, <code>.css</code>, or <code>.js</code> files will resolve correctly.</p>
-<p>For required functions and anything important script-wise, it is recommended to embed them in <code>&lt;script&gt;</code> tags in the HTML file so they are loaded properly.</p>
-<p>HTML files do not need to be fully document-valid, but must still be valid HTML.</p>
-<p>You can import any scripts, CSS, fonts, etc you want - but <strong>only local CSS files</strong> will be scanned for variables.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Script variable injection overrides are not yet supported but are planned.</p>
-</div>
-<hr>
-<h2 id="metadata">Metadata<a class="headerlink" href="#metadata" title="Permanent link">¶</a></h2>
-<p>In your widget's HTML file, you can define metadata at the top to pre-configure values.</p>
-<div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cm">&lt;!--</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cm">WIDGET_META</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cm">Width:520</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="cm">Height:130</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="cm">Url:https://example.com</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="cm">END_WIDGET_META</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="cm">--&gt;</span>
-</span></code></pre></div>
-<p><code>Width</code> and <code>Height</code> pre-set the widget dimensions. <code>Url</code> appears as a clickable documentation button in the editor. Any other keys are ignored by the app but can serve as inline notes.</p>
-<h3 id="css-metadata">CSS Metadata<a class="headerlink" href="#css-metadata" title="Permanent link">¶</a></h3>
-<p>For any CSS files with configurable variables (see <a href="#css">CSS</a>), you can create a sidecar metadata file with the same filename suffixed with <code>.json</code>.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>events.styles.css  →  events.styles.css.json
-</span></code></pre></div>
-<p>This lets you define a <code>type</code> and <code>description</code> for any variable:</p>
-<div class="language-css highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">:</span><span class="nd">root</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nv">--background-color</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span>
-</span></code></pre></div>
-<div class="language-json highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">"background-color"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"color"</span><span class="p">,</span><span class="w"> </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The background color"</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">}</span>
-</span></code></pre></div>
-<ul>
-<li><strong><code>description</code></strong> - shown as a tooltip in the widget editor.</li>
-<li><strong><code>type</code></strong> - enables a specific editing control (color picker, slider, dropdown, etc).</li>
-</ul>
-<p>Without a metadata file, all unknown variables are treated as plain string inputs. Valid types include <code>Color</code>, <code>Size</code>, <code>Opacity</code>, <code>String</code>, <code>Int</code>, <code>Float</code>, <code>Alignment</code>, and more - see <a href="../../Design/#enums">WidgetVariableType</a> or <a href="https://github.com/WolfwithSword/SubathonManager/blob/main/SubathonManager.Core/Enums/WidgetVariableType.cs">source</a> for the full list.</p>
+<p>KoFi setup requires Streamer.Bot. Clicking the <strong>Setup</strong> button will open this guide for connecting KoFi to Streamer.Bot and configuring the required actions.</p>
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>UI Control</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Color</code></td>
-<td>Color picker</td>
-</tr>
-<tr>
-<td><code>Opacity</code></td>
-<td>Slider from 0 to 1</td>
-</tr>
-<tr>
-<td><code>Size</code></td>
-<td>Float + size unit selector</td>
-</tr>
-<tr>
-<td><code>Alignment</code></td>
-<td>Dropdown: <code>left</code>, <code>right</code>, <code>center</code></td>
-</tr>
-<tr>
-<td><code>String</code></td>
-<td>Text input (default for unknown types)</td>
-</tr>
-<tr>
-<td><code>Int</code> / <code>Float</code></td>
-<td>Numeric input</td>
-</tr>
-</tbody>
-</table>
-<h3 id="js-variable-injection">JS Variable Injection<a class="headerlink" href="#js-variable-injection" title="Permanent link">¶</a></h3>
-<p>You can also inject JavaScript variables directly from widget metadata. Any metadata key containing a single <code>.</code> is parsed as <code>&lt;variable_name&gt;.&lt;variable_type&gt;</code>.</p>
-<p><strong>Rules:</strong></p>
-<ul>
-<li>Valid entries are injected as <code>const</code> declarations at the start of each widget.</li>
-<li>Lines starting with <code>//</code> or a special character/symbol are ignored (useful for commenting out entries).</li>
-<li><code>NONE</code> as a value becomes an empty string (not applicable for <code>EventTypeList</code>).</li>
-<li>If a <code>Float</code> or <code>Int</code> fails to validate, it falls back to <code>String</code>. Any unsupported type also falls back to <code>String</code>.</li>
-</ul>
-<p><strong>Available types:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Type</th>
+<th>Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>String</code></td>
-<td>Plain text input</td>
+<td><strong>Donations</strong></td>
+<td>Seconds per 1$, Points per 1$ (rounded down). 1$ of Default Currency after conversion.</td>
 </tr>
 <tr>
-<td><code>Int</code></td>
-<td>Integer input</td>
-</tr>
-<tr>
-<td><code>Float</code></td>
-<td>Float input</td>
-</tr>
-<tr>
-<td><code>Boolean</code></td>
-<td>Checkbox in the UI</td>
-</tr>
-<tr>
-<td><code>Percent</code></td>
-<td>Integer clamped 0–100</td>
-</tr>
-<tr>
-<td><code>StringList</code></td>
-<td>Comma-separated list of strings</td>
-</tr>
-<tr>
-<td><code>StringSelect</code></td>
-<td>Comma-separated options; user selects one. Defaults to first item.</td>
-</tr>
-<tr>
-<td><code>EventTypeList</code></td>
-<td>Comma-separated <a href="https://github.com/WolfwithSword/SubathonManager/tree/main/SubathonManager.Core/Enums/SubathonEventType.cs">SubathonEventType</a> values - selected via checkboxes. See <a href="../../Design/#enums">Enums</a>.</td>
-</tr>
-<tr>
-<td><code>EventTypeSelect</code></td>
-<td>Single EventType selection, limited to those with configurable time/points values</td>
-</tr>
-<tr>
-<td><code>EventSubTypeList</code></td>
-<td>Comma-separated <a href="https://github.com/WolfwithSword/SubathonManager/tree/main/SubathonManager.Core/Enums/SubathonEventSubType.cs">SubathonEventSubType</a> values - selected via checkboxes. See <a href="../../Design/#enums">Enums</a>.</td>
-</tr>
-<tr>
-<td><code>EventSubTypeSelect</code></td>
-<td>Single EventSubType selection</td>
-</tr>
-<tr>
-<td><code>AnyFile</code> / <code>ImageFile</code> / <code>SoundFile</code> / <code>VideoFile</code></td>
-<td>Injects a path string. Value is empty, an absolute system path (prefixed <code>externalPath/</code>), or a relative path from the widget. Use <code>NONE</code> for empty default. Do not use absolute paths in shared widgets.</td>
-</tr>
-<tr>
-<td><code>FolderPath</code></td>
-<td>Folder path string</td>
-</tr>
-<tr>
-<td><code>OrderEventTypeList</code> / <code>TokenEventTypeList</code> / <code>SubEventTypeList</code> / <code>FollowEventTypeList</code> / <code>DonationEventTypeList</code></td>
-<td>Pre-filtered <code>EventTypeList</code> by subtype category</td>
+<td><strong>Memberships</strong></td>
+<td>Seconds and points per membership. Add tiers with the <strong>Add Membership Tier</strong> button - the name must match the tier name from KoFi exactly.</td>
 </tr>
 </tbody>
 </table>
-<details class="example">
-<summary>Full metadata example</summary>
-<div class="language-html highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cm">&lt;!--</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="cm">WIDGET_META</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="cm">Width:520</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="cm">Height:130</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="cm">applicableEvents.EventTypeList:TwitchSub,TwitchGiftSub,TwitchCheer</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="cm">//applicableEvents.EventSubTypeList:SubLike,GiftSubLike,TokenLike</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="cm">pointsName.String:subpoints</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="cm">secondsToDisplay.Int:5</span>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="cm">//test.String:Hello World</span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="cm">#test2.Float:-4.5</span>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="cm">showCompleted.Boolean:True</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="cm">mySelect.StringSelect:Seconds,Points</span>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="cm">myEvent.EventTypeSelect:NONE</span>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="cm">dinkDonk.SoundFile:./dinkdonk.mp3</span>
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="cm">END_WIDGET_META</span>
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="cm">--&gt;</span>
-</span></code></pre></div>
-<p>Produces:</p>
-<div class="language-html highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">applicableEvents</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"TwitchSub"</span><span class="p">,</span><span class="w"> </span><span class="s2">"TwitchGiftSub"</span><span class="p">,</span><span class="w"> </span><span class="s2">"TwitchCheer"</span><span class="p">];</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">pointsName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"subpoints"</span><span class="p">;</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">secondsToDisplay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">showCompleted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">mySelect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Seconds"</span><span class="p">;</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">myEvent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="p">;</span><span class="w"> </span><span class="c1">// May be selected in UI, e.g. "TwitchSub"</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">dinkDonk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"./dinkdonk.mp3"</span><span class="p">;</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></code></pre></div>
-<p>Note: <code>//applicableEvents.EventSubTypeList</code> and <code>#test2.Float</code> are ignored (commented out / special character prefix).</p>
-</details>
-<hr>
-<h2 id="css">CSS<a class="headerlink" href="#css" title="Permanent link">¶</a></h2>
-<p>Define CSS variables in a <code>:root</code> block in your stylesheet. All CSS variables can be configured and overridden via the widget editor UI without modifying the raw files.</p>
-<div class="language-css highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">:</span><span class="nd">root</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="nv">--main-background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#cecece</span><span class="p">;</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nv">--text-size</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">}</span>
-</span></code></pre></div>
-<hr>
+<h2 id="streamerbot-setup">StreamerBot Setup<a class="headerlink" href="#streamerbot-setup" title="Permanent link">¶</a></h2>
+<p>To integrate KoFi, StreamerBot is currently required.</p>
+<ul>
+<li>Install &amp; Setup <a href="https://streamer.bot/">Streamer.Bot</a></li>
+<li><a href="https://docs.streamer.bot/guide/integrations/ko-fi">Set Up KoFi with Streamer.Bot</a><ul>
+<li>This requires the Streamer.bot Website Integration setup, with a logged in account.</li>
+</ul>
+</li>
+<li>Copy the string/text from in SubathonManager</li>
+<li>In Streamer.Bot's desktop app, click "Import" and paste in the string.</li>
+<li>In Streamer.Bot, go to Server/Clients -&gt; Custom WebSocket Clients -&gt; Find <code>SubathonManager</code>. Right click it, and enable "Auto Connect" if it is not already enabled.</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../streamerbotwebsocketsetup.png" data-desc-position="bottom"><img alt="img" src="../streamerbotwebsocketsetup.png"></a></p>
+<p>You can test the connection from KoFi -&gt; StreamerBot -&gt; SubathonManager by firing events from <a href="https://ko-fi.com/manage/webhooks?src=sidemenu">KoFi here</a>.</p>
+<p>You can verify Streamer.Bot is connected to SubathonManager by checking its configuration in the settings and it will say Connected or Disconnected next to the import string copy button.</p>
+<p>Supports:</p>
+<ul>
+<li>Donation/Tips, Memberships subscriptions, Membership resubscriptions</li>
+<li>Monthly recurring tips are treated as Donation/Tips</li>
+</ul>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">¶</a></h2>
+<p>You can configure KoFi natively in the UI's Settings tab.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../kofisetup.png" data-desc-position="bottom"><img alt="kofi" src="../kofisetup.png"></a></p>
+<p>By default, all memberships/subs will be treated using the values for DEFAULT. If you want to support your custom membership tiers, please add new tiers with the button and match the tier name with the first text field.</p>
+<p>To import the action string, you can copy it from within the application, find it in the latest release assets, or get the <a href="https://raw.githubusercontent.com/WolfwithSword/SubathonManager/refs/heads/main/external/streamerbot/SubathonManager_KoFi.sb">raw file here</a>.</p>
 
 
 
@@ -2085,14 +1890,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "navigation.instant", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "announce.dismiss"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "nightly", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "navigation.instant", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "announce.dismiss"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "nightly", "provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
       
-        <script src="../../assets/javascripts/drawio-reload.js"></script>
+        <script src="../../../assets/javascripts/drawio-reload.js"></script>
       
     
   
