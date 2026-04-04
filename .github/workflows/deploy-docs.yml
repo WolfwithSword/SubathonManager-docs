@@ -59,7 +59,7 @@ jobs:
           DOCS_VERSION: nightly
         run: |
           mike deploy --push --update-aliases nightly
-          mike set-default --push nightly 2>/dev/null || true
+# mike set-default --push nightly 2>/dev/null || true
 
       - name: Deploy release version
         if: github.event_name == 'repository_dispatch'
