@@ -3,7 +3,7 @@
 [![GitHub Release](https://img.shields.io/github/v/release/WolfwithSword/SubathonManager?include_prereleases&style=for-the-badge&logo=github&color=3f4fa3)](https://github.com/WolfwithSword/SubathonManager/releases/latest)
 [![GitHub Downloads](https://img.shields.io/github/downloads/WolfwithSword/SubathonManager/total?style=for-the-badge&logo=github&color=3f4fa3)](https://github.com/WolfwithSword/SubathonManager/releases/latest)
 
-{% if version == "nightly" %}
+{% if config.version == "nightly" %}
 [Download nightly :material-download:](https://github.com/WolfwithSword/SubathonManager/releases/nightly){ .md-button .md-button--primary }
 {% else %}
 [Download the latest release :material-download:](https://github.com/WolfwithSword/SubathonManager/releases/latest){ .md-button .md-button--primary }
