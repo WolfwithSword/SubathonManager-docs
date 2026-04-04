@@ -1,0 +1,78 @@
+name: Deploy Docs
+
+on:
+  push:
+    paths:
+      - 'wiki/**'
+      - 'wiki/docs/**'
+      - 'mkdocs.yml'
+      - 'requirements.txt'
+    branches:
+      - main
+
+  repository_dispatch:
+    types: [docs-release]
+
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version label (e.g. v1.2, nightly)"
+        required: true
+        default: "nightly"
+      set_latest:
+        description: "Mark this as the 'latest' alias?"
+        required: false
+        default: "false"
+        type: choice
+        options: ["true", "false"]
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout docs repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Configure git for mike
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Deploy nightly
+        if: github.event_name == 'push'
+        run: |
+          mike deploy --push --update-aliases nightly
+          mike set-default --push nightly 2>/dev/null || true
+
+      - name: Deploy release version
+        if: github.event_name == 'repository_dispatch'
+        run: |
+          VERSION="${{ github.event.client_payload.version }}"
+          mike deploy --push --update-aliases "$VERSION" latest
+          mike set-default --push latest
+
+      - name: Deploy manual version
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          VERSION="${{ github.event.inputs.version }}"
+          if [ "${{ github.event.inputs.set_latest }}" = "true" ]; then
+            mike deploy --push --update-aliases "$VERSION" latest
+            mike set-default --push latest
+          else
+            mike deploy --push "$VERSION"
+          fi

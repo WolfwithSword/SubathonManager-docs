@@ -1,0 +1,142 @@
+site_name: Subathon Manager
+site_url: https://wolfwithsword.github.io/SubathonManager-docs/
+site_author: WolfwithSword
+site_description: Documentation for SubathonManager
+repo_name: WolfwithSword/SubathonManager
+repo_url: https://github.com/WolfwithSword/SubathonManager
+edit_uri: ""
+
+docs_dir: wiki
+
+theme:
+  name: material
+  logo: assets/icon.png
+  favicon: assets/icon.png
+
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - navigation.instant
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+    - announce.dismiss
+
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  version:
+    provider: mike
+    default: nightly
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/WolfwithSword/SubathonManager
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/r8FUvUdCpP
+
+extra_css:
+  - assets/extra.css
+
+extra_javascript:
+  - https://viewer.diagrams.net/js/viewer-static.min.js
+  - assets/javascripts/drawio-reload.js
+
+plugins:
+  - search
+  - glightbox
+  - drawio:
+      tooltips: true 
+      border: 5
+      darkmode: true
+      edit: false
+      highlight: "#0000FF"
+      lightbox: true
+      toolbar:
+        pages: true
+        tags: true
+        zoom: true
+        layers: true
+        lightbox: true
+        position: "top"
+        no_hide: true
+        show_title: false
+  - mike:
+      alias_type: symlink
+      redirect_template: null
+      deploy_prefix: ''
+      canonical_version: latest
+      version_selector: true
+      css_dir: assets
+      javascript_dir: assets
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.emoji: # ignore errors
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      title: On this page
+
+nav:
+  - Home: index.md
+  - Installation & Usage:
+      - Installation: Installation.md
+      - Usage: Usage.md
+  - Configuration: 
+      - Overview: Configuration.md
+      - App: config/App.md
+      - Streaming Services: config/Streaming.md
+      - Stream Extensions: config/Extensions.md
+      - External Services: config/External.md
+      - Chat Commands: config/Commands.md
+      - Discord Logging: config/Webhooks.md
+  - Development & Design:
+      - Setup & Contribute: develop/Setup.md
+      - Integrations & API: Development.md
+      - Design & Architecture: 
+          - Overview: Design.md
+          - Interactive View: Design-Interactive.md
+  - Widget Development: 
+      - Overview: Widget-Development.md
+      - Import/Export: widgets/Porting.md
+      - Structure: widgets/Structure.md
+      - Functions & Data: widgets/Data.md
+  - FAQ: FAQ.md
+  - Credits: Credits.md
