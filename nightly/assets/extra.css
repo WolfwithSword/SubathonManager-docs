@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --md-text-font: "Nunito", sans-serif;
+  --md-code-font: "JetBrains Mono", monospace;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:        #5c6bc0;
+  --md-primary-fg-color--light: #8e99f3;
+  --md-primary-fg-color--dark:  #26418f;
+  --md-accent-fg-color:         #64ffda;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color:        #3f4fa3;
+  --md-primary-fg-color--light: #6e7dd4;
+  --md-primary-fg-color--dark:  #15267a;
+  --md-accent-fg-color:         #00bfa5;
+}
+
+.md-version__current {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+img[src$=".svg"], img[src$=".SVG"] {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  background: #ffffff;
+  padding: 8px;
+}
+
+[data-md-color-scheme="slate"] img[src$=".svg"],
+[data-md-color-scheme="slate"] img[src$=".SVG"] {
+  background: #1e1e2e;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.45);
+}
+
+.md-typeset .admonition.question,
+.md-typeset details.question {
+  border-color: #00bfa5; 
+}
+
+.md-typeset .question > .admonition-title,
+.md-typeset .question > summary {
+  background-color: #3742412b;
+}
+
+.md-typeset details.question summary {
+  color: #00bfa5;
+}
+
+.md-typeset .question > .admonition-title::before,
+.md-typeset details.question summary::before {
+  background-color: #00bfa5;
+}
+
+.md-typeset details.question summary::after {
+  color: #00bfa5;
+}
+
+
+
+.home-hero {
+  text-align: center;
+  padding: 1rem 0.5rem 0.5rem;
+}
+
+.home-hero img {
+  width: 192px;
+  height:192px;
+  margin-bottom: 0.6rem;
+  filter: drop-shadow();
+}
+
+.md-typeset code {
+  border-radius: 4px;
+}
+
+.usage-img {
+  text-align: center;
+}
+
+.clip {
+  border-radius: 2px !important;
+  clip-path: polygon( 2px 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px));
+}
