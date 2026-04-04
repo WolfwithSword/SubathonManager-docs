@@ -124,6 +124,9 @@
 
 ## Support
 
+??? question "My widgets look weird"
+    If you are experiencing problems with your widgets, please check [their troubleshooting page](widgets/troubleshooting/Troubleshooting.md)
+
 ??? question "Linux? Mac?"
     While this is a primarily Windows application, tweaks have been made and users have reported that it can work under WINE or Steam Proton.
 

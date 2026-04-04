@@ -124,9 +124,15 @@ nav:
   - Configuration: 
       - Overview: Configuration.md
       - App: config/App.md
-      - Streaming Services: config/Streaming.md
+      - Streaming Services:
+          - Twitch: config/setup/Twitch.md
+          - YouTube: config/setup/YouTube.md
+          - Picarto: config/setup/Picarto.md
       - Stream Extensions: config/Extensions.md
-      - External Services: config/External.md
+      - External Services: 
+          - GoAffPro: config/setup/GoAffPro.md
+          - KoFi: config/setup/KoFi.md
+          - Custom: config/setup/Custom.md
       - Chat Commands: config/Commands.md
       - Discord Logging: config/Webhooks.md
   - Development & Design:
@@ -140,5 +146,6 @@ nav:
       - Import/Export: widgets/Porting.md
       - Structure: widgets/Structure.md
       - Functions & Data: widgets/Data.md
+      - Troubleshooting: widgets/troubleshooting/Troubleshooting.md
   - FAQ: FAQ.md
   - Credits: Credits.md
