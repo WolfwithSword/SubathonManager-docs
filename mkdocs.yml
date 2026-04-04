@@ -7,7 +7,6 @@ repo_url: https://github.com/WolfwithSword/SubathonManager
 edit_uri: ""
 
 docs_dir: wiki
-site_dir: site
 
 theme:
   name: material
