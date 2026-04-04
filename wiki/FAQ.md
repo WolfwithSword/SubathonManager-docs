@@ -129,6 +129,9 @@
 
     Not everything is tested or guaranteed to work — for example, the widget editor embedded preview will instead show a button to open it in your browser. Aside from that, most things should work.
 
+??? question "Roadmap?"
+    Currently planned features are (mostly) created as issues over on the [main repository](https://github.com/WolfwithSword/SubathonManager/issues). However, please contact me if you have any suggestions that are not over there!
+
 ??? question "Contact"
     For questions, issues, or other, you can leave an issue or discussion in the repo.
 
