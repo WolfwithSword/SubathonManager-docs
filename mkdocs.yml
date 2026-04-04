@@ -57,6 +57,10 @@ extra:
       link: https://github.com/WolfwithSword/SubathonManager
     - icon: fontawesome/brands/discord
       link: https://discord.gg/r8FUvUdCpP
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/_WolfwithSword
+    - icon: fontawesome/brands/twitch
+      link: https://www.twitch.tv/wolfwithsword
 
 extra_css:
   - assets/extra.css
