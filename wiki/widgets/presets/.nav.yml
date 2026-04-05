@@ -1,0 +1,8 @@
+nav:
+  - Presets.md
+  - Themed Presets:
+      - themesets/index.md
+      - themesets
+  - Single Widgets:
+      - single/index.md
+      - single

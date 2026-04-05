@@ -1,5 +1,5 @@
 site_name: Subathon Manager
-site_url: https://wolfwithsword.github.io/SubathonManager-docs/
+site_url: https://docs.subathonmanager.app
 site_author: WolfwithSword
 site_description: Documentation for SubathonManager
 repo_name: WolfwithSword/SubathonManager
@@ -73,6 +73,7 @@ plugins:
   - search
   - macros
   - glightbox
+  - awesome-nav
   - drawio:
       tooltips: true 
       border: 5
@@ -119,37 +120,3 @@ markdown_extensions:
   - toc:
       permalink: true
       title: On this page
-
-nav:
-  - Home: index.md
-  - Installation & Usage:
-      - Installation: Installation.md
-      - Usage: Usage.md
-  - Configuration: 
-      - Overview: Configuration.md
-      - App: config/App.md
-      - Streaming Services:
-          - Twitch: config/setup/Twitch.md
-          - YouTube: config/setup/YouTube.md
-          - Picarto: config/setup/Picarto.md
-      - Stream Extensions: config/Extensions.md
-      - External Services: 
-          - GoAffPro: config/setup/GoAffPro.md
-          - KoFi: config/setup/KoFi.md
-          - Custom: config/setup/Custom.md
-      - Chat Commands: config/Commands.md
-      - Discord Logging: config/Webhooks.md
-  - Development & Design:
-      - Setup & Contribute: develop/Setup.md
-      - Integrations & API: Development.md
-      - Design & Architecture: 
-          - Overview: Design.md
-          - Interactive View: Design-Interactive.md
-  - Widget Development: 
-      - Overview: Widget-Development.md
-      - Import/Export: widgets/Porting.md
-      - Structure: widgets/Structure.md
-      - Functions & Data: widgets/Data.md
-      - Troubleshooting: widgets/troubleshooting/Troubleshooting.md
-  - FAQ: FAQ.md
-  - Credits: Credits.md

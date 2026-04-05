@@ -1,0 +1,41 @@
+nav:
+  - Home: index.md
+  - Installation & Usage:
+      - Installation: Installation.md
+      - Usage: Usage.md
+  - Configuration:
+      - Overview: Configuration.md
+      - App: config/App.md
+      - Streaming Services:
+          - Twitch: config/setup/Twitch.md
+          - YouTube: config/setup/YouTube.md
+          - Picarto: config/setup/Picarto.md
+      - Stream Extensions: config/Extensions.md
+      - External Services:
+          - GoAffPro: config/setup/GoAffPro.md
+          - KoFi: config/setup/KoFi.md
+          - Custom: config/setup/Custom.md
+      - Chat Commands: config/Commands.md
+      - Discord Logging: config/Webhooks.md
+  - Development & Design:
+      - Setup & Contribute: develop/Setup.md
+      - Integrations & API: Development.md
+      - Design & Architecture:
+          - Overview: Design.md
+          - Interactive View: Design-Interactive.md
+  - Widget Development:
+      - Overview: Widget-Development.md
+      - Import/Export: widgets/Porting.md
+      - Structure: widgets/Structure.md
+      - Functions & Data: widgets/Data.md
+      - Troubleshooting: widgets/troubleshooting/Troubleshooting.md
+  - Presets:
+      - widgets/presets/Presets.md
+      - Themed Presets:
+          - widgets/presets/themesets/index.md
+          - widgets/presets/themesets
+      - Single Widgets:
+          - widgets/presets/single/index.md
+          - widgets/presets/single
+  - FAQ: FAQ.md
+  - Credits: Credits.md
