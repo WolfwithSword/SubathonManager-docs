@@ -51,7 +51,7 @@ extra:
   version:
     provider: mike
     default: nightly
-  docs_version: !ENV [DOCS_VERSION, "latest"]
+  docs_version: !ENV [DOCS_VERSION, "latest"] #ignore error
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/WolfwithSword/SubathonManager
