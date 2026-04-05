@@ -1,5 +1,5 @@
 site_name: Subathon Manager
-site_url: https://docs.subathonmanager.app
+site_url: https://docs.subathonmanager.app/
 site_author: WolfwithSword
 site_description: Documentation for SubathonManager
 repo_name: WolfwithSword/SubathonManager
@@ -47,6 +47,8 @@ theme:
   icon:
     repo: fontawesome/brands/github
 
+  custom_dir: wiki/overrides
+
 extra:
   version:
     provider: mike
@@ -62,14 +64,14 @@ extra:
     - icon: fontawesome/brands/twitch
       link: https://www.twitch.tv/wolfwithsword
   meta:
-    - name: "og:site_name"
+    - name: og:site_name
       content: "SubathonManager Docs"
-    - name: "og:image"
+    - name: og:image
       content: "https://raw.githubusercontent.com/WolfwithSword/SubathonManager/main/assets/icon.png"
-    - property: "og:type"
-      content: "website"
-    - name: "twitter:card"
-      content: "summary_large_image"
+    - property: og:type
+      content: website
+    - name: twitter:card
+      content: "summary"
 
 extra_css:
   - assets/extra.css
@@ -83,11 +85,6 @@ plugins:
   - macros
   - glightbox
   - awesome-nav
-  - social:
-      cards_layout_options:
-        background_color: "#1a1a2e"
-        color: "#ffffff"
-        font_family: Nunito
   - drawio:
       tooltips: true 
       border: 5
