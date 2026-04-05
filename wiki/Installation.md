@@ -4,6 +4,9 @@
 [![GitHub Downloads](https://img.shields.io/github/downloads/WolfwithSword/SubathonManager/total?style=for-the-badge&logo=github&color=3f4fa3)](https://github.com/WolfwithSword/SubathonManager/releases/latest)
 
 {% if docs_version == "nightly" %}
+
+[Download the latest release :material-download:](https://github.com/WolfwithSword/SubathonManager/releases/latest){ .md-button .md-button--primary }
+
 [Download nightly :material-download:](https://github.com/WolfwithSword/SubathonManager/releases/nightly){ .md-button .md-button--primary }
 {% else %}
 [Download the latest release :material-download:](https://github.com/WolfwithSword/SubathonManager/releases/latest){ .md-button .md-button--primary }

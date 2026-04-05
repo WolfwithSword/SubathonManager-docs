@@ -39,6 +39,9 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Install imaging dependencies
+        run: sudo apt-get install -y libcairo2 libfreetype6 libffi-dev libjpeg-dev libpng-dev libz-dev
+        
       - name: Set up Python
         uses: actions/setup-python@v5
         with:

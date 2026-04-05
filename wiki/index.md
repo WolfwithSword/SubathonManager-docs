@@ -73,7 +73,7 @@ All completely local, opensource, and made with no AI.
 
 ## Help
 
-- :fontawesome-brands-discord: Join the [Discord server](https://discord.gg/r8FUvUdCpP) for support 
-    - [![Discord](https://dcbadge.limes.pink/api/server/r8FUvUdCpP?theme=discord-inverted)](https://discord.gg/r8FUvUdCpP)
+- :fontawesome-brands-discord: Join the [Discord server](https://discord.gg/qp4Te3bQTk) for support 
+    - [![Discord](https://dcbadge.limes.pink/api/server/r8FUvUdCpP?theme=discord-inverted)](https://discord.gg/qp4Te3bQTk)
 - :fontawesome-brands-github: Open a [Discussion](https://github.com/WolfwithSword/SubathonManager/discussions) or [Issue](https://github.com/WolfwithSword/SubathonManager/issues) on GitHub
-- :material-widgets-outline: Browse widget demos in the [Demos category](https://github.com/WolfwithSword/SubathonManager/discussions/categories/demos)
+- :material-widgets-outline: Browse widget demos in the [Demos category](https://github.com/WolfwithSword/SubathonManager/discussions/categories/demos) or [Presets category](widgets/presets/Presets.md)

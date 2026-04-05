@@ -147,4 +147,4 @@
     Alternatively, you can contact me through Discord.
 
     ![](https://dcbadge.limes.pink/api/shield/153961246910185472?theme=discord-inverted)  
-    [![](https://dcbadge.limes.pink/api/server/r8FUvUdCpP)](https://discord.gg/r8FUvUdCpP)
+    [![](https://dcbadge.limes.pink/api/server/r8FUvUdCpP)](https://discord.gg/qp4Te3bQTk)

@@ -56,11 +56,20 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/WolfwithSword/SubathonManager
     - icon: fontawesome/brands/discord
-      link: https://discord.gg/r8FUvUdCpP
+      link: https://discord.gg/qp4Te3bQTk
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/_WolfwithSword
     - icon: fontawesome/brands/twitch
       link: https://www.twitch.tv/wolfwithsword
+  meta:
+    - name: "og:site_name"
+      content: "SubathonManager Docs"
+    - name: "og:image"
+      content: "https://raw.githubusercontent.com/WolfwithSword/SubathonManager/main/assets/icon.png"
+    - property: "og:type"
+      content: "website"
+    - name: "twitter:card"
+      content: "summary_large_image"
 
 extra_css:
   - assets/extra.css
@@ -74,6 +83,11 @@ plugins:
   - macros
   - glightbox
   - awesome-nav
+  - social:
+      cards_layout_options:
+        background_color: "#1a1a2e"
+        color: "#ffffff"
+        font_family: Nunito
   - drawio:
       tooltips: true 
       border: 5
