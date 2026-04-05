@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="SubathonManager - a feature-rich subathon app for streamers">
+        <meta name="description" content="Functions and Data spec available for custom widgets">
       
       
         <meta name="author" content="WolfwithSword">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Functions &amp; Data - Subathon Manager</title>
+        <title>Widget Data - Subathon Manager</title>
       
     
     
@@ -64,7 +64,7 @@
     
   
   <meta property="og:title" content="Functions &amp; Data - Subathon Manager">
-  <meta property="og:description" content="[nightly] SubathonManager - a feature-rich subathon app for streamers">
+  <meta property="og:description" content="[nightly] Functions and Data spec available for custom widgets">
   <meta property="og:image" content="https://raw.githubusercontent.com/WolfwithSword/SubathonManager/refs/heads/main/assets/icon.png">
   <meta property="og:url" content="https://docs.subathonmanager.app/latest/widgets/Data/">
   <meta name="twitter:card" content="summary">
@@ -142,7 +142,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Functions &amp; Data
+              Widget Data
             
           </span>
         </div>
@@ -1963,7 +1963,7 @@
   <span class="md-ellipsis">
     
   
-    Basic
+    Basic Theme
   
 
     
@@ -2608,6 +2608,8 @@
 <p class="admonition-title">Note</p>
 <p>When <code>multiplier_points</code> or <code>multiplier_time</code> is <code>1</code>, no multiplier is active for that field.</p>
 </div>
+<details class="example">
+<summary>Example payload</summary>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subathon_timer"</span><span class="p">,</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">"total_seconds"</span><span class="p">:</span><span class="w"> </span><span class="err">i</span><span class="kc">nt</span><span class="p">,</span>
@@ -2631,9 +2633,12 @@
 </span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">  </span><span class="nt">"fractional_money"</span><span class="p">:</span><span class="w"> </span><span class="err">double</span>
 </span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="p">}</span>
 </span></code></pre></div>
+</details>
 <hr>
 <h3 id="handlesubathonevent">handleSubathonEvent<a class="headerlink" href="#handlesubathonevent" title="Permanent link">¶</a></h3>
 <p>Fires whenever an event is successfully processed and has added to the subathon timer.</p>
+<details class="example">
+<summary>Example payload</summary>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"event"</span><span class="p">,</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">"event_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span>
@@ -2652,6 +2657,7 @@
 </span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">  </span><span class="nt">"type_true_source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span>
 </span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="p">}</span>
 </span></code></pre></div>
+</details>
 <table>
 <thead>
 <tr>
@@ -2712,6 +2718,8 @@
 <hr>
 <h3 id="handlegoalsupdate">handleGoalsUpdate<a class="headerlink" href="#handlegoalsupdate" title="Permanent link">¶</a></h3>
 <p>Fires when the goals list updates - new goals, changed goals, or point changes.</p>
+<details class="example">
+<summary>Example payload</summary>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"goals_list"</span><span class="p">,</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">"points"</span><span class="p">:</span><span class="w"> </span><span class="err">lo</span><span class="kc">n</span><span class="err">g</span><span class="p">,</span>
@@ -2725,6 +2733,7 @@
 </span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">  </span><span class="p">]</span>
 </span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="p">}</span>
 </span></code></pre></div>
+</details>
 <table>
 <thead>
 <tr>
@@ -2746,6 +2755,8 @@
 <hr>
 <h3 id="handlegoalcompleted">handleGoalCompleted<a class="headerlink" href="#handlegoalcompleted" title="Permanent link">¶</a></h3>
 <p>Fires whenever a new goal is completed (and unchanged from the current list).</p>
+<details class="example">
+<summary>Example payload</summary>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"goal_completed"</span><span class="p">,</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">"goal_text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span>
@@ -2753,6 +2764,7 @@
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="nt">"points"</span><span class="p">:</span><span class="w"> </span><span class="err">lo</span><span class="kc">n</span><span class="err">g</span>
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">}</span>
 </span></code></pre></div>
+</details>
 <p><code>points</code> is the current subathon points at time of completion, or rounded (floor) sum of real money donations if <code>goals_type</code> is <code>Money</code>.</p>
 <hr>
 <h3 id="handlesubathondisconnect">handleSubathonDisconnect<a class="headerlink" href="#handlesubathondisconnect" title="Permanent link">¶</a></h3>
@@ -2761,6 +2773,8 @@
 <hr>
 <h3 id="handlevalueconfig">handleValueConfig<a class="headerlink" href="#handlevalueconfig" title="Permanent link">¶</a></h3>
 <p>Fires whenever the subathon seconds/points configuration is updated - either from the UI or via a remote config patch.</p>
+<details class="example">
+<summary>Example payload</summary>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value_config"</span><span class="p">,</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -2774,6 +2788,7 @@
 </span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">  </span><span class="p">]</span>
 </span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="p">}</span>
 </span></code></pre></div>
+</details>
 <p><code>meta</code> is an empty string for most event types; it is used for sub/membership tier names.</p>
 <hr>
 <h3 id="handletotalsupdate">handleTotalsUpdate<a class="headerlink" href="#handletotalsupdate" title="Permanent link">¶</a></h3>
@@ -2840,6 +2855,9 @@
 
 
 
+
+  
+  
 
 
 
