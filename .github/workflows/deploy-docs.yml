@@ -62,7 +62,7 @@ jobs:
           DOCS_VERSION: nightly
         run: |
           mike deploy --push --update-aliases nightly --template wiki/overrides/redirect.html
-          mike set-default --push nightly --template wiki/overrides/redirect.html
+# mike set-default --push nightly --template wiki/overrides/redirect.html 2>/dev/null || true
 
       - name: Deploy release version
         if: github.event_name == 'repository_dispatch'
