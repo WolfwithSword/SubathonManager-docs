@@ -2,6 +2,8 @@
   {
     "version": "nightly",
     "title": "nightly",
-    "aliases": []
+    "aliases": [
+      "latest"
+    ]
   }
 ]
