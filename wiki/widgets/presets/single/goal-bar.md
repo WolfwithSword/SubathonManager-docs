@@ -3,7 +3,7 @@
 [:fontawesome-brands-github: View Source](https://github.com/WolfwithSword/SubathonManager/blob/main/presets/generic/goal-bar.html){ .md-button } &nbsp;&nbsp;
 **Author:** [WolfwithSword](https://github.com/WolfwithSword)
 
-A very basic progress bar, allowing you to configure it to track your goals for either a subathon or donothon (Money/Points), and override the max value or goal text if you choose.
+A very basic progress bar, allowing you to configure it to track your goals for either a subathon or donothon (Money/Points), and to override the max value or goal text if you choose.
 
 ![Goal Bar preview](https://github.com/user-attachments/assets/b73f2bf0-a77e-41ff-b206-9c23d0514964)
 
