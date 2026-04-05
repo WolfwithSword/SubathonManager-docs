@@ -41,7 +41,7 @@ jobs:
 
       - name: Install imaging dependencies
         run: sudo apt-get install -y libcairo2 libfreetype6 libffi-dev libjpeg-dev libpng-dev libz-dev
-        
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -61,7 +61,7 @@ jobs:
         env:
           DOCS_VERSION: nightly
         run: |
-          mike deploy --push --update-aliases nightly
+          mike deploy --push --update-aliases nightly --template wiki/overrides/redirect.html
 # mike set-default --push nightly 2>/dev/null || true
 
       - name: Deploy release version
@@ -70,7 +70,7 @@ jobs:
           DOCS_VERSION: ${{ github.event.client_payload.version }}
         run: |
           VERSION="${{ github.event.client_payload.version }}"
-          mike deploy --push --update-aliases "$VERSION" latest
+          mike deploy --push --update-aliases "$VERSION" latest --template wiki/overrides/redirect.html
           mike set-default --push latest
 
       - name: Deploy manual version
@@ -80,8 +80,8 @@ jobs:
         run: |
           VERSION="${{ github.event.inputs.version }}"
           if [ "${{ github.event.inputs.set_latest }}" = "true" ]; then
-            mike deploy --push --update-aliases "$VERSION" latest
+            mike deploy --push --update-aliases "$VERSION" latest --template wiki/overrides/redirect.html
             mike set-default --push latest
           else
-            mike deploy --push "$VERSION"
+            mike deploy --push "$VERSION" --template wiki/overrides/redirect.html
           fi
