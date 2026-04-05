@@ -1,3 +1,7 @@
+---
+title: Widget Data
+description: Functions and Data spec available for custom widgets
+---
 
 Implement only the functions you need. Each is called automatically when the corresponding WebSocket data is received.
 
@@ -22,30 +26,31 @@ Fires very frequently - use for the timer display, points, lock/pause state, and
 !!! note
     When `multiplier_points` or `multiplier_time` is `1`, no multiplier is active for that field.
 
-```json
-{
-  "type": "subathon_timer",
-  "total_seconds": int,
-  "days": int,
-  "hours": int,
-  "minutes": int,
-  "seconds": int,
-  "total_points": int,
-  "is_paused": bool,
-  "is_locked": bool,
-  "is_reversed": bool,
-  "multiplier_points": float,
-  "multiplier_time": float,
-  "multiplier_start_time": "timestamp | null",
-  "multiplier_seconds_total": int,
-  "multiplier_seconds_remaining": int,
-  "total_seconds_elapsed": int,
-  "total_seconds_added": int,
-  "currency": "string",
-  "rounded_money": double,
-  "fractional_money": double
-}
-```
+??? example "Example payload"
+    ```json
+    {
+      "type": "subathon_timer",
+      "total_seconds": int,
+      "days": int,
+      "hours": int,
+      "minutes": int,
+      "seconds": int,
+      "total_points": int,
+      "is_paused": bool,
+      "is_locked": bool,
+      "is_reversed": bool,
+      "multiplier_points": float,
+      "multiplier_time": float,
+      "multiplier_start_time": "timestamp | null",
+      "multiplier_seconds_total": int,
+      "multiplier_seconds_remaining": int,
+      "total_seconds_elapsed": int,
+      "total_seconds_added": int,
+      "currency": "string",
+      "rounded_money": double,
+      "fractional_money": double
+    }
+    ```
 
 ---
 
@@ -53,25 +58,26 @@ Fires very frequently - use for the timer display, points, lock/pause state, and
 
 Fires whenever an event is successfully processed and has added to the subathon timer.
 
-```json
-{
-  "type": "event",
-  "event_type": "string",
-  "source": "string",
-  "seconds_added": int,
-  "points_added": int,
-  "user": "string",
-  "value": "string",
-  "amount": int,
-  "currency": "string",
-  "command": "string",
-  "event_timestamp": "datetime",
-  "reversed": bool,
-  "sub_type": "string",
-  "secondary_value": "string",
-  "type_true_source": "string"
-}
-```
+??? example "Example payload"
+    ```json
+    {
+      "type": "event",
+      "event_type": "string",
+      "source": "string",
+      "seconds_added": int,
+      "points_added": int,
+      "user": "string",
+      "value": "string",
+      "amount": int,
+      "currency": "string",
+      "command": "string",
+      "event_timestamp": "datetime",
+      "reversed": bool,
+      "sub_type": "string",
+      "secondary_value": "string",
+      "type_true_source": "string"
+    }
+    ```
 
 | Field | Notes |
 |---|---|
@@ -102,20 +108,21 @@ Fires whenever an event is successfully processed and has added to the subathon 
 
 Fires when the goals list updates - new goals, changed goals, or point changes.
 
-```json
-{
-  "type": "goals_list",
-  "points": long,
-  "goals_type": "string",
-  "goals": [
+??? example "Example payload"
+    ```json
     {
-      "text": "string",
+      "type": "goals_list",
       "points": long,
-      "completed": bool
+      "goals_type": "string",
+      "goals": [
+        {
+          "text": "string",
+          "points": long,
+          "completed": bool
+        }
+      ]
     }
-  ]
-}
-```
+    ```
 
 | Field | Notes |
 |---|---|
@@ -128,14 +135,15 @@ Fires when the goals list updates - new goals, changed goals, or point changes.
 
 Fires whenever a new goal is completed (and unchanged from the current list).
 
-```json
-{
-  "type": "goal_completed",
-  "goal_text": "string",
-  "goal_points": long,
-  "points": long
-}
-```
+??? example "Example payload"
+    ```json
+    {
+      "type": "goal_completed",
+      "goal_text": "string",
+      "goal_points": long,
+      "points": long
+    }
+    ```
 
 `points` is the current subathon points at time of completion, or rounded (floor) sum of real money donations if `goals_type` is `Money`.
 
@@ -153,20 +161,21 @@ On reconnection, initial messages for all other handlers are always re-sent, so 
 
 Fires whenever the subathon seconds/points configuration is updated - either from the UI or via a remote config patch.
 
-```json
-{
-  "type": "value_config",
-  "data": [
+??? example "Example payload"
+    ```json
     {
-      "eventType": "TwitchSub",
-      "source": "Twitch",
-      "meta": "1000",
-      "seconds": 60,
-      "points": 1
+      "type": "value_config",
+      "data": [
+        {
+          "eventType": "TwitchSub",
+          "source": "Twitch",
+          "meta": "1000",
+          "seconds": 60,
+          "points": 1
+        }
+      ]
     }
-  ]
-}
-```
+    ```
 
 `meta` is an empty string for most event types; it is used for sub/membership tier names.
 

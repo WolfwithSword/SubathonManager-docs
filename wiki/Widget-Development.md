@@ -1,4 +1,9 @@
-﻿# Widget Development
+﻿---
+title: Widget Development
+description: Specifications for developing custom widgets
+---
+
+# Widget Development
 
 You can develop your own widgets by either modifying the existing [presets](https://github.com/WolfwithSword/SubathonManager/tree/main/presets) or building your own from scratch.
 

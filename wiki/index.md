@@ -1,4 +1,9 @@
-﻿# Subathon Manager
+﻿---
+title: Home
+description: Subathon Manager - a feature reach subathon timer and event manager for streams
+---
+
+# Subathon Manager
 
 <div class="home-hero" markdown>
 ![SubathonManager icon](assets/icon.png)

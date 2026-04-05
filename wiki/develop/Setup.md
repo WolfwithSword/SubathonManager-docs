@@ -1,3 +1,8 @@
+---
+title: Development Setup
+description: How to setup a dev environment for contributing
+---
+
 ## Local Setup
 
 Open the solution project in your IDE of choice and restore dependencies:

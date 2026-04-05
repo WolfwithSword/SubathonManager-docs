@@ -1,3 +1,8 @@
+---
+title: Widget Structure
+description: Details for how custom widgets are structured
+---
+
 When imported into SubathonManager, only a single `.html` file is imported. Any relative imports to media files, `.css`, or `.js` files will resolve correctly.
 
 For required functions and anything important script-wise, it is recommended to embed them in `<script>` tags in the HTML file so they are loaded properly.

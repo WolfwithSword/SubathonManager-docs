@@ -1,3 +1,8 @@
+---
+title: Import/Export Overlays
+description: How to import and export custom overlays
+---
+
 Overlays can be import and exported using `.smo` files.
 
 `.smo` files are essentially zip files containing all the required files and structure needed for an overlay, and all preconfigured values.

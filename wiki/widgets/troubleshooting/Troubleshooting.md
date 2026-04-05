@@ -1,3 +1,8 @@
+---
+title: Troubleshooting Widgets
+description: Troubleshooting steps for widgets
+---
+
 For various issues with widgets, please try these troubleshooting steps.
 
 # Widgets are faded / grey / desaturated in OBS

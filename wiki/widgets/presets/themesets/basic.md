@@ -1,4 +1,4 @@
-# Basic
+# Basic Theme
 
 [:fontawesome-brands-github: View Source](https://github.com/WolfwithSword/SubathonManager/tree/main/presets/basic){ .md-button } &nbsp;&nbsp;
 **Author:** [WolfwithSword](https://github.com/WolfwithSword)

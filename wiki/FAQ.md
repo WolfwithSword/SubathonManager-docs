@@ -70,15 +70,6 @@ tags:
         - Kudos Tips
         - Chat Commands
 
-    Plenty of platforms and integrations are supported, and I would recommend looking at the [configuration](Configuration.md) for more details, but here are a few:
-
-    - Twitch, YouTube, Picarto  
-    - StreamElements, StreamLabs, Blerp  
-    - GoAffPro affiliate stores  
-        - GamerSupps, UwUMarket, Orchid Eight, KatDragonz  
-    - KoFi (via streamerbot integration)  
-    - Custom External Services - make your own!
-
 ??? question "Integrations"
 
     Currently, we support the following integrations natively or with provided extensions.
@@ -92,7 +83,7 @@ tags:
         - Orchid Eight
         - KatDragonz
     - KoFi (via streamerbot integration)
-      - Tips & Memberships
+        - Tips & Memberships
 
     And a system for custom external integrations via API.
 
