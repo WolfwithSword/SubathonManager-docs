@@ -1,7 +1,7 @@
 site_name: Subathon Manager
 site_url: https://docs.subathonmanager.app/
 site_author: WolfwithSword
-site_description: Documentation for SubathonManager
+site_description: SubathonManager - a feature-rich subathon app for streamers
 repo_name: WolfwithSword/SubathonManager
 repo_url: https://github.com/WolfwithSword/SubathonManager
 edit_uri: ""
@@ -53,7 +53,9 @@ extra:
   version:
     provider: mike
     default: nightly
-  docs_version: !ENV [DOCS_VERSION, "latest"] #ignore error
+  docs_version: !ENV [DOCS_VERSION, "dev"] #ignore error
+  noindex: !ENV [NOINDEX, false]
+  docs_canonical: !ENV [DOCS_CANONICAL, false]
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/WolfwithSword/SubathonManager
@@ -85,6 +87,7 @@ plugins:
   - macros
   - glightbox
   - awesome-nav
+  - tags
   - drawio:
       tooltips: true 
       border: 5
@@ -103,7 +106,7 @@ plugins:
         show_title: false
   - mike:
       alias_type: symlink
-      redirect_template: null
+      redirect_template: wiki/overrides/redirect.html
       deploy_prefix: ''
       canonical_version: latest
       version_selector: true

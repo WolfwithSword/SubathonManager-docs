@@ -1,5 +1,13 @@
 
 ---
+title: Design
+description: View the highlevel design of how the app is built
+tags:
+  - Design
+  - Develop
+  - dev
+  - Subathon
+---
 
 ## Overview
 

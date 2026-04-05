@@ -1,4 +1,13 @@
-﻿!!! tip "Donothon Mode"
+﻿---
+title: Usage
+description: How to use SubathonManager
+tags:
+  - Usage
+  - Setup
+  - Subathon
+---
+
+!!! tip "Donothon Mode"
     If you want to adjust the subathon to be a donothon, that is done by configuring your goals list to be of type "Money" instead of "Points". Even if you have no goals.
 
 !!! info "Generic Alert / Timerless Mode"

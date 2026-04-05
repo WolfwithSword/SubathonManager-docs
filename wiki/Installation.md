@@ -1,4 +1,13 @@
-﻿# Installation
+﻿---
+title: Download
+description: Download & Install SubathonManager
+tags:
+  - Installation
+  - Setup
+  - Subathon
+---
+
+# Installation
 
 [![GitHub Release](https://img.shields.io/github/v/release/WolfwithSword/SubathonManager?include_prereleases&style=for-the-badge&logo=github&color=3f4fa3)](https://github.com/WolfwithSword/SubathonManager/releases/latest)
 [![GitHub Downloads](https://img.shields.io/github/downloads/WolfwithSword/SubathonManager/total?style=for-the-badge&logo=github&color=3f4fa3)](https://github.com/WolfwithSword/SubathonManager/releases/latest)

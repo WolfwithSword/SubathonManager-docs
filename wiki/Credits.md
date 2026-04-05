@@ -1,4 +1,9 @@
-﻿# Credits
+﻿---
+title: Credits
+description: Credits and Special Thanks
+---
+
+# Credits
 
 ## Maintainers
 
