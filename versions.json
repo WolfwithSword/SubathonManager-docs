@@ -2,6 +2,11 @@
   {
     "version": "nightly",
     "title": "nightly",
+    "aliases": []
+  },
+  {
+    "version": "v1.1.0",
+    "title": "v1.1.0",
     "aliases": [
       "latest"
     ]
