@@ -41,6 +41,13 @@ tags:
 
     Custom widgets for overlays you develop can be licensed however you want and distributed however you want and are not considered part of this software. In fact, we encourage you to share and even commercialize widgets you make.
 
+??? question "Do you collect data?"
+    There is an opt-in data collection / telemetry service. This is completely anonymous and only collects information on which services/integrations are currently active, and what version of the app is comes from.
+    
+    This way, we can tell what services are a priority for users.
+
+    If opted in, data is only collected on bootup and every hour.
+
 ---
 
 ## Supported Connections & Features
