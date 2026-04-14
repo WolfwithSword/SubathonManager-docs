@@ -32,6 +32,9 @@ Browse and download premade overlays. Click an overlay to preview it, then downl
       <div id="modal-header">
         <h2 id="modal-name"></h2>
         <div id="modal-meta"></div>
+        <button id="modal-share" type="button" data-tooltip="Copy link">
+          <i class="fa-solid fa-link"></i>
+        </button>
         <div id="modal-tags"></div>
       </div>
       <p id="modal-description"></p>
@@ -211,6 +214,53 @@ Browse and download premade overlays. Click an overlay to preview it, then downl
 
 @media (max-width: 600px) {
   #modal { grid-template-columns: 1fr; }
+}
+#modal-share {
+  position: absolute;
+  top: 0.85rem;
+  right: 3rem;
+
+  width: 34px;
+  height: 34px;
+
+  border-radius: 8px;
+  border: 0px solid rgba(0, 0, 0, 0);
+
+  background: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(6px);
+
+  color: var(--md-default-fg-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: all 0.15s;
+  z-index: 2;
+}
+
+#modal-share:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+#modal-share:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: rgba(0,0,0,0.85);
+  color: white;
+
+  padding: 4px 6px;
+  font-size: 11px;
+  border-radius: 6px;
+
+  white-space: nowrap;
+  pointer-events: none;
 }
 
 #modal-close {
@@ -473,9 +523,28 @@ a.glightbox {
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
+.badge-new {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #7b68f3d5;
+  transform: scale(1);
+  opacity: 0.85;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 3px 6px;
+  border-radius: 6px;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
 .theme-card:hover .download-badge {
   transform: scale(1.05);
   opacity: 0.85;
+}.theme-card:hover .badge-new {
+  transform: scale(1.05);
+  opacity: 0.95;
 }
 
 .sort-toggle {
