@@ -1,4 +1,5 @@
 const THEMES_URL = "https://assets.subathonmanager.app/presets/overlays/data";
+const DL_PROTOCOL = "subathonmanager://import?url=";
 
 let allThemes = [];
 let activeTag = null;
@@ -39,6 +40,7 @@ async function loadThemes() {
 
   allThemes = data.overlays || [];
   renderGallery();
+  openFromHash();
 }
 
 function setupListeners() {
@@ -75,6 +77,24 @@ function setupListeners() {
       renderGallery();
     });
   }
+
+  window.addEventListener("popstate", () => {
+    const hash = new URLSearchParams(window.location.hash.slice(1));
+    const slug = hash.get("overlay");
+
+    if (!slug) {
+      closeModal();
+      return;
+    }
+
+    const index = allThemes.findIndex(t =>
+      slugify(t.name) === slug
+    );
+
+    if (index !== -1) {
+      openModal(index);
+    }
+  });
 
   document.addEventListener("click", (e) => {
 
@@ -185,67 +205,6 @@ function cycleLightbox(dir) {
   openLightbox(nextSrc);
 }
 
-// function renderGallery() {
-//   const gallery = document.getElementById("gallery");
-//   const empty = document.getElementById("empty");
-//   if (!gallery || !empty) return;
-
-//   const q = searchQuery.toLowerCase();
-
-//   let filtered = allThemes.filter(t => {
-//     const matchesTag = !activeTag || (t.tags || []).includes(activeTag);
-
-//     const q = searchQuery.toLowerCase();
-//     const matchesSearch =
-//       !q ||
-//       t.name.toLowerCase().includes(q) ||
-//       t.description.toLowerCase().includes(q) ||
-//       (t.author || "").toLowerCase().includes(q);
-
-//     return matchesTag && matchesSearch;
-//   });
-
-//   if (sortMode === "downloads") {
-//     filtered.sort((a, b) => (b.downloads || 0) - (a.downloads || 0));
-//   }
-
-//   if (!filtered.length) {
-//     gallery.innerHTML = "";
-//     empty.style.display = "block";
-//     return;
-//   }
-
-//   empty.style.display = "none";
-
-//   gallery.innerHTML = filtered.map(t => `
-//     <div class="theme-card" data-index="${allThemes.indexOf(t)}">
-
-//         <div class="card-image-wrapper">
-//           <img src="${t.preview}" alt="${t.name}" loading="lazy" />
-
-//           <div class="download-badge">
-//             ⬇ ${t.downloads ? t.downloads >= 0  ? t.downloads : '?' : 0}
-//           </div>
-//         </div>
-
-//         <div class="theme-card-body">
-//           <h3>${t.name}</h3>
-
-//           <div class="author">
-//             by ${t.author || "Unknown"} · v${t.version || "?"}
-//           </div>
-
-//           <div class="card-tags">
-//             ${(t.tags || []).map(tag => `
-//               <span class="tag-pill">${tag}</span>
-//             `).join("")}
-//           </div>
-//         </div>
-//     </div>
-//   `).join("");
-
-// }
-
 function renderGallery() {
   const gallery = document.getElementById("gallery");
   const empty = document.getElementById("empty");
@@ -266,6 +225,11 @@ function renderGallery() {
   if (sortMode === "downloads") {
     filtered.sort((a, b) => (b.downloads || 0) - (a.downloads || 0));
   }
+  else {
+    filtered.sort((a, b) =>
+      (b.created || "").localeCompare(a.created || "")
+    );
+  }
 
   if (!filtered.length) {
     gallery.innerHTML = "";
@@ -285,6 +249,8 @@ function renderGallery() {
   gallery.innerHTML = pageItems.map(t => `
     <div class="theme-card" data-index="${allThemes.indexOf(t)}">
       <div class="card-image-wrapper">
+       
+        ${isNew(t.created) ? `<div class="badge-new">New</div>` : ""} 
         <img src="${t.preview}" alt="${t.name}" loading="lazy" />
         <div class="download-badge">
           ⬇ ${t.downloads != null && t.downloads >= 0 ? t.downloads : '?'}
@@ -382,7 +348,7 @@ function openModal(index) {
 
   document.getElementById("modal-download").href = t.file;
   const protocolBtn = document.getElementById("modal-protocol");
-  protocolBtn.href = t.protocol;
+  protocolBtn.href = `${DL_PROTOCOL}${t.file}`;
   
   const tagHTML = Array.isArray(t.tags)
     ? t.tags.map(tag => `<span class="tag-pill">${tag}</span>`).join("")
@@ -398,6 +364,23 @@ function openModal(index) {
   } else {
     el.style.display = "none";
   }
+
+  const slug = slugify(t.name);
+
+  history.replaceState(null, "", `#overlay=${slug}`);
+  const url = `${window.location.origin}${window.location.pathname}#overlay=${slug}`;
+  const shareBtn = document.getElementById("modal-share");
+  shareBtn.onclick = async (e) => {
+    e.preventDefault();
+    try {
+      const icon = shareBtn.querySelector("i");
+      icon.className = "fa-solid fa-check";
+      setTimeout(() => {
+        icon.className = "fa-solid fa-link";
+      }, 1500);
+      await navigator.clipboard.writeText(url);
+    } catch { }
+  };
 
   const hasMultiple = previews.length > 1;
   let previewsEl = document.getElementById("modal-previews");
@@ -459,6 +442,7 @@ function closeLightbox() {
 function closeModal() {
   document.getElementById("modal-overlay").style.display = "none";
   document.body.style.overflow = "";
+  history.replaceState(null, "", window.location.pathname);
 }
 
 function switchPreview(src, el) {
@@ -468,6 +452,32 @@ function switchPreview(src, el) {
     .forEach(img => img.classList.remove("active"));
 
   el.classList.add("active");
+}
+
+function isNew(created) {
+  if (!created) return false;
+  const createdDate = new Date(created);
+  const now = new Date();
+  const diffDays = (now - createdDate) / (1000 * 60 * 60 * 24);
+  return diffDays <= 30;
+}
+
+function slugify(name) {
+  return name.toLowerCase().replace(/\s+/g, "-");
+}
+
+function openFromHash() {
+  const hash = new URLSearchParams(window.location.hash.slice(1));
+  const slug = hash.get("overlay");
+  if (!slug) return;
+
+  const index = allThemes.findIndex(t =>
+    slugify(t.name) === slug
+  );
+
+  if (index !== -1) {
+    openModal(index);
+  }
 }
 
 window.closeLightbox = closeLightbox;
