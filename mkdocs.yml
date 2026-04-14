@@ -81,6 +81,7 @@ extra_css:
 extra_javascript:
   - https://viewer.diagrams.net/js/viewer-static.min.js
   - assets/javascripts/drawio-reload.js
+  - assets/javascripts/marketplace.js
 
 plugins:
   - search

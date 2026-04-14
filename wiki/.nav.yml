@@ -37,5 +37,6 @@ nav:
       - Single Widgets:
           - widgets/presets/single/index.md
           - widgets/presets/single
+  - Marketplace: browse.md
   - FAQ: FAQ.md
   - Credits: Credits.md
