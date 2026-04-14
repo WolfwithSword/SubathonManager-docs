@@ -2,150 +2,154 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.subathonmanager.app/latest/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/Configuration/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/Credits/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/Design-Interactive/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/Design/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/Development/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/FAQ/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/Installation/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/Usage/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/Widget-Development/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.subathonmanager.app/latest/browse/</loc>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/config/App/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/config/Commands/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/config/Extensions/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/config/Webhooks/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/config/setup/Custom/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/config/setup/GoAffPro/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/config/setup/KoFi/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/config/setup/Picarto/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/config/setup/Twitch/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/config/setup/YouTube/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/develop/Setup/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/widgets/Data/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/widgets/Porting/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/widgets/Structure/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/widgets/presets/Presets/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/widgets/presets/single/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/widgets/presets/single/compact-timer/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/widgets/presets/single/event-alerts/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/widgets/presets/single/event-popups/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/widgets/presets/single/goal-bar/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/widgets/presets/single/subathon-totals/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/widgets/presets/themesets/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/widgets/presets/themesets/basic/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/widgets/presets/themesets/retro-pixel/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/widgets/presets/themesets/simple-1/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/widgets/presets/themesets/steampunk/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
     <url>
          <loc>https://docs.subathonmanager.app/latest/widgets/troubleshooting/Troubleshooting/</loc>
-         <lastmod>2026-04-10</lastmod>
+         <lastmod>2026-04-14</lastmod>
     </url>
 </urlset>

@@ -6,5 +6,7 @@ document$.subscribe(({ body }) => {
   GraphViewer.processElements()
 
   // required to fix duplicate display of external drawio graphs (via http)
-  reload();
+  try {
+    reload();
+  } catch(e) {};
 })
