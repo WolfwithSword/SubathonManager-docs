@@ -10,8 +10,8 @@ A clean, modern overlay collection.
 
 ## Previews
 
-![Simple-1 preview 1](https://github.com/user-attachments/assets/0b0270ca-52f1-4437-877b-0cb72f2300c7)
-![Simple-1 preview 2](https://github.com/user-attachments/assets/15fdc464-6d25-4dc2-8522-5bfcf6f5a04e)
+![Simple-1 preview 1](https://assets.subathonmanager.app/docs/widgets/simple-1/s1-preview.png)
+![Simple-1 preview 2](https://assets.subathonmanager.app/docs/widgets/simple-1/s1-preview2.png)
 
 ---
 
@@ -20,7 +20,7 @@ A clean, modern overlay collection.
 Displays hours, minutes, and seconds - hours are hidden when under 1 hour remains. Numbers animate top-down on change. When a time multiplier is active, it pops up in a circle on the right. A lock icon appears top-left when locked, and digits dim when paused.
 
 <video controls style="width:100%;border-radius:8px;margin:1rem 0">
-  <source src="https://github.com/user-attachments/assets/d92fa7de-1703-4660-be37-4bf295104512">
+  <source src="https://assets.subathonmanager.app/docs/widgets/simple-1/s1-timer.webm">
 </video>
 
 === "CSS Variables"
@@ -54,7 +54,7 @@ Displays the most recent event. Multiple events are queued and each displays for
     When testing via the UI simulator, the user will always display as `SYSTEM`.
 
 <video controls style="width:100%;border-radius:8px;margin:1rem 0">
-  <source src="https://github.com/user-attachments/assets/05c9855b-57ef-4aa1-b2f3-af7e169aa2ff">
+  <source src="https://assets.subathonmanager.app/docs/widgets/simple-1/s1-event.webm">
 </video>
 
 === "CSS Variables"
@@ -83,7 +83,7 @@ Displays the most recent event. Multiple events are queued and each displays for
 A progress bar showing the current points value against the goals max. Goal markers are shown on the bar for each upcoming goal relative to its position. Once full, only the filled bar and points value are shown. When the points multiplier is active, it appears in a circle in the bottom right.
 
 <video controls style="width:100%;border-radius:8px;margin:1rem 0">
-  <source src="https://github.com/user-attachments/assets/aebf0eeb-3b52-4f03-b78b-797e715443b4">
+  <source src="https://assets.subathonmanager.app/docs/widgets/simple-1/s1-progress.webm">
 </video>
 
 === "CSS Variables"
@@ -113,7 +113,7 @@ A progress bar showing the current points value against the goals max. Goal mark
 
 A configurable list of upcoming goals showing their text description and points value. Optionally shows the last completed goal at the top, faded.
 
-![Goals preview](https://github.com/user-attachments/assets/1cec2036-ca07-4a3e-a8b9-0ca8cc6a37dd)
+![Goals preview](https://assets.subathonmanager.app/docs/widgets/simple-1/s1-goals.png)
 
 === "CSS Variables"
 

@@ -7,8 +7,8 @@ A clean, no-frills overlay collection focused on simplicity.
 
 ## Previews
 
-![Basic preview 1](https://github.com/user-attachments/assets/cb44f4f5-36c3-40a4-8a33-14bb18d52c29)
-![Basic preview 2](https://github.com/user-attachments/assets/4c38c9f9-22e6-419f-89a6-e889f6712710)
+![Basic preview 1](https://assets.subathonmanager.app/docs/widgets/basic/basic_preview.png)
+![Basic preview 2](https://assets.subathonmanager.app/docs/widgets/basic/basic_preview.png)
 
 ---
 
@@ -17,7 +17,7 @@ A clean, no-frills overlay collection focused on simplicity.
 A simplistic timer. Fades gray when paused, and displays a bar across it when locked.
 
 <video controls style="width:100%;border-radius:8px;margin:1rem 0">
-  <source src="https://github.com/user-attachments/assets/5e44baff-c303-41c5-be7f-ac0c82867c32">
+  <source src="https://assets.subathonmanager.app/docs/widgets/basic/basic_timer.webm">
 </video>
 
 === "CSS Variables"
@@ -43,7 +43,7 @@ A simplistic timer. Fades gray when paused, and displays a bar across it when lo
 A simple points display. Crossed out when locked, similar to the Timer.
 
 <video controls style="width:100%;border-radius:8px;margin:1rem 0">
-  <source src="https://github.com/user-attachments/assets/45465253-c1aa-4eae-9340-d60eb404cd77">
+  <source src="https://assets.subathonmanager.app/docs/widgets/basic/basic-points.webm">
 </video>
 
 === "CSS Variables"
@@ -71,7 +71,7 @@ A simple points display. Crossed out when locked, similar to the Timer.
 
 A simple display for the next upcoming goal and its points value. Empty when no goals remain.
 
-![Next Goal preview](https://github.com/user-attachments/assets/aab2259d-2eeb-49d1-bb4e-66c59e78dd9c)
+![Next Goal preview](https://assets.subathonmanager.app/docs/widgets/basic/basic-goal.png)
 
 === "CSS Variables"
 
@@ -94,8 +94,7 @@ A simple display for the next upcoming goal and its points value. Empty when no 
 
 A simple display for the current multiplier - points, time, or both. Empty when no multiplier is active.
 
-![Multiplier preview 1](https://github.com/user-attachments/assets/8c031a88-7edb-4e60-8acc-5f4207b5eea0)
-![Multiplier preview 2](https://github.com/user-attachments/assets/26292d0b-6df9-4d10-9e39-a64ec5bb470f)
+![Multiplier preview 1](https://assets.subathonmanager.app/docs/widgets/basic/basic-mult.png)
 
 === "CSS Variables"
 
@@ -120,7 +119,7 @@ A simple display for the current multiplier - points, time, or both. Empty when 
 A basic text display for the most recent event, showing the triggering user, an event type icon, value, amount, and more.
 
 <video controls style="width:100%;border-radius:8px;margin:1rem 0">
-  <source src="https://github.com/user-attachments/assets/124daebc-db6e-42bc-ad62-e8657ed30324">
+  <source src="https://assets.subathonmanager.app/docs/widgets/basic/basic-events.webm">
 </video>
 
 === "CSS Variables"

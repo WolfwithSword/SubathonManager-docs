@@ -7,7 +7,7 @@ A full retro pixel-art themed overlay collection.
 
 ## Preview
 
-![Retro-Pixel preview](https://github.com/user-attachments/assets/70fcaf1e-f54f-46b5-a6a0-9d100b847d7e)
+![Retro-Pixel preview](https://assets.subathonmanager.app/docs/widgets/retro-pixel/retro-preview.png)
 
 ---
 
@@ -16,7 +16,7 @@ A full retro pixel-art themed overlay collection.
 A lightweight, customizable retro themed timer. Shows days, hours, minutes, and seconds separately.
 
 <video controls style="width:100%;border-radius:8px;margin:1rem 0">
-  <source src="https://github.com/user-attachments/assets/4b6d1b3d-9104-41be-a515-55caf025078b">
+  <source src="https://assets.subathonmanager.app/docs/widgets/retro-pixel/retro-timer.webm">
 </video>
 
 === "CSS Variables"
@@ -47,7 +47,7 @@ A lightweight, customizable retro themed timer. Shows days, hours, minutes, and 
 View recent events like subs and donations in a sleek retro-pixelated bar.
 
 <video controls style="width:100%;border-radius:8px;margin:1rem 0">
-  <source src="https://github.com/user-attachments/assets/07c36a04-8ced-4ed6-9075-cb7616744318">
+  <source src="https://assets.subathonmanager.app/docs/widgets/retro-pixel/retro-events.webm">
 </video>
 
 === "CSS Variables"
@@ -74,12 +74,9 @@ View recent events like subs and donations in a sleek retro-pixelated bar.
 An XP-like progress bar for the current goal in progress, in a retro theme. Optionally plays a sound on goal completion.
 
 <video controls style="width:100%;border-radius:8px;margin:1rem 0">
-  <source src="https://github.com/user-attachments/assets/45fdabef-cb3d-4d6a-845a-b7d1ab76bb58">
+  <source src="https://assets.subathonmanager.app/docs/widgets/retro-pixel/retro-goals.webm">
 </video>
 
-<video controls style="width:100%;border-radius:8px;margin:1rem 0">
-  <source src="https://github.com/user-attachments/assets/69daa175-e1b5-4f40-bf2d-669c0c0a8cf6">
-</video>
 
 === "CSS Variables"
 
@@ -106,13 +103,13 @@ An XP-like progress bar for the current goal in progress, in a retro theme. Opti
 
 View subathon stats and status all in one retro-style widget. Supports an icon mode for a more compact display.
 
-<video controls style="width:100%;border-radius:8px;margin:1rem 0">
-  <source src="https://github.com/user-attachments/assets/693ba068-95d5-4cd8-9208-7d8ae1144ada">
+<video controls style="height:50%;border-radius:8px;margin:1rem 0">
+  <source src="https://assets.subathonmanager.app/docs/widgets/retro-pixel/retro-stats.webm">
 </video>
 
 Icon mode enabled:
 
-![Stats icon mode](https://github.com/user-attachments/assets/44b6231a-be25-4755-aa2a-7e16e5dd701f)
+![Stats icon mode](https://assets.subathonmanager.app/docs/widgets/retro-pixel/retro-stats.png)
 
 === "CSS Variables"
 
@@ -151,7 +148,7 @@ Icon mode enabled:
 
 Displays the configured seconds or points value for a specific event type. Syncs automatically when the value updates.
 
-![Event Value preview](https://github.com/user-attachments/assets/4f75a864-0bb6-4566-b719-92abac38bfaf)
+![Event Value preview](https://assets.subathonmanager.app/docs/widgets/retro-pixel/retro-value.png)
 
 !!! tip
     See your current configured values at `http://localhost:14040/api/data/values`. The `meta` field in that response corresponds to `optionalTier` here.
@@ -186,7 +183,7 @@ Displays the configured seconds or points value for a specific event type. Syncs
 
 Displays goals in a list view. Automatically uses points or money tracking based on the active goals type.
 
-![Goals List preview](https://github.com/user-attachments/assets/84664815-a7b8-4894-8a93-84de7e6e01cf)
+![Goals List preview](https://assets.subathonmanager.app/docs/widgets/retro-pixel/retro-goalslist.png)
 
 === "CSS Variables"
 

@@ -36,6 +36,14 @@ Individual widgets you can import into any overlay and combine + configure freel
 
     [:octicons-arrow-right-24: View Goal Bar](goal-bar.md)
 
+-   :material-progress-check: **Totals Goal Bar**
+
+    ---
+
+    A progress bar tracking a count or sum of any event type.
+
+    [:octicons-arrow-right-24: View Totals Goal Bar](total-goal-bar.md)
+
 -   :material-chart-bar: **Subathon Totals**
 
     ---

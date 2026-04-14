@@ -6,7 +6,7 @@
 A generic event alerts widget for all event types, with per-type colour customization, entrance and exit animations, and configurable filtering. For compatible store order events, displays the store logo instead of a generic shopping cart icon.
 
 <video controls style="width:100%;border-radius:8px;margin:1rem 0">
-  <source src="https://github.com/user-attachments/assets/8e5bf8c4-1a35-4402-919c-e916b5952fcc">
+  <source src="https://assets.subathonmanager.app/docs/widgets/single/event-alerts.webm">
 </video>
 
 ---

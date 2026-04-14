@@ -7,7 +7,7 @@ A customizable widget for displaying the total values for the subathon. You can 
 
 Has both a **vertical** and **horizontal** layout. Horizontal view scales in width to match the widget width.
 
-![Subathon Totals preview](https://github.com/user-attachments/assets/601bf61d-b912-4014-8476-4007065fcba7)
+![Subathon Totals preview](https://assets.subathonmanager.app/docs/widgets/single/subathon-totals.png)
 
 ---
 

@@ -5,8 +5,8 @@
 
 An overlay for displaying animated values from events. You can customize it a variety of ways, such as which events, which values, colours, and animation style.
 
-<video controls style="width:100%;border-radius:8px;margin:1rem 0">
-  <source src="https://github.com/user-attachments/assets/5d24b53d-d4cf-49d5-bee8-1cf846599ecf">
+<video controls style="height:70%;border-radius:8px;margin:1rem 0">
+  <source src="https://assets.subathonmanager.app/docs/widgets/single/events-popup.webm">
 </video>
 
 ---

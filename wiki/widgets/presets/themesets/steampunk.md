@@ -10,8 +10,8 @@ A full nixie-tube steampunk themed overlay collection.
 
 ## Preview
 
-![SteamPunk preview 1](https://github.com/user-attachments/assets/590fec6e-7fab-4275-931f-f9b2fd6f0d5a)
-![SteamPunk preview 2](https://github.com/user-attachments/assets/9ff7f48f-51d2-4968-b3c9-5052755919a9)
+![SteamPunk preview 1](https://assets.subathonmanager.app/docs/widgets/steampunk/sp_preview.png)
+![SteamPunk preview 2](https://assets.subathonmanager.app/docs/widgets/steampunk/sp_preview2.png)
 
 ---
 
@@ -20,7 +20,7 @@ A full nixie-tube steampunk themed overlay collection.
 A lightweight, customizable nixie-tube themed timer. On pause, tubes dim. On lock, tubes appear cracked and colons are replaced with lock icons. Tubes are mostly transparent by default - keep this in mind when compositing overlays. Each digit change triggers a subtle flicker effect.
 
 <video controls style="width:100%;border-radius:8px;margin:1rem 0">
-  <source src="https://github.com/user-attachments/assets/67a6f765-fb03-4e8a-84c2-b9c5cddb556e">
+  <source src="https://assets.subathonmanager.app/docs/widgets/steampunk/sp_timer.webm">
 </video>
 
 === "CSS Variables"
@@ -59,7 +59,7 @@ A lightweight, customizable nixie-tube themed timer. On pause, tubes dim. On loc
 A lightweight, customizable nixie-tube themed points counter. Shares the same tube behaviour as the Timer - dims on pause, cracks on lock, and flickers on digit change. Tubes are mostly transparent by default.
 
 <video controls style="width:100%;border-radius:8px;margin:1rem 0">
-  <source src="https://github.com/user-attachments/assets/c8f423d2-4ae2-4f55-8905-d0b23c58615e">
+  <source src="https://assets.subathonmanager.app/docs/widgets/steampunk/sp_points.webm">
 </video>
 
 === "CSS Variables"
@@ -95,8 +95,8 @@ A lightweight, customizable nixie-tube themed points counter. Shares the same tu
 
 A small indicator box with two lights showing whether the multiplier is active for points, time, or both. A steel plate in the centre displays the current multiplier value. When a duration is set, a gauge bar shows remaining time - if no duration is set, the gauge stays full.
 
-<video controls style="width:100%;border-radius:8px;margin:1rem 0">
-  <source src="https://github.com/user-attachments/assets/f17171e0-645e-4886-b48e-3acd39fd771b">
+<video controls style="height:70%;border-radius:8px;margin:1rem 0">
+  <source src="https://assets.subathonmanager.app/docs/widgets/steampunk/sp_mult.webm">
 </video>
 
 === "CSS Variables"
@@ -127,7 +127,7 @@ A small indicator box with two lights showing whether the multiplier is active f
 A card/plate displaying the most recent event. Multiple events are queued and each displays for a short period. An embossed icon represents the event type, and a steel plate shows the triggering user with details below.
 
 <video controls style="width:100%;border-radius:8px;margin:1rem 0">
-  <source src="https://github.com/user-attachments/assets/ee86f6e5-787f-4f84-995c-b3c65aed81d1">
+  <source src="https://assets.subathonmanager.app/docs/widgets/steampunk/sp_events.webm">
 </video>
 
 === "CSS Variables"
@@ -155,7 +155,7 @@ A card/plate displaying the most recent event. Multiple events are queued and ea
 
 A vertical list of upcoming goals showing their points value and description text. Optionally shows the most recently completed goal at the top, faded.
 
-![Goals preview](https://github.com/user-attachments/assets/09e0fcc9-9a46-4e56-b67e-f0948b77209e)
+![Goals preview](https://assets.subathonmanager.app/docs/widgets/steampunk/sp_goals.png)
 
 === "CSS Variables"
 

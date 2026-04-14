@@ -5,7 +5,7 @@
 
 A very basic progress bar, allowing you to configure it to track your goals for either a subathon or donothon (Money/Points), and to override the max value or goal text if you choose.
 
-![Goal Bar preview](https://github.com/user-attachments/assets/b73f2bf0-a77e-41ff-b206-9c23d0514964)
+![Goal Bar preview](https://assets.subathonmanager.app/docs/widgets/single/goal-bar.png)
 
 ---
 
@@ -33,6 +33,6 @@ A very basic progress bar, allowing you to configure it to track your goals for 
 | `formatWithCommas` | Boolean | Format large numbers with comma separators |
 | `showDecimalsForMoney` | Boolean | Show decimal places when tracking money values |
 | `overrideMax` | Boolean | If `true`, the max value is set manually rather than pulled from your goals list |
-| `maxGoalOverride` | Float | The manual max value to use when `overrideMax` is enabled |
+| `maxGoalOverride` | Int | The manual max value to use when `overrideMax` is enabled |
 | `overrideGoalText` | Boolean | If `true`, replaces the current goal's text with a custom string |
 | `goalTextOverride` | String | The custom goal text to display when `overrideGoalText` is enabled |

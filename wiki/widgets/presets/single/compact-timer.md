@@ -6,7 +6,7 @@
 A compact subathon timer showing the countdown, configurable stats, and the next upcoming goal. Stats can display points, subs, bits, followers, and total money donated - each filterable by event type, with offset support and fully custom labels. Icons are optional.
 
 <video controls style="width:100%;border-radius:8px;margin:1rem 0">
-  <source src="https://github.com/user-attachments/assets/e5535e6f-9996-4166-b07d-392e5e75325b">
+  <source src="https://assets.subathonmanager.app/docs/widgets/single/compact-timer.webm">
 </video>
 
 ---
