@@ -7,6 +7,10 @@ description: Browse and download overlay themes for SubathonManager.
 
 Browse and download premade overlays. Click an overlay to preview it, then download directly or open it straight in SubathonManager if you have it installed.
 
+These overlays are meant to serve as starting points before customization, or ready to go!
+
+To submit your own overlays to be included, please make a forum post in the [discord](https://discord.gg/qp4Te3bQTk).
+
 <div id="marketplace">
   <div id="controls">
     <div class="controls-row">

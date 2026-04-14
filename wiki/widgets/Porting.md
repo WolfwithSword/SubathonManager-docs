@@ -18,3 +18,7 @@ You can rename the exported `.smo` file before it is saved. All configuration of
 # Importing
 
 When importing a `.smo` file, it will instantly create a new overlay named after the export. It can be found in the `imports` folder of the installation path of Subathon Manager, and is isolated from all other overlays unless it was an existing one being overwritten.
+
+You can also import via double-clicking a valid `.smo` file, as it will open your latest install of Subathon Manager and auto import. If you already had it imported, it will update any changed files.
+
+For developers, you can also import an `.smo` file from the web using the custom protocol `subathonmanager://import?url=` followed by a link to the file.

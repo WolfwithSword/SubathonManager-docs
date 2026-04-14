@@ -1,6 +1,8 @@
 # Overview
 
-Browse the available preset widget collections for SubathonManager.
+Browse the available preset widget collections for SubathonManager. These are included in your install, and can be imported into any overlay.
+
+For precompiled overlays, see the [marketplace](../../browse.md)
 
 <div class="grid cards" markdown>
 
