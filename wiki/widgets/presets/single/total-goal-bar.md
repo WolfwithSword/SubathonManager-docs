@@ -36,5 +36,6 @@ For example, number of items sold via GamerSupps.
 | `valuePrefix` | String | Text to prepend to the displayed value |
 | `valueSuffix` | String | Text to append to the displayed value |
 | `formatWithCommas` | Boolean | Format large numbers with comma separators |
-| `goalMax` | Int | The  max value to use for the goal bar |
+| `goalOffset` | Int | Offset the current count of the total by a certain amount, +- |
+| `goalMax` | Int | The max value to use for the goal bar |
 | `goalText` | String | The label you want for the goal bar. Set empty to display nothing |
