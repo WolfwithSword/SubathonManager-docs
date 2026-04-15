@@ -221,8 +221,8 @@ To submit your own overlays to be included, please make a forum post in the [dis
 }
 #modal-share {
   position: absolute;
-  top: 0.85rem;
-  right: 3rem;
+  top: 2.65rem;
+  right: 0.51rem;
 
   width: 34px;
   height: 34px;
@@ -245,16 +245,16 @@ To submit your own overlays to be included, please make a forum post in the [dis
 }
 
 #modal-share:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   opacity: 0.9;
 }
 
 #modal-share:hover::after {
   content: attr(data-tooltip);
   position: absolute;
-  top: 120%;
+  top: 15%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-130%);
 
   background: rgba(0,0,0,0.85);
   color: white;
