@@ -1,6 +1,6 @@
 # Subathon Totals
 
-[:fontawesome-brands-github: View Source](#TODOTODO){ .md-button } &nbsp;&nbsp;
+[:fontawesome-brands-github: View Source](https://github.com/WolfwithSword/SubathonManager/tree/main/presets/generic/totals){ .md-button } &nbsp;&nbsp;
 **Author:** [WolfwithSword](https://github.com/WolfwithSword)
 
 A customizable widget for displaying the total values for the subathon. You can show total subs/memberships, bits/tokens, follows, total donated, and number of orders for each compatible store. Each type can be shown or hidden, and filtered by event type - e.g. show Twitch subs but exclude gifted, or exclude YouTube memberships entirely.

@@ -69,7 +69,7 @@ extra:
     - name: og:site_name
       content: "SubathonManager Docs"
     - name: og:image
-      content: "https://raw.githubusercontent.com/WolfwithSword/SubathonManager/main/assets/icon.png"
+      content: "https://assets.subathonmanager.app/docs/icon.png"
     - property: og:type
       content: website
     - name: twitter:card

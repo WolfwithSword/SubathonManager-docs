@@ -87,3 +87,29 @@ img[src$=".svg"], img[src$=".SVG"] {
   border-radius: 2px !important;
   clip-path: polygon( 2px 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px));
 }
+
+
+.md-typeset .grid.cards > ul > li {
+  display: flex;
+  flex-direction: column;
+}
+
+.md-typeset .grid.cards > ul > li > p:last-child {
+  margin-top: auto;
+}
+
+/****************************/
+.md-main__inner.md-grid {
+  max-width: 82rem !important; 
+}
+
+.home-header {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 36rem !important;
+}
+
+.grid.cards > ul > li {
+  border-radius: 4px !important;
+  border: 0.1rem solid var(--md-default-fg-color--lightest) !important;
+}

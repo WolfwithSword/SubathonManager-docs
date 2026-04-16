@@ -1,6 +1,6 @@
 # Event Alerts
 
-[:fontawesome-brands-github: View Source](#TODO){ .md-button } &nbsp;&nbsp;
+[:fontawesome-brands-github: View Source](https://github.com/WolfwithSword/SubathonManager/tree/main/presets/popups/alert){ .md-button } &nbsp;&nbsp;
 **Author:** [WolfwithSword](https://github.com/WolfwithSword)
 
 A generic event alerts widget for all event types, with per-type colour customization, entrance and exit animations, and configurable filtering. For compatible store order events, displays the store logo instead of a generic shopping cart icon.

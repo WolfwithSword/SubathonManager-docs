@@ -11,6 +11,6 @@ If you notice your widgets with some transparency look weird, grey, or dim in OB
 
 In OBS on your `Browser Source`, Right Click -> Blending Method -> Select `SRGB Off`
 
-![blending fix](blendingfix.png)
+![blending fix](https://assets.subathonmanager.app/docs/troubleshooting/blendingfix.png)
 
 This will fix semi-transparent, faded, glowing effects in OBS when on lighter backgrounds. This is caused by OBS's internal browser source doing alpha blending weirdly for anything with blur or opacity filters.

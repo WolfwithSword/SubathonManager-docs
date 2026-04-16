@@ -1,6 +1,6 @@
 # Compact Timer
 
-[:fontawesome-brands-github: View Source](#TODO){ .md-button } &nbsp;&nbsp;
+[:fontawesome-brands-github: View Source](https://github.com/WolfwithSword/SubathonManager/tree/main/presets/generic/compact){ .md-button } &nbsp;&nbsp;
 **Author:** [WolfwithSword](https://github.com/WolfwithSword)
 
 A compact subathon timer showing the countdown, configurable stats, and the next upcoming goal. Stats can display points, subs, bits, followers, and total money donated - each filterable by event type, with offset support and fully custom labels. Icons are optional.

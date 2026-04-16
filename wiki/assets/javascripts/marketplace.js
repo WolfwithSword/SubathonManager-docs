@@ -21,6 +21,7 @@ function initMarketplace() {
 
   setupListeners();
   loadThemes();
+  initIntroCollapse();
 }
 
 
@@ -464,6 +465,21 @@ function isNew(created) {
 
 function slugify(name) {
   return name.toLowerCase().replace(/\s+/g, "-");
+}
+
+function initIntroCollapse() {
+  const intro = document.querySelector(".marketplace-intro");
+  const controls = document.getElementById("controls");
+  if (!intro || !controls) return;
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      intro.classList.toggle("collapsed", !entry.isIntersecting);
+    },
+    { threshold: 0.1 }
+  );
+
+  observer.observe(controls);
 }
 
 function openFromHash() {

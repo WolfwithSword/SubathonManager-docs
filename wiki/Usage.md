@@ -18,7 +18,7 @@ tags:
 ## Subathon Controls
 
 <div class="usage-img clip" markdown>
-![Home Page](assets/examples/usage/homepage.png)
+![Home Page](https://assets.subathonmanager.app/docs/examples/usage/homepage.png)
 </div>
 
 ### Subathon & Time Management
@@ -68,7 +68,7 @@ To use an overlay in OBS, please create a browser source of the correct height a
 ### Overlays Page
 
 <div class="usage-img clip" markdown>
-![Overlays Page](assets/examples/usage/overlaypage.png)
+![Overlays Page](https://assets.subathonmanager.app/docs/examples/usage/overlaypage.png)
 </div>
 
 
@@ -84,7 +84,7 @@ On the right, you will see a button which will let you quickly refresh all overl
 ### Editor
 
 <div class="usage-img clip" markdown>
-![Overlays Editor Page](assets/examples/usage/overlayeditorpage.png)
+![Overlays Editor Page](https://assets.subathonmanager.app/docs/examples/usage/overlayeditorpage.png)
 </div>
 
 
@@ -99,7 +99,7 @@ On the right, you will see a button which will let you quickly refresh all overl
     Saving the overlay will cause it to refresh in all places.
 
     <div class="usage-img" markdown>
-    ![Overlay Settings](assets/examples/usage/overlay_settings.png)
+    ![Overlay Settings](https://assets.subathonmanager.app/docs/examples/usage/overlay_settings.png)
     </div>
 
 === "Widget Control"
@@ -116,7 +116,7 @@ On the right, you will see a button which will let you quickly refresh all overl
     When you double click or click the edit button on a widget in this list, it will populate it in the *Widget Editor* for customization.
 
     <div class="usage-img" markdown>
-    ![Widget Control](assets/examples/usage/widget_control.png)
+    ![Widget Control](https://assets.subathonmanager.app/docs/examples/usage/widget_control.png)
     </div>
 
 === "Built-In Editor"
@@ -131,7 +131,7 @@ On the right, you will see a button which will let you quickly refresh all overl
 
     
     <div class="usage-img" markdown>
-    ![Preview Editor](assets/examples/usage/builtin-editor.png)
+    ![Preview Editor](https://assets.subathonmanager.app/docs/examples/usage/builtin-editor.png)
     </div>
 
 === "Widget Editor/Settings"
@@ -141,17 +141,17 @@ On the right, you will see a button which will let you quickly refresh all overl
     You can rename the widget, set its width and height, and change its X and Y position (will also update when you drag them around).
 
     <div class="usage-img" markdown>
-    ![Widget Settings](assets/examples/usage/widgeteditor_1.png)
+    ![Widget Settings](https://assets.subathonmanager.app/docs/examples/usage/widgeteditor_1.png)
     </div>
 
     A list of detected CSS variables will also be displayed, which you can customize to *override* defaults found as CSS Vars in your linked CSS variables from within the widget's local referenced css files.
 
     <div class="usage-img" markdown>
-    ![Widget Settings](assets/examples/usage/widgeteditor_css.png)
+    ![Widget Settings](https://assets.subathonmanager.app/docs/examples/usage/widgeteditor_css.png)
     </div>
 
     <div class="usage-img" markdown>
-    ![Widget Settings](assets/examples/usage/widgeteditor_js.png)
+    ![Widget Settings](https://assets.subathonmanager.app/docs/examples/usage/widgeteditor_js.png)
     </div>
 
     To load and preview your customizations, you will need to click **Save**. To reload CSS variable detection from your raw files, click the **Reload CSS Vars** button.
@@ -163,7 +163,7 @@ On the right, you will see a button which will let you quickly refresh all overl
 ## Goals
 
 <div class="usage-img clip" markdown>
-![Goals Page](assets/examples/usage/goalspage.png)
+![Goals Page](https://assets.subathonmanager.app/docs/examples/usage/goalspage.png)
 </div>
 
 ### Goals List
@@ -191,7 +191,7 @@ To save changes to your list, click **Save Changes**.
 See [Configuration](Configuration.md)
 
 <div class="usage-img clip" markdown>
-![Settings Page](assets/examples/usage/settingspage.png)
+![Settings Page](https://assets.subathonmanager.app/docs/examples/usage/settingspage.png)
 </div>
 
 ---

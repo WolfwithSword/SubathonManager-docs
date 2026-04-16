@@ -5,18 +5,21 @@ description: Subathon Manager - a feature reach subathon timer and event manager
 
 # Subathon Manager
 
+<div class="home-header" markdown>
 <div class="home-hero" markdown>
 ![SubathonManager icon](assets/icon.png)
 </div>
 
 **SubathonManager** is a feature-rich tool for streamers with a subathon timer, goals + event manager, and overlay host - integrating Twitch, YouTube, KoFi, GoAffPro, and many more too.
+<br><br>
 
 All completely local, opensource, and made with no AI.
 
-![Static Badge](https://img.shields.io/badge/OPENSOURCE-g?style=flat-square)
-[![License: AGPL](https://img.shields.io/badge/License-APGL-yellow.svg?style=flat-square)](https://opensource.org/licenses/AGPL)
-![Static Badge](https://img.shields.io/badge/NO%20AI-orange?style=flat-square)
+![Static Badge](https://img.shields.io/badge/OPENSOURCE-g?style=flat-square&color=3f4fa3)
+[![License: AGPL](https://img.shields.io/badge/License-APGL-yellow.svg?style=flat-square&color=3f4fa3)](https://opensource.org/licenses/AGPL)
+![Static Badge](https://img.shields.io/badge/NO%20AI-orange?style=flat-square&color=3f4fa3)
 
+</div>
 ---
 
 ## Quick Navigation
@@ -46,6 +49,14 @@ All completely local, opensource, and made with no AI.
     How to use SubathonManager.
 
     [:octicons-arrow-right-24: Usage](Usage.md)
+
+-   :material-storefront-outline: **Marketplace**
+
+    ---
+
+    Premade overlays, ready to import and configure!
+
+    [:octicons-arrow-right-24: Browse](browse.md)
 
 -   :material-code-braces: **Development**
 

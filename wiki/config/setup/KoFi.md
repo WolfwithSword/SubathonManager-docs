@@ -18,7 +18,7 @@ To integrate KoFi, StreamerBot is currently required.
 - In Streamer.Bot's desktop app, click "Import" and paste in the string.
 - In Streamer.Bot, go to Server/Clients -> Custom WebSocket Clients -> Find `SubathonManager`. Right click it, and enable "Auto Connect" if it is not already enabled.
 
-![img](streamerbotwebsocketsetup.png)
+![img](https://assets.subathonmanager.app/docs/config/setup/streamerbotwebsocketsetup.png)
 
 You can test the connection from KoFi -> StreamerBot -> SubathonManager by firing events from [KoFi here](https://ko-fi.com/manage/webhooks?src=sidemenu).
 
@@ -33,7 +33,7 @@ Supports:
 
 You can configure KoFi natively in the UI's Settings tab.
 
-![kofi](kofisetup.png)
+![kofi](https://assets.subathonmanager.app/docs/config/setup/kofisetup.png)
 
 By default, all memberships/subs will be treated using the values for DEFAULT. If you want to support your custom membership tiers, please add new tiers with the button and match the tier name with the first text field.
 

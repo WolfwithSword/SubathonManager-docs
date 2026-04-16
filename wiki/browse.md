@@ -5,11 +5,13 @@ description: Browse and download overlay themes for SubathonManager.
 
 # Overlay Marketplace
 
+<div class="marketplace-intro" markdown>
 Browse and download premade overlays. Click an overlay to preview it, then download directly or open it straight in SubathonManager if you have it installed.
 
 These overlays are meant to serve as starting points before customization, or ready to go!
 
 To submit your own overlays to be included, please make a forum post in the [discord](https://discord.gg/qp4Te3bQTk).
+</div>
 
 <div id="marketplace">
   <div id="controls">
@@ -605,6 +607,20 @@ a.glightbox {
 .page-btn:disabled {
   opacity: 0.35;
   cursor: default;
+  pointer-events: none;
+}
+
+.marketplace-intro {
+  transition: opacity 0.4s ease, max-height 0.4s ease, margin 0.4s ease;
+  max-height: 300px;
+  overflow: hidden;
+  opacity: 1;
+}
+
+.marketplace-intro.collapsed {
+  max-height: 0;
+  opacity: 0;
+  margin: 0;
   pointer-events: none;
 }
 

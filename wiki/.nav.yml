@@ -7,11 +7,13 @@ nav:
       - Overview: Configuration.md
       - App: config/App.md
       - Streaming Services:
+          - Overview: config/streaming.md
           - Twitch: config/setup/Twitch.md
           - YouTube: config/setup/YouTube.md
           - Picarto: config/setup/Picarto.md
       - Stream Extensions: config/Extensions.md
       - External Services:
+          - Overview: config/external.md
           - GoAffPro: config/setup/GoAffPro.md
           - KoFi: config/setup/KoFi.md
           - Custom: config/setup/Custom.md
