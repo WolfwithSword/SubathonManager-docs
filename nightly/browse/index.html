@@ -67,7 +67,7 @@
   
   <meta property="og:title" content="Marketplace - Subathon Manager">
   <meta property="og:description" content="[nightly] Browse and download overlay themes for SubathonManager.">
-  <meta property="og:image" content="https://raw.githubusercontent.com/WolfwithSword/SubathonManager/refs/heads/main/assets/icon.png">
+  <meta property="og:image" content="https://assets.subathonmanager.app/docs/icon.png">
   <meta property="og:url" content="https://docs.subathonmanager.app/latest/browse/">
   <meta name="twitter:card" content="summary">
   
@@ -774,6 +774,8 @@
       
         
       
+        
+      
     
     
     
@@ -820,6 +822,34 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/streaming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -956,6 +986,8 @@
       
         
       
+        
+      
     
     
     
@@ -1002,6 +1034,34 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/external/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -2432,9 +2492,11 @@
 
 
 <h1 id="overlay-marketplace">Overlay Marketplace<a class="headerlink" href="#overlay-marketplace" title="Permanent link">¶</a></h1>
+<div class="marketplace-intro">
 <p>Browse and download premade overlays. Click an overlay to preview it, then download directly or open it straight in SubathonManager if you have it installed.</p>
 <p>These overlays are meant to serve as starting points before customization, or ready to go!</p>
 <p>To submit your own overlays to be included, please make a forum post in the <a href="https://discord.gg/qp4Te3bQTk">discord</a>.</p>
+</div>
 <div id="marketplace">
   <div id="controls">
     <div class="controls-row">
@@ -3029,6 +3091,20 @@ a.glightbox {
 .page-btn:disabled {
   opacity: 0.35;
   cursor: default;
+  pointer-events: none;
+}
+
+.marketplace-intro {
+  transition: opacity 0.4s ease, max-height 0.4s ease, margin 0.4s ease;
+  max-height: 300px;
+  overflow: hidden;
+  opacity: 1;
+}
+
+.marketplace-intro.collapsed {
+  max-height: 0;
+  opacity: 0;
+  margin: 0;
   pointer-events: none;
 }
 
