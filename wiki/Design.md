@@ -38,3 +38,7 @@ tags:
 ## Overlay Websocket Data
 
 [![Overlay Websockets](./docs/SubathonManager_Design-Overlay-Websocket-Data.svg)](./docs/SubathonManager_Design-Overlay-Websocket-Data.svg)
+
+## SecureStore
+
+[![Config](./docs/SubathonManager_Design-SecureStore.svg)](./docs/SubathonManager_Design-SecureStore.svg)

@@ -16,6 +16,8 @@ nav:
           - Overview: config/external.md
           - GoAffPro: config/setup/GoAffPro.md
           - KoFi: config/setup/KoFi.md
+          - FourthWall: config/setup/FourthWall.md
+          - DevTunnels: config/setup/DevTunnels.md
           - Custom: config/setup/Custom.md
       - Chat Commands: config/Commands.md
       - Discord Logging: config/Webhooks.md
