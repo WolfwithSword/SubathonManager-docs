@@ -15,7 +15,9 @@ nav:
       - External Services:
           - Overview: config/external.md
           - GoAffPro: config/setup/GoAffPro.md
-          - KoFi: config/setup/KoFi.md
+          - KoFi: 
+             - DevTunnel: config/setup/KoFi.md
+             - Legacy: config/setup/KoFiLegacy.md
           - FourthWall: config/setup/FourthWall.md
           - DevTunnels: config/setup/DevTunnels.md
           - Custom: config/setup/Custom.md
