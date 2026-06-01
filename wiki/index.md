@@ -10,7 +10,7 @@ description: Subathon Manager - a feature reach subathon timer and event manager
 ![SubathonManager icon](assets/icon.png)
 </div>
 
-**SubathonManager** is a feature-rich tool for streamers with a subathon timer, goals + event manager, and overlay host - integrating Twitch, YouTube, KoFi, GoAffPro, and many more too.
+**SubathonManager** is a feature-rich tool for streamers with a subathon timer, goals + event manager, and overlay host - integrating Twitch, YouTube, KoFi, Throne, GoAffPro, and many more.
 <br><br>
 
 All completely local, opensource, and made with no AI.
