@@ -132,3 +132,47 @@ A configurable list of upcoming goals showing their text description and points 
     | Variable | Type | Description |
     |---|---|---|
     | `showLastCompleted` | Boolean | Show the last completed goal at the top, faded |
+
+---
+
+## Prompt
+
+A simple popup displaying the currently running prompt goal. When complete, sparkles show up, but when it fails, dust smoke puffs comes out.
+
+![Prompt preview](https://assets.subathonmanager.app/docs/widgets/simple-1/simpleprompt.png)
+
+
+=== "CSS Variables"
+
+    | Variable | Description |
+    |---|---|
+    | `border-color` | Outer border colour |
+    | `inner-border-color` | Inner border colour |
+    | `main-background-color` | Widget background colour |
+    | `text-color` | Text colour |
+    | `timer-color` | Timer colour |
+    | `timer-ring-color` | Timer ring colour |
+    | `progress-color` | Progress bar colour |
+    | `progress-bg-color` | Progress bar bg colour |
+    | `glow-color` | Glow colour |
+    | `sparkle-color` | Sparkle colour |
+    | `puff-color` | Puff colour |
+    | `font` | Font name for text |
+    | `prompt-font-size` | Font size for prompt text |
+    | `prompt-font-weight` | Font weight for prompt text |
+    | `timer-font-size` | Font size for timer text |
+    | `timer-font-weight` | Font weight for timer text |
+    | `progress-font-size` | Font size for progress text |
+    | `progress-font-weight` | Font weight for progress text |
+
+=== "JS Variables"
+
+    | Variable | Type | Description |
+    |---|---|---|
+    | `lingerSeconds` | Int | Time to let the prompt linger after it ends |
+    | `startedSound` | SoundFile | Sound for when a prompt starts |
+    | `startedSoundVolume` | Float | Volume for started sound |
+    | `successSound` | SoundFile | Sound for when a prompt completes |
+    | `successSoundVolume` | Float | Volume for success sound |
+    | `failSound` | SoundFile | Sound for when a prompt ends in failure |
+    | `failSoundVolume` | Float | Volume for fail sound |

@@ -23,4 +23,4 @@ As a widget developer, you have full rights to your developed widget(s) and asso
 SubathonManager aims to be an open ecosystem for creatives, artists, hobbyists, and content creators. While the program itself is non-commercial and should not be redistributed, widgets are perfectly fine to share and sell.
 
 !!! note "A note on AI assistance"
-    Although, in the spirit of this project and in support of creatives and developers, we ask you to not use AI to assist in development of your widgets.
+    In the spirit of this project and in support of creatives and developers, we request you to not use AI to assist in development of your widgets.

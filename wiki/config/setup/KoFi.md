@@ -30,4 +30,10 @@ You can configure KoFi natively in the UI's Settings tab.
 
 By default, all memberships/subs will be treated using the values for DEFAULT. If you want to support your custom membership tiers, please add new tiers with the button and match the tier name with the first text field.
 
+!!! tip
+    Since KoFi only supports a single webhook url, you can configure any number of Forward URLs, which will forward all data to any other webhook url, such as streamerbot!
+---
+
+Please keep an eye on the webhook URL or if you are missing events every couple months. It is possible for the webhook URL to change after 3-6 months. If this is the case, all you need to do is update the URL on KoFi's webpage.
+
 ---

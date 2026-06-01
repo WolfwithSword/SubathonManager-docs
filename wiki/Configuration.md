@@ -47,6 +47,14 @@ Use the navigation on the left for various configuration settings, or the cards 
 
     [:octicons-arrow-right-24: External Config](config/external.md)
 
+-   :material-video: **OBS WebSocket**
+
+    ---
+
+    Config for OBS WebSocket connection
+
+    [:octicons-arrow-right-24: OBS Config](config/OBS.md)
+
 -   :material-chat-processing: **Chat Commands**
 
     ---

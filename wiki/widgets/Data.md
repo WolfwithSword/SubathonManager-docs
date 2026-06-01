@@ -9,6 +9,7 @@ Implement only the functions you need. Each is called automatically when the cor
 |---|---|---|
 | [`handleSubathonUpdate(data)`](#handlesubathonupdate) | `subathon_timer` | Timer, points, lock/pause status, multiplier - fires frequently |
 | [`handleSubathonEvent(data)`](#handlesubathonevent) | `event` | Fired whenever an event is successfully processed |
+| [`handlePromptUpdate(data)`](#handlepromptupdate) | `prompt_update` | Fired whenever a prompt starts, ends, is completed, or progresses |
 | [`handleGoalsUpdate(data)`](#handlegoalsupdate) | `goals_list` | Goals list changes |
 | [`handleGoalCompleted(data)`](#handlegoalcompleted) | `goal_completed` | A new goal is completed |
 | [`handleSubathonDisconnect()`](#handlesubathondisconnect) | - | Socket disconnected from SubathonManager |
@@ -75,6 +76,7 @@ Fires whenever an event is successfully processed and has added to the subathon 
       "reversed": bool,
       "sub_type": "string",
       "secondary_value": "string",
+      "tertiary_value": "string",
       "type_true_source": "string"
     }
     ```
@@ -89,24 +91,72 @@ Fires whenever an event is successfully processed and has added to the subathon 
 | `amount` | Number of gift subs for gift events; otherwise usually `1` |
 | `reversed` | `true` if seconds were removed during a reverse subathon |
 | `secondary_value` | Mostly used for Order events (commission value + currency) or other rare data |
+| `tertiary_value` | Mostly used for Order events, will sometimes include an item name if available, but not always |
 | `type_true_source` | For simulated events, the original source type rather than `"Simulated"`. For GoAffPro orders, the GoAffProSource. |
 
-??? info "TwitchHypeTrain event behaviour"
+??? info "GenericEventTypes event behaviour"
 
-    For `event_type: TwitchHypeTrain`, the event is structured differently from other types - it is intended as a status signal, not a points/time event:
+    For `event_type: TwitchHypeTrain` or `ThroneCrowdGiftComplete`, the event is structured differently from other types - it is intended as a status signal, not a points/time event:
 
     - `seconds_added` and `points_added` will be `0`
-    - `value` will be `start`, `progress`, or `end` (or `start ...` with multiplier details if one was started)
-    - `amount` will be the current hype train level. `progress` is only sent when the level increases.
-    - `user` will be your Twitch username
-
-    Events are sent regardless of the auto-multiplier setting - only the `start` value is modified when auto-multiplier is enabled.
+    - for HypeTrain
+        - `value` will be `start`, `progress`, or `end` (or `start ...` with multiplier details if one was started)
+        - `amount` will be the current hype train level. `progress` is only sent when the level increases.
+        - `user` will be your Twitch username
+        - Events are sent regardless of the auto-multiplier setting - only the `start` value is modified when auto-multiplier is enabled.
+    - for Throne Gift Complete
+        - `value` fields (value, secondary, tertiary) will include information on the price ofthe item, and item name.
 
 ---
 
+
+
+### handlePromptUpdate
+
+Fires whenever a prompt run is started, progressed, completed, expired/cancelled.
+
+??? example "Example payload"
+    ```json
+    {
+      "type": "prompt_update",
+      "status": string,
+      "progress": int,
+      "target": int,
+      "seconds_remaining": double,
+      "start_time": datetime,
+      "end_time": datetime,
+      "duration_seconds": double,
+      "text": string,
+      "prompt_type": string,
+      "prompt_subtype": string, 
+      "prompt_eventtype": string,
+      "prompt_eventtype_metafilter": string
+
+    }
+    ```
+
+| Field | Notes |
+|---|---|
+| `status` | Current prompt status. `None`, `Active`, `Completed`, `Expired`, `Cancelled` |
+| `progress` | Current progress towards the goal |
+| `target` | Current target for the goal for completion |
+| `seconds_remaining` | How many seconds left until the prompt expires |
+| `start_time` | When the prompt goal started to run |
+| `end_time` | The expected time when the prompt goal expires |
+| `duration_seconds` | How long the prompt's duration was setup to last |
+| `text` | The prompt text to display |
+| `prompt_type` | The type of the prompt. `Points`, `Money`, `Orders`, `Follows`, `Subs`, `Tokens`, `Event` |
+| `prompt_subtype` | The subtype for filtering. `Default`, `Items`, `NormalSubs`, `GiftSubs`, `ByTier` |
+| `prompt_eventtype` | [SubathonEventType](https://github.com/WolfwithSword/SubathonManager/tree/main/SubathonManager.Core/Enums/SubathonEventType.cs) - [alt view](../Design.md#enums) |
+| `prompt_eventtype_metafilter` | Filter for specific event types. Such as tier name for subscriptions / memberships. |
+
+---
+
+
+
 ### handleGoalsUpdate
 
-Fires when the goals list updates - new goals, changed goals, or point changes.
+Fires when the goals list updates - new goals, changed goals, or point changes. Including when goal list is swapped.
 
 ??? example "Example payload"
     ```json

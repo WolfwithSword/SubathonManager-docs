@@ -48,7 +48,7 @@ To submit your own overlays to be included, please make a forum post in the [dis
         <a id="modal-download" href="#" download>
           ⬇ Download
         </a>
-        <a id="modal-protocol" href="#" data-tooltip="Only available for v1.1.1+">
+        <a id="modal-protocol" href="#" data-tooltip="Only available for v1.2.0+">
           ⚙ Open in App
         </a>
       </div>

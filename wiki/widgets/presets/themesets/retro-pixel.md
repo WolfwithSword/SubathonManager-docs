@@ -206,3 +206,54 @@ Displays goals in a list view. Automatically uses points or money tracking based
     |---|---|---|
     | `showLastCompleted` | Boolean | Show the most recently completed goal |
     | `maxGoalsToShow` | Int | Maximum number of goals to display at once |
+
+
+---
+
+## Prompt
+
+A retro dialogue-like popup displaying the currently running prompt goal, timer, and progress bar. Will flash different icons or colours when the prompt completes or fails.
+
+<video controls style="width:80%;border-radius:8px;margin:1rem 0">
+  <source src="https://assets.subathonmanager.app/docs/widgets/retro-pixel/retropixelprompt.webm">
+</video>
+
+=== "CSS Variables"
+
+    | Variable | Description |
+    |---|---|
+    | `background` | Widget background colour |
+    | `border-color` | Border colour |
+    | `text-color` | Text colour |
+    | `label-color` | Label colour |
+    | `dialogue-color` | Dialogue colour |
+    | `portrait-bg` | Portrait BG colour |
+    | `portrait-active` | Portrait BG Active colour |
+    | `portrait-complete` | Portrait BG Complete colour |
+    | `portrait-expired` | Portrait BG Expired colour |
+    | `portrait-color` | Portrait Icon colour |
+    | `portrait-complete-color` | Portrait Complete colour |
+    | `portrait-expired-color` | Portrait Expired colour |
+    | `hp-green` | Progress/HP Bar Full colour |
+    | `hp-yellow` | Progress/HP Bar Medium colour |
+    | `hp-red` | Progress/HP Bar Low colour |
+    | `hp-bg` | Progress/HP Bar bg colour |
+    | `timer-color` | Timer colour |
+    | `done-color` | Done colour |
+    | `expired-color` | Expired colour |
+    | `pixel-border` | Size of pixel border thickness |
+    | `font` | Font to use |
+    | `font-size` | Font size |
+    | `dialogue-font-size` | Dialogue text font size |
+
+=== "JS Variables"
+
+    | Variable | Type | Description |
+    |---|---|---|
+    | `lingerSeconds` | Int | Time to let the prompt linger after it ends |
+    | `startedSound` | SoundFile | Sound for when a prompt starts |
+    | `startedSoundVolume` | Float | Volume for started sound |
+    | `successSound` | SoundFile | Sound for when a prompt completes |
+    | `successSoundVolume` | Float | Volume for success sound |
+    | `failSound` | SoundFile | Sound for when a prompt ends in failure |
+    | `failSoundVolume` | Float | Volume for fail sound |

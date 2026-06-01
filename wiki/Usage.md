@@ -18,12 +18,19 @@ tags:
 ## Subathon Controls
 
 <div class="usage-img clip" markdown>
-![Home Page](https://assets.subathonmanager.app/docs/examples/usage/homepage.png)
+![Home Page](https://assets.subathonmanager.app/docs/examples/usage/1.2.0/homepage.png)
 </div>
 
 ### Subathon & Time Management
 
 In this section, you can create a new subathon with an initial time set by clicking the `start new subathon` button. You can also specify if it is a **reverse subathon** in the popup, which if true, will make the timer tick up, but all events will reduce time instead.
+
+To the left of this button is an end-date configuration button. If you wish to set an end date and time for the subathon, you can do so here. If the time of your timer exceeds this value, then what will be displayed in widgets, data, and the app, will be *time until the end date*, and will "count down" even if paused - time can still be "added" if unlocked, but will not increase visually until end date is removed, so no data is lost. You can enable/disable the end date at any time.
+
+<div class="usage-img clip" markdown>
+![Home Page](https://assets.subathonmanager.app/docs/examples/usage/1.2.0/enddate.png)
+</div>
+
 
 In addition to viewing what the current timer value is, you can also toggle **pausing** and **locking** the subathon.
 
@@ -84,7 +91,7 @@ On the right, you will see a button which will let you quickly refresh all overl
 ### Editor
 
 <div class="usage-img clip" markdown>
-![Overlays Editor Page](https://assets.subathonmanager.app/docs/examples/usage/overlayeditorpage.png)
+![Overlays Editor Page](https://assets.subathonmanager.app/docs/examples/usage/1.2.0/overlayeditorpage.png)
 </div>
 
 
@@ -129,6 +136,7 @@ On the right, you will see a button which will let you quickly refresh all overl
 
     You can resize widgets in the editor, and by holding shift and dragging an orange corner, you can preserve aspect ratio while resizing.
 
+    There is grid shapping by holding Alt.
     
     <div class="usage-img" markdown>
     ![Preview Editor](https://assets.subathonmanager.app/docs/examples/usage/builtin-editor.png)
@@ -144,7 +152,7 @@ On the right, you will see a button which will let you quickly refresh all overl
     ![Widget Settings](https://assets.subathonmanager.app/docs/examples/usage/widgeteditor_1.png)
     </div>
 
-    A list of detected CSS variables will also be displayed, which you can customize to *override* defaults found as CSS Vars in your linked CSS variables from within the widget's local referenced css files.
+    A list of detected CSS, JS, and Font variables will also be displayed, which you can customize to *override* defaults found as CSS Vars in your linked CSS variables from within the widget's local referenced css files.
 
     <div class="usage-img" markdown>
     ![Widget Settings](https://assets.subathonmanager.app/docs/examples/usage/widgeteditor_css.png)
@@ -154,21 +162,27 @@ On the right, you will see a button which will let you quickly refresh all overl
     ![Widget Settings](https://assets.subathonmanager.app/docs/examples/usage/widgeteditor_js.png)
     </div>
 
-    To load and preview your customizations, you will need to click **Save**. To reload CSS variable detection from your raw files, click the **Reload CSS Vars** button.
+    <div class="usage-img" markdown>
+    ![Widget Settings](https://assets.subathonmanager.app/docs/examples/usage/1.2.0/widgeteditor_font.png)
+    </div>
 
-    Saving any widget will cause the overlay to refresh in all places.
+    To load and preview your customizations, you will need to click **Save**. To reload CSS variable detection from your raw files, click the **Reload Vars** button. CSS Variables can be previewed instantly without saving, however JS and Font variables require saving. If you swap between widgets without saving, they will be highlighted in yellow.
+
+    You can specify custom fonts from Google or Cdn which can be injected into your widgets as well. This will be a comma-separated list.
+
+    Saving any widget will cause the widget to refresh in all places. Saving the overlay will cause all widgets to refresh.
 
 ---
 
 ## Goals
 
 <div class="usage-img clip" markdown>
-![Goals Page](https://assets.subathonmanager.app/docs/examples/usage/goalspage.png)
+![Goals Page](https://assets.subathonmanager.app/docs/examples/usage/1.2.0/goalspage.png)
 </div>
 
 ### Goals List
 
-Goals are tracked separately from your subathon, so that once you set them up, they will persist here unless edited or a new list is made.
+Goals are tracked separately from your subathon, so that once you set them up, they will persist here unless edited or a new list is made. You can swap between active lists at any time, however, whichever one is visible will immediately become active.
 
 You can add new goals with the **+** button, where for each goal you can set the Text and the number of Points required to achieve. Each goal can also be deleted, and the list will always be sorted from lowest to highest points.
 
@@ -176,13 +190,50 @@ To save changes, click the Save button in the Editor pane.
 
 ### Goals Editor
 
-In the goals editor, you can set a new name for your current goals list. This name is only for logging and self-organization purposes, as only one set of goals can be active at any given time.
+In the goals editor, you can set a new name for your current goals list or make a new one. Only one set of goals can be active at any given time.
 
 You can preview your live current number of points on this page.
 
-Clicking the **Create New List** button will create a whole new empty goals list.
+Clicking the **Create New List** button will create a whole new empty goals list, added to the dropdown.
 
 To save changes to your list, click **Save Changes**.
+
+---
+
+## Prompts
+
+<div class="usage-img clip" markdown>
+![Prompts Page](https://assets.subathonmanager.app/docs/examples/usage/1.2.0/promptspage.png)
+</div>
+
+In the prompts tab, you can setup "prompts", which are similar to mini goals during your subathon.
+
+Similar to goals, you can setup multiple "sets" of prompts, and swap between them as desired. Only one set can be active at a time, and it is whichever has "Enabled" checked. To disable the feature, simple uncheck it then hit save.
+
+When enabled, every *interval* minutes, with an offset of +- *offset* minutes, a new prompt can be executed if any are available. After it is completed, the interval starts again - if successful, the *cooldown* minutes is added before the interval starts.
+
+Prompts have multiple fields. The text is presented in overlay widgets to your viewers while the prompt is running.
+
+| Field | Description |
+|---|---|
+| **Type** | What events will progress the goal. One of: `Points` `Money` `Orders` `Follows` `Subs` `Tokens` `Specific Event` |
+| **How?** | Depends on **Type**. Can be per subscription tier, items vs orders for order events, or **Count** (default) for a simple event count. |
+| **Event** | Available when **Type** is `Specific Event`. Dropdown of all sources and their specific events. |
+| **Tier** | Available when **Event** is a subscription or membership event. Restricts the goal to a specific tier only. |
+| **Target** | The goal to reach. For example: 10 subs, $100, 5 items ordered from Gamersupps, etc. |
+| **Duration** | How long viewers have to complete the goal before it expires. |
+| **Quantity** | How many times the prompt can be successfully completed before it runs out. Expired, failed, or cancelled runs do not count against it. Set to **Infinite** for unlimited completions. |
+
+You can choose to manually run any configured prompt immediately, or run a random one from the list. When the interval runs to choose one, it will run one at random that has a valid quantity. Individual prompts can also be disabled or temporarily excluded with their checkbox.
+
+Prompts auto-running is only available if the timer is *unlocked* and *not paused*.
+
+You can view the prompt history on the home page, tabbed with recent events.
+
+<div class="usage-img clip" markdown>
+![Recent Prompts](https://assets.subathonmanager.app/docs/examples/usage/1.2.0/promptshomepreview.png)
+</div>
+
 
 ---
 
@@ -191,7 +242,7 @@ To save changes to your list, click **Save Changes**.
 See [Configuration](Configuration.md)
 
 <div class="usage-img clip" markdown>
-![Settings Page](https://assets.subathonmanager.app/docs/examples/usage/settingspage.png)
+![Settings Page](https://assets.subathonmanager.app/docs/examples/usage/1.2.0/settingspage.png)
 </div>
 
 ---

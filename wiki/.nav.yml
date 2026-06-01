@@ -19,8 +19,10 @@ nav:
              - DevTunnel: config/setup/KoFi.md
              - Legacy: config/setup/KoFiLegacy.md
           - FourthWall: config/setup/FourthWall.md
+          - Throne: config/setup/Throne.md
           - DevTunnels: config/setup/DevTunnels.md
           - Custom: config/setup/Custom.md
+      - OBS WebSocket: config/OBS.md
       - Chat Commands: config/Commands.md
       - Discord Logging: config/Webhooks.md
   - Development & Design:

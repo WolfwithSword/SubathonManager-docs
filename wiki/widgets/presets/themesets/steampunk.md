@@ -178,3 +178,57 @@ A vertical list of upcoming goals showing their points value and description tex
     |---|---|---|
     | `showLastCompleted` | Boolean | Show the last completed goal at the top, faded |
     | `maxGoalsToShow` | Int | Maximum number of goals to display, including the optional last completed |
+
+
+---
+
+## Prompt
+
+A steampunk engine-like popup displaying the currently running prompt goal. Two gears spin as the goal progresses, the engine gets hotter, and when complete, the light comes on. If it fails, smoke comes out.
+
+<video controls style="width:80%;border-radius:8px;margin:1rem 0">
+  <source src="https://assets.subathonmanager.app/docs/widgets/steampunk/steampunkprompt.webm">
+</video>
+
+=== "CSS Variables"
+
+    | Variable | Description |
+    |---|---|
+    | `background-color` | Widget background colour |
+    | `border-color` | Border colour |
+    | `border-thickness` | Border thickness |
+    | `metal-dark` | Dark metal colour |
+    | `metal-mid` | Mid metal colour |
+    | `metal-light` | Light metal colour |
+    | `text-color` | Text colour |
+    | `dim-text` | Dimmed text / secondary text colour |
+    | `label-color` | Label colour |
+    | `light-idle` | Light Idle colour |
+    | `light-active` | Light Active colour |
+    | `light-complete` | Light completed colour |
+    | `light-expired` | Light colour when expired |
+    | `glow-complete` | Completed glow colour |
+    | `ember-color` | Progress ember colour |
+    | `grill-color` | Grill colour |
+    | `font-family` | Font family |
+    | `font-size` | Primary font size |
+    | `small-font-size` | Secondary font size |
+    | `timer-font-size` | Timer font size |
+    | `cog-fill` | Cog colour |
+    | `cog-mid` | Cog Mid colour |
+    | `cog-edge` | Cog Edge colour |
+    | `cog-edge-light` | Lighter cog edge colour |
+    | `cog-hole` | Cog hole colour |
+    | `cog-shadow` | Cog shadow colour |
+
+=== "JS Variables"
+
+    | Variable | Type | Description |
+    |---|---|---|
+    | `lingerSeconds` | Int | Time to let the prompt linger after it ends |
+    | `startedSound` | SoundFile | Sound for when a prompt starts |
+    | `startedSoundVolume` | Float | Volume for started sound |
+    | `successSound` | SoundFile | Sound for when a prompt completes |
+    | `successSoundVolume` | Float | Volume for success sound |
+    | `failSound` | SoundFile | Sound for when a prompt ends in failure |
+    | `failSoundVolume` | Float | Volume for fail sound |

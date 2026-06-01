@@ -141,3 +141,30 @@ A basic text display for the most recent event, showing the triggering user, an 
     | Variable | Type | Description |
     |---|---|---|
     | `applicableEvents` | [`EventTypeList`](../../Structure.md#js-variable-injection) | Which event types to display |
+    
+---
+
+## Prompt
+
+A text-only display for the currently running prompt.
+
+![Prompt preview](https://assets.subathonmanager.app/docs/widgets/basic/basicprompt.png)
+
+=== "CSS Variables"
+
+    | Variable | Description |
+    |---|---|
+    | `font` | Font to use |
+    | `text-color` | Text colour |
+    | `outline-color` | Outline colour |
+    | `outline-width` | Outline width size |
+    | `font-size` | Font size |
+    | `timer-size` | Timer Font size |
+    | `progress-color` | Progress colour |
+    | `progress-bg` | Progress BG colour |
+
+=== "JS Variables"
+
+    | Variable | Type | Description |
+    |---|---|---|
+    | `lingerSeconds` | Int | Time to let the prompt linger after it ends |

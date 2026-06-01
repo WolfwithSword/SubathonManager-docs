@@ -24,6 +24,14 @@ Individual widgets you can import into any overlay and combine + configure freel
 
     ---
 
+    Animated alert for current prompt goal run.
+
+    [:octicons-arrow-right-24: View Prompt Alerts](prompt-alerts.md)
+
+-   :material-message-flash: **Event Popups**
+
+    ---
+
     Animated value popups triggered by events.
 
     [:octicons-arrow-right-24: View Event Popups](event-popups.md)
