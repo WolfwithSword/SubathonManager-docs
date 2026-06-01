@@ -656,6 +656,8 @@
       
         
       
+        
+      
     
     
     
@@ -992,6 +994,8 @@
       
         
       
+        
+      
     
     
     
@@ -1254,6 +1258,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../config/setup/Throne/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Throne
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../config/setup/DevTunnels/" class="md-nav__link">
         
   
@@ -1306,6 +1338,34 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../config/OBS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OBS WebSocket
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2285,6 +2345,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prompt
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2392,6 +2463,8 @@
   
     
     
+      
+        
       
         
       
@@ -2551,6 +2624,34 @@
     
   
     Goal Bar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../single/prompt-alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompt Alerts
   
 
     
@@ -2812,6 +2913,17 @@
     <span class="md-ellipsis">
       
         Goals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prompt
       
     </span>
   </a>
@@ -3281,6 +3393,181 @@
 <td><code>maxGoalsToShow</code></td>
 <td>Int</td>
 <td>Maximum number of goals to display, including the optional last completed</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<hr>
+<h2 id="prompt">Prompt<a class="headerlink" href="#prompt" title="Permanent link">¶</a></h2>
+<p>A steampunk engine-like popup displaying the currently running prompt goal. Two gears spin as the goal progresses, the engine gets hotter, and when complete, the light comes on. If it fails, smoke comes out.</p>
+<video controls="" style="width:80%;border-radius:8px;margin:1rem 0">
+  <source src="https://assets.subathonmanager.app/docs/widgets/steampunk/steampunkprompt.webm">
+</video>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">CSS Variables</label><label for="__tabbed_6_2">JS Variables</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>background-color</code></td>
+<td>Widget background colour</td>
+</tr>
+<tr>
+<td><code>border-color</code></td>
+<td>Border colour</td>
+</tr>
+<tr>
+<td><code>border-thickness</code></td>
+<td>Border thickness</td>
+</tr>
+<tr>
+<td><code>metal-dark</code></td>
+<td>Dark metal colour</td>
+</tr>
+<tr>
+<td><code>metal-mid</code></td>
+<td>Mid metal colour</td>
+</tr>
+<tr>
+<td><code>metal-light</code></td>
+<td>Light metal colour</td>
+</tr>
+<tr>
+<td><code>text-color</code></td>
+<td>Text colour</td>
+</tr>
+<tr>
+<td><code>dim-text</code></td>
+<td>Dimmed text / secondary text colour</td>
+</tr>
+<tr>
+<td><code>label-color</code></td>
+<td>Label colour</td>
+</tr>
+<tr>
+<td><code>light-idle</code></td>
+<td>Light Idle colour</td>
+</tr>
+<tr>
+<td><code>light-active</code></td>
+<td>Light Active colour</td>
+</tr>
+<tr>
+<td><code>light-complete</code></td>
+<td>Light completed colour</td>
+</tr>
+<tr>
+<td><code>light-expired</code></td>
+<td>Light colour when expired</td>
+</tr>
+<tr>
+<td><code>glow-complete</code></td>
+<td>Completed glow colour</td>
+</tr>
+<tr>
+<td><code>ember-color</code></td>
+<td>Progress ember colour</td>
+</tr>
+<tr>
+<td><code>grill-color</code></td>
+<td>Grill colour</td>
+</tr>
+<tr>
+<td><code>font-family</code></td>
+<td>Font family</td>
+</tr>
+<tr>
+<td><code>font-size</code></td>
+<td>Primary font size</td>
+</tr>
+<tr>
+<td><code>small-font-size</code></td>
+<td>Secondary font size</td>
+</tr>
+<tr>
+<td><code>timer-font-size</code></td>
+<td>Timer font size</td>
+</tr>
+<tr>
+<td><code>cog-fill</code></td>
+<td>Cog colour</td>
+</tr>
+<tr>
+<td><code>cog-mid</code></td>
+<td>Cog Mid colour</td>
+</tr>
+<tr>
+<td><code>cog-edge</code></td>
+<td>Cog Edge colour</td>
+</tr>
+<tr>
+<td><code>cog-edge-light</code></td>
+<td>Lighter cog edge colour</td>
+</tr>
+<tr>
+<td><code>cog-hole</code></td>
+<td>Cog hole colour</td>
+</tr>
+<tr>
+<td><code>cog-shadow</code></td>
+<td>Cog shadow colour</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lingerSeconds</code></td>
+<td>Int</td>
+<td>Time to let the prompt linger after it ends</td>
+</tr>
+<tr>
+<td><code>startedSound</code></td>
+<td>SoundFile</td>
+<td>Sound for when a prompt starts</td>
+</tr>
+<tr>
+<td><code>startedSoundVolume</code></td>
+<td>Float</td>
+<td>Volume for started sound</td>
+</tr>
+<tr>
+<td><code>successSound</code></td>
+<td>SoundFile</td>
+<td>Sound for when a prompt completes</td>
+</tr>
+<tr>
+<td><code>successSoundVolume</code></td>
+<td>Float</td>
+<td>Volume for success sound</td>
+</tr>
+<tr>
+<td><code>failSound</code></td>
+<td>SoundFile</td>
+<td>Sound for when a prompt ends in failure</td>
+</tr>
+<tr>
+<td><code>failSoundVolume</code></td>
+<td>Float</td>
+<td>Volume for fail sound</td>
 </tr>
 </tbody>
 </table>

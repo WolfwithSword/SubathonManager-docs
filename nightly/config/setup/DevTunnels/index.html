@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://docs.subathonmanager.app/latest/config/setup/DevTunnels/">
       
       
-        <link rel="prev" href="../FourthWall/">
+        <link rel="prev" href="../Throne/">
       
       
         <link rel="next" href="../Custom/">
@@ -103,6 +103,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#dev-tunnels" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -653,6 +658,8 @@
       
         
       
+        
+      
     
     
     
@@ -995,6 +1002,8 @@
       
         
       
+        
+      
     
     
     
@@ -1255,6 +1264,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../Throne/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Throne
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1264,6 +1301,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DevTunnels
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1281,6 +1338,60 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#step-1-install-the-devtunnels-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Install the DevTunnels CLI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-sign-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Sign in
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-start-the-tunnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Start the tunnel
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1318,6 +1429,34 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OBS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OBS WebSocket
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2293,6 +2432,8 @@
       
         
       
+        
+      
     
     
     
@@ -2439,6 +2580,34 @@
     
   
     Goal Bar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../widgets/presets/single/prompt-alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompt Alerts
   
 
     
@@ -2631,6 +2800,49 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#step-1-install-the-devtunnels-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Install the DevTunnels CLI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-sign-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Sign in
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-start-the-tunnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Start the tunnel
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2647,9 +2859,61 @@
 
 
 
-  <h1>DevTunnels</h1>
-
-
+<h1 id="dev-tunnels">Dev Tunnels<a class="headerlink" href="#dev-tunnels" title="Permanent link">¶</a></h1>
+<p>Dev Tunnels allow your app to receive webhook events from external services like Ko-Fi, FourthWall, and Throne by exposing a local endpoint to the internet via Microsoft's Azure DevTunnels service.</p>
+<p>The tunnel will start automatically on launch if any service that requires it is already configured. For first-time setup, follow the steps below.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://assets.subathonmanager.app/docs/config/setup/devtunnels.png" data-desc-position="bottom"><img alt="configuration" src="https://assets.subathonmanager.app/docs/config/setup/devtunnels.png"></a></p>
+<hr>
+<h2 id="step-1-install-the-devtunnels-cli">Step 1: Install the DevTunnels CLI<a class="headerlink" href="#step-1-install-the-devtunnels-cli" title="Permanent link">¶</a></h2>
+<p>In the <strong>External Services</strong> dropdown of the settings page, go to the <strong>Dev Tunnels</strong> tab, and check the <strong>CLI Status</strong> field.</p>
+<ul>
+<li>If it shows <strong>Not installed</strong>, click <strong>Install</strong> to download the Azure DevTunnels CLI from Microsoft. You will be prompted with a link to download and install if it is not able to automatically install.</li>
+<li>Once installation is complete, click <strong>Check</strong> to confirm it was found successfully.</li>
+<li>If it does not find it after installing, try restarting SubathonManager.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The CLI is a small command-line tool installed by the app on your behalf. You do not need to interact with it directly.</p>
+</div>
+<hr>
+<h2 id="step-2-sign-in">Step 2: Sign in<a class="headerlink" href="#step-2-sign-in" title="Permanent link">¶</a></h2>
+<p>Once the CLI is installed, sign in with either a <strong>Microsoft</strong> or <strong>GitHub</strong> account using the buttons provided.</p>
+<p>Clicking either button will open a browser tab. Complete the sign-in flow there — the <strong>Login Status</strong> field will update automatically once you are authenticated.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Either account type works the same. Use whichever you already have.</p>
+</div>
+<hr>
+<h2 id="step-3-start-the-tunnel">Step 3: Start the tunnel<a class="headerlink" href="#step-3-start-the-tunnel" title="Permanent link">¶</a></h2>
+<p>After signing in, click <strong>Start</strong> next to the Tunnel field to start the tunnel for the first time.</p>
+<p>The app will display a base URL once the tunnel is running. You can ignore this.</p>
+<p>When other services hook into the DevTunnel setup, they will append their own path to the base url. See examples below.</p>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Webhook path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ko-Fi</td>
+<td><code>/api/webhooks/kofi</code></td>
+</tr>
+<tr>
+<td>FourthWall</td>
+<td><code>/api/webhooks/fourthwall</code></td>
+</tr>
+<tr>
+<td>Throne</td>
+<td><code>/api/webhooks/throne</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Automatic startup</p>
+<p>After the first manual start, the tunnel will launch automatically on app startup whenever Ko-Fi, FourthWall, Throne, or other integration which requires it is configured.</p>
+</div>
 
 
 

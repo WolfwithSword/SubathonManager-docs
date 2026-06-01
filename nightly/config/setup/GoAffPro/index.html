@@ -104,6 +104,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#goaffpro-integrations" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -653,6 +658,8 @@
       
         
       
+        
+      
     
     
     
@@ -995,6 +1002,8 @@
       
         
       
+        
+      
     
     
     
@@ -1083,6 +1092,8 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
+      
+        
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
@@ -1266,6 +1277,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../Throne/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Throne
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../DevTunnels/" class="md-nav__link">
         
   
@@ -1318,6 +1357,34 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OBS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OBS WebSocket
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2293,6 +2360,8 @@
       
         
       
+        
+      
     
     
     
@@ -2439,6 +2508,34 @@
     
   
     Goal Bar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../widgets/presets/single/prompt-alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompt Alerts
   
 
     
@@ -2631,6 +2728,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -2647,8 +2746,7 @@
 
 
 
-  <h1>GoAffPro</h1>
-
+<h1 id="goaffpro-integrations">GoAffPro Integrations<a class="headerlink" href="#goaffpro-integrations" title="Permanent link">¶</a></h1>
 <p>GoAffPro is the intermediary service many store partners use for affiliate services.</p>
 <p>Click <strong>Connect</strong> and log in to your GoAffPro account in the popup. Your active supported stores will be listed below.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Options</label><label for="__tabbed_1_2">Per-Store Values</label></div>
@@ -2704,12 +2802,48 @@
 </div>
 </div>
 <p>Currently supported:</p>
-<ul>
-<li>GamerSupps</li>
-<li>Orchid Eight</li>
-<li>UwUMarket</li>
-<li>KatDragonz</li>
-</ul>
+<div class="store-grid" markdown="0">
+  <script>
+  (function() {
+    var stores = [
+      { name: "GamerSupps",  url: "https://gamersupps.gg",  img: "https://cdn.shopify.com/s/files/1/1265/2145/files/GS-Logo-002_x320.png" },
+      { name: "Orchid Eight", url: "https://orchideight.com", img: "https://www.orchideight.com/cdn/shop/files/O8_Website_Logo.png" },
+      { name: "UwUMarket",   url: "https://uwumarket.us",    img: "https://uwumarket.us/cdn/shop/files/LOGO_UWUMARKET-2025-REVISION.png" },
+      { name: "KatDragonz",  url: "https://katdragonz.com",  img: "https://katdragonz.com/cdn/shop/files/logo_32_4.png" },
+      { name: "Cheeky Soap", url: "https://usecheeky.com/",  img: "https://usecheeky.com/cdn/shop/files/cheeky-logo-line.png?v=1726779683" },
+      { name: "Advanced GG", url: "https://advanced.gg",     img: "https://advanced.gg/cdn/shop/files/ADV-Logo-Horizontal_600x.png" },
+      { name: "Rogue Energy", url: "https://rogueenergy.com", img: "https://rogueenergy.com/cdn/shop/files/RlogoZ_6769a8b1-7e7d-4791-bb25-8ec5609fe904.png" },
+      { name: "Saucy Biz",   url: "https://saucy.biz",    img: "https://saucy.biz/wp-content/uploads/2024/09/SaucyBiz_horz_purplewhite_4x_1ae1fdf6-7a76-4b5f-961c-dfd1e07267be_430x.webp" },
+      { name: "GFuel",       url: "https://gfuel.com",       img: "https://gfuel.com/cdn/shop/files/sig_gfuel_logo.png" },
+      { name: "Natura Pine", url: "https://naturapine.com",   img: "https://naturapine.com/cdn/shop/files/NP-Logo-DK.png" }
+    ];
+    var grid = document.currentScript.parentElement;
+    stores.forEach(function(s) {
+      var a = document.createElement("a");
+      a.className = "store-card";
+      a.href = s.url;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      var logo = document.createElement("div");
+      logo.className = "store-logo-wrap";
+      if (s.img) {
+        var img = document.createElement("img");
+        img.src = s.img;
+        img.alt = s.name;
+        img.onerror = function() { logo.textContent = s.name[0]; };
+        logo.appendChild(img);
+      } else {
+        logo.textContent = s.name[0];
+      }
+      a.appendChild(logo);
+      var label = document.createElement("span");
+      label.textContent = s.name;
+      a.appendChild(label);
+      grid.appendChild(a);
+    });
+  })();
+  </script>
+</div>
 
 
 

@@ -656,6 +656,8 @@
       
         
       
+        
+      
     
     
     
@@ -992,6 +994,8 @@
       
         
       
+        
+      
     
     
     
@@ -1254,6 +1258,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../config/setup/Throne/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Throne
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../config/setup/DevTunnels/" class="md-nav__link">
         
   
@@ -1306,6 +1338,34 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../config/OBS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OBS WebSocket
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2240,6 +2300,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prompt
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2416,6 +2487,8 @@
       
         
       
+        
+      
     
     
     
@@ -2562,6 +2635,34 @@
     
   
     Goal Bar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../single/prompt-alerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompt Alerts
   
 
     
@@ -2834,6 +2935,17 @@
     <span class="md-ellipsis">
       
         Goals List
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prompt
       
     </span>
   </a>
@@ -3390,6 +3502,169 @@
 <td><code>maxGoalsToShow</code></td>
 <td>Int</td>
 <td>Maximum number of goals to display at once</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<hr>
+<h2 id="prompt">Prompt<a class="headerlink" href="#prompt" title="Permanent link">¶</a></h2>
+<p>A retro dialogue-like popup displaying the currently running prompt goal, timer, and progress bar. Will flash different icons or colours when the prompt completes or fails.</p>
+<video controls="" style="width:80%;border-radius:8px;margin:1rem 0">
+  <source src="https://assets.subathonmanager.app/docs/widgets/retro-pixel/retropixelprompt.webm">
+</video>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1">CSS Variables</label><label for="__tabbed_7_2">JS Variables</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>background</code></td>
+<td>Widget background colour</td>
+</tr>
+<tr>
+<td><code>border-color</code></td>
+<td>Border colour</td>
+</tr>
+<tr>
+<td><code>text-color</code></td>
+<td>Text colour</td>
+</tr>
+<tr>
+<td><code>label-color</code></td>
+<td>Label colour</td>
+</tr>
+<tr>
+<td><code>dialogue-color</code></td>
+<td>Dialogue colour</td>
+</tr>
+<tr>
+<td><code>portrait-bg</code></td>
+<td>Portrait BG colour</td>
+</tr>
+<tr>
+<td><code>portrait-active</code></td>
+<td>Portrait BG Active colour</td>
+</tr>
+<tr>
+<td><code>portrait-complete</code></td>
+<td>Portrait BG Complete colour</td>
+</tr>
+<tr>
+<td><code>portrait-expired</code></td>
+<td>Portrait BG Expired colour</td>
+</tr>
+<tr>
+<td><code>portrait-color</code></td>
+<td>Portrait Icon colour</td>
+</tr>
+<tr>
+<td><code>portrait-complete-color</code></td>
+<td>Portrait Complete colour</td>
+</tr>
+<tr>
+<td><code>portrait-expired-color</code></td>
+<td>Portrait Expired colour</td>
+</tr>
+<tr>
+<td><code>hp-green</code></td>
+<td>Progress/HP Bar Full colour</td>
+</tr>
+<tr>
+<td><code>hp-yellow</code></td>
+<td>Progress/HP Bar Medium colour</td>
+</tr>
+<tr>
+<td><code>hp-red</code></td>
+<td>Progress/HP Bar Low colour</td>
+</tr>
+<tr>
+<td><code>hp-bg</code></td>
+<td>Progress/HP Bar bg colour</td>
+</tr>
+<tr>
+<td><code>timer-color</code></td>
+<td>Timer colour</td>
+</tr>
+<tr>
+<td><code>done-color</code></td>
+<td>Done colour</td>
+</tr>
+<tr>
+<td><code>expired-color</code></td>
+<td>Expired colour</td>
+</tr>
+<tr>
+<td><code>pixel-border</code></td>
+<td>Size of pixel border thickness</td>
+</tr>
+<tr>
+<td><code>font</code></td>
+<td>Font to use</td>
+</tr>
+<tr>
+<td><code>font-size</code></td>
+<td>Font size</td>
+</tr>
+<tr>
+<td><code>dialogue-font-size</code></td>
+<td>Dialogue text font size</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lingerSeconds</code></td>
+<td>Int</td>
+<td>Time to let the prompt linger after it ends</td>
+</tr>
+<tr>
+<td><code>startedSound</code></td>
+<td>SoundFile</td>
+<td>Sound for when a prompt starts</td>
+</tr>
+<tr>
+<td><code>startedSoundVolume</code></td>
+<td>Float</td>
+<td>Volume for started sound</td>
+</tr>
+<tr>
+<td><code>successSound</code></td>
+<td>SoundFile</td>
+<td>Sound for when a prompt completes</td>
+</tr>
+<tr>
+<td><code>successSoundVolume</code></td>
+<td>Float</td>
+<td>Volume for success sound</td>
+</tr>
+<tr>
+<td><code>failSound</code></td>
+<td>SoundFile</td>
+<td>Sound for when a prompt ends in failure</td>
+</tr>
+<tr>
+<td><code>failSoundVolume</code></td>
+<td>Float</td>
+<td>Volume for fail sound</td>
 </tr>
 </tbody>
 </table>
