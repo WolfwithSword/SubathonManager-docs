@@ -658,6 +658,8 @@
       
         
       
+        
+      
     
     
     
@@ -1414,6 +1416,34 @@
     
   
     Discord Logging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../config/setup/StreamerBot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Streamer.Bot Extension
   
 
     
@@ -2317,6 +2347,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#wheel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wheel
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2452,6 +2493,8 @@
   
     
     
+      
+        
       
         
       
@@ -2710,6 +2753,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../single/wheel-slots/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wheel Slots
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2902,6 +2973,17 @@
     <span class="md-ellipsis">
       
         Prompt
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wheel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wheel
       
     </span>
   </a>
@@ -3370,6 +3452,159 @@
 <td><code>failSoundVolume</code></td>
 <td>Float</td>
 <td>Volume for fail sound</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<hr>
+<h2 id="wheel">Wheel<a class="headerlink" href="#wheel" title="Permanent link">¶</a></h2>
+<p>A clean &amp; simple spinning wheel. Slices are rendered with alternating panel colours and item labels, and spin to a result when triggered. A centre hub displays spins owed, and a result nameplate reveals the winning item. A teardrop pointer and glow accents complete the look.</p>
+<video controls="" style="width:80%;border-radius:8px;margin:1rem 0">
+  <source src="https://assets.subathonmanager.app/docs/widgets/simple-1/simple_wheel.webm">
+</video>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">CSS Variables</label><label for="__tabbed_6_2">JS Variables</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>wheel-size</code></td>
+<td>Total wheel size (width and height)</td>
+</tr>
+<tr>
+<td><code>border-color</code></td>
+<td>Wheel ring border and accent colour</td>
+</tr>
+<tr>
+<td><code>inner-border-color</code></td>
+<td>Inner border highlight colour</td>
+</tr>
+<tr>
+<td><code>text-color</code></td>
+<td>Wheel item label text colour</td>
+</tr>
+<tr>
+<td><code>label-color</code></td>
+<td>Small caption text colour (SPINS label, RESULT header)</td>
+</tr>
+<tr>
+<td><code>glow-color</code></td>
+<td>Glow and shadow accent colour</td>
+</tr>
+<tr>
+<td><code>hub-bg</code></td>
+<td>Centre hub background colour</td>
+</tr>
+<tr>
+<td><code>hub-text</code></td>
+<td>Centre hub spins-owed number colour</td>
+</tr>
+<tr>
+<td><code>hub-label-size</code></td>
+<td>Font size for the SPINS label above the spins counter</td>
+</tr>
+<tr>
+<td><code>hub-count-size</code></td>
+<td>Font size for the spins counter number</td>
+</tr>
+<tr>
+<td><code>slice-text-size</code></td>
+<td>Base font size for wheel item text on slices</td>
+</tr>
+<tr>
+<td><code>needle-color</code></td>
+<td>Teardrop pointer colour</td>
+</tr>
+<tr>
+<td><code>nameplate-bg</code></td>
+<td>Result nameplate background colour</td>
+</tr>
+<tr>
+<td><code>nameplate-border</code></td>
+<td>Result nameplate border colour</td>
+</tr>
+<tr>
+<td><code>nameplate-text</code></td>
+<td>Result nameplate item text colour</td>
+</tr>
+<tr>
+<td><code>panelColor1</code></td>
+<td>Background colour for wheel item sections (1 of 8 options)</td>
+</tr>
+<tr>
+<td><code>panelColor2</code></td>
+<td>Background colour for wheel item sections</td>
+</tr>
+<tr>
+<td><code>panelColor3</code></td>
+<td>Background colour for wheel item sections</td>
+</tr>
+<tr>
+<td><code>panelColor4</code></td>
+<td>Background colour for wheel item sections</td>
+</tr>
+<tr>
+<td><code>panelColor5</code></td>
+<td>Background colour for wheel item sections</td>
+</tr>
+<tr>
+<td><code>panelColor6</code></td>
+<td>Background colour for wheel item sections</td>
+</tr>
+<tr>
+<td><code>panelColor7</code></td>
+<td>Background colour for wheel item sections</td>
+</tr>
+<tr>
+<td><code>panelColor8</code></td>
+<td>Background colour for wheel item sections</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>partitionType</code></td>
+<td>StringSelect</td>
+<td>Visually partition wheel sections by relative <code>Weight</code>, or <code>Equal</code> size for each item regardless of weight</td>
+</tr>
+<tr>
+<td><code>playTickSound</code></td>
+<td>Boolean</td>
+<td>Play a tick sound while the wheel is spinning</td>
+</tr>
+<tr>
+<td><code>tickSound</code></td>
+<td>SoundFile</td>
+<td>Sound to play as a tick while the wheel spins</td>
+</tr>
+<tr>
+<td><code>tickSoundVolume</code></td>
+<td>Percent</td>
+<td>Tick sound volume</td>
+</tr>
+<tr>
+<td><code>showSpinsOwed</code></td>
+<td>Boolean</td>
+<td>Show the count of spins remaining in the centre hub</td>
 </tr>
 </tbody>
 </table>
