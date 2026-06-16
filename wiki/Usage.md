@@ -168,7 +168,7 @@ On the right, you will see a button which will let you quickly refresh all overl
 
     To load and preview your customizations, you will need to click **Save**. To reload CSS variable detection from your raw files, click the **Reload Vars** button. CSS Variables can be previewed instantly without saving, however JS and Font variables require saving. If you swap between widgets without saving, they will be highlighted in yellow.
 
-    You can specify custom fonts from Google or Cdn which can be injected into your widgets as well. This will be a comma-separated list.
+    You can specify custom fonts from Google, CDN, or BunnyFonts which can be injected into your widgets as well. This will be a comma-separated list.
 
     Saving any widget will cause the widget to refresh in all places. Saving the overlay will cause all widgets to refresh.
 

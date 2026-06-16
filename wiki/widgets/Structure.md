@@ -128,7 +128,7 @@ Please look at the `.json` files for the preset widgets included for examples.
 | `AnyFile` / `ImageFile` / `SoundFile` / `VideoFile` | Injects a path string. Value is empty, an absolute system path (prefixed `externalPath/`), or a relative path from the widget. Use `NONE` for empty default. Do not use absolute paths in shared widgets. |
 | `FolderPath` | Folder path string |
 | `OrderEventTypeList` / `TokenEventTypeList` / `SubEventTypeList` / `FollowEventTypeList` / `DonationEventTypeList` / `GenericEventTypeList` | Pre-filtered `EventTypeList` by subtype category |
-| `GoogleFont` / `CdnFont` | Comma separated strings of font-names to inject in the widget from Google or CDN, fetches as a url. |
+| `GoogleFont` / `CdnFont` / `BunnyFont` | Comma separated strings of font-names to inject in the widget from Google, CDN, or BunnyFonts, fetches as a url. |
 
 ??? example "Metadata example"
 
@@ -196,7 +196,7 @@ Please look at the `.json` files for the preset widgets included for examples.
 
 ---
 
-For `Font` type variables, it is recommended you only define one variable per type (one GoogleFont, one CdnFont etc) max. For the value, it is a comma separated list of font names to import automatically.
+For `Font` type variables, it is recommended you only define one variable per type (one GoogleFont, one CdnFont, one BunnyFont etc) max. For the value, it is a comma separated list of font names to import automatically.
 
 This works by using the base URLs for each font service, querying for the font name and injecting it into each widget.
 

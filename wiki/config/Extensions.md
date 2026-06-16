@@ -14,6 +14,14 @@ Go to your [dashboard API Settings](https://streamlabs.com/dashboard#/settings/a
 |---|---|
 | **Donations** | Seconds per 1$, Points per 1$ (rounded down). 1$ of Default Currency after conversion. |
 
+### TipeeeStream
+
+Click the connect button and you will be prompted to authorize with the SubathonManager app for TipeeeStream.
+
+| Value | Description |
+|---|---|
+| **Donations** | Seconds per 1$, Points per 1$ (rounded down). 1$ of Default Currency after conversion. |
+
 ### Blerp
 
 To use Blerp, you need to have the default chat message notifications enabled, as we rely on parsing chat for the Blerp account. Supports both Bits and Beets for both Twitch and YouTube chats.

@@ -35,7 +35,7 @@ Use the navigation on the left for various configuration settings, or the cards 
 
     ---
 
-    Streaming extensions, such as StreamElements, StreamLabs, Blerp.
+    Streaming extensions, such as StreamElements, StreamLabs, TipeeeStream, Blerp.
 
     [:octicons-arrow-right-24: Extension Config](config/Extensions.md)
 

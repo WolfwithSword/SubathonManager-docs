@@ -25,6 +25,7 @@ nav:
       - OBS WebSocket: config/OBS.md
       - Chat Commands: config/Commands.md
       - Discord Logging: config/Webhooks.md
+      - Streamer.Bot Extension: config/setup/StreamerBot.md 
   - Development & Design:
       - Setup & Contribute: develop/Setup.md
       - Integrations & API: Development.md
