@@ -176,3 +176,51 @@ A simple popup displaying the currently running prompt goal. When complete, spar
     | `successSoundVolume` | Float | Volume for success sound |
     | `failSound` | SoundFile | Sound for when a prompt ends in failure |
     | `failSoundVolume` | Float | Volume for fail sound |
+
+---
+
+## Wheel
+
+A clean & simple spinning wheel. Slices are rendered with alternating panel colours and item labels, and spin to a result when triggered. A centre hub displays spins owed, and a result nameplate reveals the winning item. A teardrop pointer and glow accents complete the look.
+
+<video controls style="width:80%;border-radius:8px;margin:1rem 0">
+  <source src="https://assets.subathonmanager.app/docs/widgets/simple-1/simple_wheel.webm">
+</video>
+
+=== "CSS Variables"
+
+    | Variable | Description |
+    |---|---|
+    | `wheel-size` | Total wheel size (width and height) |
+    | `border-color` | Wheel ring border and accent colour |
+    | `inner-border-color` | Inner border highlight colour |
+    | `text-color` | Wheel item label text colour |
+    | `label-color` | Small caption text colour (SPINS label, RESULT header) |
+    | `glow-color` | Glow and shadow accent colour |
+    | `hub-bg` | Centre hub background colour |
+    | `hub-text` | Centre hub spins-owed number colour |
+    | `hub-label-size` | Font size for the SPINS label above the spins counter |
+    | `hub-count-size` | Font size for the spins counter number |
+    | `slice-text-size` | Base font size for wheel item text on slices |
+    | `needle-color` | Teardrop pointer colour |
+    | `nameplate-bg` | Result nameplate background colour |
+    | `nameplate-border` | Result nameplate border colour |
+    | `nameplate-text` | Result nameplate item text colour |
+    | `panelColor1` | Background colour for wheel item sections (1 of 8 options) |
+    | `panelColor2` | Background colour for wheel item sections |
+    | `panelColor3` | Background colour for wheel item sections |
+    | `panelColor4` | Background colour for wheel item sections |
+    | `panelColor5` | Background colour for wheel item sections |
+    | `panelColor6` | Background colour for wheel item sections |
+    | `panelColor7` | Background colour for wheel item sections |
+    | `panelColor8` | Background colour for wheel item sections |
+
+=== "JS Variables"
+
+    | Variable | Type | Description |
+    |---|---|---|
+    | `partitionType` | StringSelect | Visually partition wheel sections by relative `Weight`, or `Equal` size for each item regardless of weight |
+    | `playTickSound` | Boolean | Play a tick sound while the wheel is spinning |
+    | `tickSound` | SoundFile | Sound to play as a tick while the wheel spins |
+    | `tickSoundVolume` | Percent | Tick sound volume |
+    | `showSpinsOwed` | Boolean | Show the count of spins remaining in the centre hub |

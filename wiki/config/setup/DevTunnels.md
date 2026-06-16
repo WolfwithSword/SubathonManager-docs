@@ -25,7 +25,7 @@ In the **External Services** dropdown of the settings page, go to the **Dev Tunn
 
 Once the CLI is installed, sign in with either a **Microsoft** or **GitHub** account using the buttons provided.
 
-Clicking either button will open a browser tab. Complete the sign-in flow there — the **Login Status** field will update automatically once you are authenticated.
+Clicking either button will open a browser tab. Complete the sign-in flow there - the **Login Status** field will update automatically once you are authenticated.
 
 !!! tip
     Either account type works the same. Use whichever you already have.
@@ -48,3 +48,8 @@ When other services hook into the DevTunnel setup, they will append their own pa
 
 !!! info "Automatic startup"
     After the first manual start, the tunnel will launch automatically on app startup whenever Ko-Fi, FourthWall, Throne, or other integration which requires it is configured.
+
+If your DevTunnel has issues starting, you can try deleting old tunnels after signed in if it has stopped running.
+
+!!! info "Upgrading from v1.2.0 & below"
+    If upgrading from v1.2.0 and below, you will need to re-setup all of your DevTunnel integrations (except FourthWall) due to a data change.

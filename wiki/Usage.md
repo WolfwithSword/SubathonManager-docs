@@ -18,7 +18,7 @@ tags:
 ## Subathon Controls
 
 <div class="usage-img clip" markdown>
-![Home Page](https://assets.subathonmanager.app/docs/examples/usage/1.2.0/homepage.png)
+![Home Page](https://assets.subathonmanager.app/docs/examples/usage/1.2.1/homepage.png)
 </div>
 
 ### Subathon & Time Management
@@ -234,6 +234,75 @@ You can view the prompt history on the home page, tabbed with recent events.
 ![Recent Prompts](https://assets.subathonmanager.app/docs/examples/usage/1.2.0/promptshomepreview.png)
 </div>
 
+
+---
+
+## Wheel Spin
+
+SubathonManager includes an integrated Wheel Spin feature with two tabs: **Wheel** for configuring and spinning your wheel, and **Triggers** for automatically adding spins from stream events.
+
+### Wheel
+
+<div class="usage-img clip" markdown>
+![Wheel Spin Page](https://assets.subathonmanager.app/docs/features/wheelspin/wheel_spins.png)
+</div>
+
+You can configure multiple wheels and swap between them at any time. The active wheel is whichever one is currently viewed on this page. You can view the total number of times each individual wheel has been spun via the **Total Spins** counter.
+
+You can configure the **delay** between a spin and when the result is revealed, and view or manually adjust the current number of **spins owed**.
+
+Each wheel holds any number of items. Items can be weighted differently to influence how often they are selected, and can have a set quantity or be set to **infinite** (no limit). Items automatically disable when their quantity hits zero, and you can manually enable or disable any item at any time.
+
+Each item has an **Action** that determines what happens when it is spun:
+
+| Action | Description |
+|---|---|
+| **Add Time** | Automatically adds the configured duration to the subathon timer. |
+| **Subtract Time** | Automatically removes the configured duration from the subathon timer. |
+| **Multiplier** | Queues a new multiplier event with custom settings and duration. Must be manually started from the Spin History. |
+| **Reroll** | Adds new spins owed rather than performing a direct action. Value of 1 is essentially a reroll for dramatic expense. Does not automatiocally roll. |
+| **Manual** | No automatic action. Handled externally by you. |
+
+### Spin History
+
+The spin history shows past spins for the active wheel. You can filter and export this list. Each entry shows the **time** of the spin, the **item** selected, the **action** taken, and its **status**, which you can manually change between *Done*, *Pending*, and *Cancelled*.
+
+---
+
+### Triggers
+
+<div class="usage-img clip" markdown>
+![Wheel Triggers Page](https://assets.subathonmanager.app/docs/features/wheelspin/wheel_triggers.png)
+</div>
+
+The **Triggers** tab lets you define events and conditions that automatically add spins owed. Each trigger can be individually enabled or disabled and is tied to a single event type and condition.
+
+For most event types, only one trigger is allowed per type. The exception is **subscriptions** and **memberships**, where each trigger must be unique per event *and* tier, allowing separate spin rewards for T1, T2, and T3 for example.
+
+Supported conditions vary by event type:
+
+| Event Type | Condition Options |
+|---|---|
+| Subscriptions / Memberships | Subscription tier |
+| Gifted Subscriptions | Number of gifts required |
+| Donations | Amount donated (after currency conversion) |
+| Bits / Tokens | Total bits or tokens |
+| Orders | Amount paid, number of items, or per order |
+
+!!! note
+    Triggers for follows, raids, and similar events are not currently supported.
+
+!!! info "Spin Calculation"
+    Spins are awarded based on how many times the threshold is met. For example, if your trigger awards 1 spin per 10 gifted subs and someone gifts 25 subs at once, **2 spins** will be added. Triggers are not cumulative, and are "all or nothing" per event that matches.
+
+### Trigger History
+
+The trigger history shows past trigger events, which you can export as CSV. Each entry shows the **time**, the **event type** that triggered it, the **user** who triggered it, and the number of **spins** added. The exported file also includes the **SubathonEvent Id** for each entry.
+
+---
+
+!!! tip "Discord Logging"
+    In the [Discord Log Webhook Settings](config/Webhooks.md) page, you can log all wheel spin and wheel trigger history to a Discord channel.
 
 ---
 

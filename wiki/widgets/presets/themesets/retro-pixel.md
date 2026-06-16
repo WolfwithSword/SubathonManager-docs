@@ -257,3 +257,41 @@ A retro dialogue-like popup displaying the currently running prompt goal, timer,
     | `successSoundVolume` | Float | Volume for success sound |
     | `failSound` | SoundFile | Sound for when a prompt ends in failure |
     | `failSoundVolume` | Float | Volume for fail sound |
+
+---
+
+## Wheel
+
+A retro pixel-art styled spinning wheel. Slices are rendered with the wheel item labels, and spin to a result when triggered. A centre hub displays spins owed, and a popup dialogue in the middle will show the result.
+
+<video controls style="width:80%;border-radius:8px;margin:1rem 0">
+  <source src="https://assets.subathonmanager.app/docs/widgets/retro-pixel/rp_wheel.webm">
+</video>
+
+=== "CSS Variables"
+
+    | Variable | Description |
+    |---|---|
+    | `canvas-bg` | Wheel canvas background colour |
+    | `border-color` | Wheel ring border and accent colour |
+    | `text-color` | Wheel item label text colour |
+    | `hub-bg` | Centre hub background colour |
+    | `hub-text` | Centre hub spins-owed number colour |
+    | `label-color` | Small caption text colour (SPINS label, RESULT header) |
+    | `nameplate-bg` | Result nameplate background colour |
+    | `nameplate-border` | Result nameplate border colour |
+    | `nameplate-text` | Result nameplate item text colour |
+    | `needle-color` | Pointer nub colour |
+    | `hub-label-size` | Font size for the SPINS label above the spins counter |
+    | `hub-count-size` | Font size for the spins counter number |
+    | `slice-text-size` | Base font size for wheel item text on slices |
+
+=== "JS Variables"
+
+    | Variable | Type | Description |
+    |---|---|---|
+    | `partitionType` | StringSelect | Visually partition wheel sections by relative `Weight`, or `Equal` size for each item regardless of weight |
+    | `playTickSound` | Boolean | Play a tick sound while the wheel is spinning |
+    | `tickSound` | SoundFile | Sound to play as a tick while the wheel spins |
+    | `tickSoundVolume` | Percent | Tick sound volume |
+    | `showSpinsOwed` | Boolean | Show the count of spins remaining in the centre hub |
