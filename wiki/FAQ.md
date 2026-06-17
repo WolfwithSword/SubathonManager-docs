@@ -89,24 +89,29 @@ tags:
         - GamerSupps
         - UwUMarket
         - Orchid Eight
-        - KatDragonz
-    - KoFi (via streamerbot integration)
-        - Tips & Memberships
+        - Cheeky Soap
+        - And more - see [GoAffPro](config/setup/GoAffPro.md)
+    - KoFi
+    - Throne
+    - FourthWall
 
     And a system for custom external integrations via API.
 
 ??? question "Features?"
     SubathonManager has quite a few features:
 
-    - Default behaviour, Subathon Timer Mode (with points)  
-    - Donation based "Donothon" support and goals  
-    - Currency Conversion  
+    - Default behaviour, Subathon Timer Mode (with points)
+    - Donation based "Donothon" support and goals
+    - Currency Conversion
     - Built in overlay editor and browser source host  
     - Audit & Event logging to file, export CSV, or discord webhooks  
     - Goals list and progress tracking  
+    - Integrated Wheel Spins
+    - Automated mini goal-like prompts
     - Multiplier modes for time and/or points with optional duration  
     - External API control for pushing custom events, custom integrations, or modifying configuration  
-    - Reverse Subathon option  
+    - Reverse Subathon option
+    - Quick OBS source setup
     - And more!
 
 ??? question "Currency Conversion?"

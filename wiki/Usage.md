@@ -363,6 +363,14 @@ See [Configuration](config/Commands.md) for the command names. You can change th
     | `!addmoney` | Add money, does not affect time. Requires a currency. | `!addmoney 10.15 CAD` |
     | `!subtractmoney` | Remove money. Requires a currency. | `!subtractmoney 10 USD` |
 
+=== "Wheel Spin"
+
+    | Command | Description | Example |
+    |---|---|---|
+    | `!setspins` | Set the spins owed to a specific number. | `!setspins 20` |
+    | `!addspins` | Add spins owed. | `!addspins 5` |
+    | `!subtractspins` | Subtract spins owed up to 0. | `!subtractspins 5` |
+
 === "Other"
 
     | Command | Description |
