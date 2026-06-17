@@ -3641,7 +3641,7 @@ You can adjust the overlap position with the arrows, open the widget in the widg
 <hr>
 <h2 id="chat-commands">Chat Commands<a class="headerlink" href="#chat-commands" title="Permanent link">¶</a></h2>
 <p>See <a href="../config/Commands/">Configuration</a> for the command names. You can change the defaults.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:5"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><input id="__tabbed_2_4" name="__tabbed_2" type="radio"><input id="__tabbed_2_5" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Points</label><label for="__tabbed_2_2">Timer</label><label for="__tabbed_2_3">Multiplier</label><label for="__tabbed_2_4">Money</label><label for="__tabbed_2_5">Other</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:6"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><input id="__tabbed_2_4" name="__tabbed_2" type="radio"><input id="__tabbed_2_5" name="__tabbed_2" type="radio"><input id="__tabbed_2_6" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Points</label><label for="__tabbed_2_2">Timer</label><label for="__tabbed_2_3">Multiplier</label><label for="__tabbed_2_4">Money</label><label for="__tabbed_2_5">Wheel Spin</label><label for="__tabbed_2_6">Other</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <table>
@@ -3765,6 +3765,34 @@ You can adjust the overlap position with the arrows, open the widget in the widg
 <td><code>!subtractmoney</code></td>
 <td>Remove money. Requires a currency.</td>
 <td><code>!subtractmoney 10 USD</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>!setspins</code></td>
+<td>Set the spins owed to a specific number.</td>
+<td><code>!setspins 20</code></td>
+</tr>
+<tr>
+<td><code>!addspins</code></td>
+<td>Add spins owed.</td>
+<td><code>!addspins 5</code></td>
+</tr>
+<tr>
+<td><code>!subtractspins</code></td>
+<td>Subtract spins owed up to 0.</td>
+<td><code>!subtractspins 5</code></td>
 </tr>
 </tbody>
 </table>
