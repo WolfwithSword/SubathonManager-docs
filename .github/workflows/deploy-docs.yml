@@ -26,6 +26,10 @@ on:
         type: choice
         options: ["true", "false"]
 
+concurrency:
+  group: gh-pages-deploy
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
