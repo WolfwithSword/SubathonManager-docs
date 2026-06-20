@@ -1,5 +1,12 @@
 ---
 description: Connect extensions like StreamElements, Tangia, StreamLabs, or Blerp to SubathonManager for donation and tip tracking
+tags:
+  - Subathon
+  - StreamElements
+  - StreamLabs
+  - TipeeeStream
+  - Blerp
+  - Tangia
 ---
 
 ### StreamElements
@@ -32,7 +39,15 @@ To use Blerp, you need to have the default chat message notifications enabled, a
 
 | Value | Description |
 |---|---|
-| **Bits** | Seconds per 100, Points per 100 (rounded down). 1$ of Default Currency after conversion. **Modifier** is the fraction that counts towards currency - e.g. `0.8` means 80% of bits count as money donations. |
-| **Beets** | Seconds per 100, Points per 100 (rounded down). 1$ of Default Currency after conversion. **Modifier** works the same as Bits above. |
+| **Bits** | Seconds per 100, Points per 100 (rounded down). **Modifier** is the fraction that counts towards currency - e.g. `0.8` means 80% of bits count as money donations. |
+| **Beets** | Seconds per 100, Points per 100 (rounded down). **Modifier** works the same as Bits above. |
+
+### Tangia
+
+Tangia will work as long as you have the overlay page open somewhere in your stream. Supports both Tangia's Coins/Tokens and Twitch Bits usage - however there is no way to distinguish them.
+
+| Value | Description |
+|---|---|
+| **Tokens** | Seconds per 100, Points per 100 (rounded down).
 
 ---
