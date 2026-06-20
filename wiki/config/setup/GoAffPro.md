@@ -1,3 +1,7 @@
+---
+description: Connect GoAffPro affiliate stores to SubathonManager for tracking sales and orders during your subathon, such as from GamerSupps, UwUMarket, Orchid Eight, and more
+---
+
 # GoAffPro Integrations
 
 

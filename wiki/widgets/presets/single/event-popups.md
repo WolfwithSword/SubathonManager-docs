@@ -1,3 +1,7 @@
+---
+description: An overlay widget for displaying animated event values with customizable styles, colours, and filters in SubathonManager
+---
+
 # Event Value Popups
 
 [:fontawesome-brands-github: View Source](https://github.com/WolfwithSword/SubathonManager/blob/main/presets/popups/event-popups.html){ .md-button } &nbsp;&nbsp;

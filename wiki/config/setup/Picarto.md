@@ -1,3 +1,7 @@
+---
+description: Connect Picarto to SubathonManager to track kudos, follows, and subscriptions during your subathon
+---
+
 Type in your Picarto Channel's Username then click **Connect**.
 
 | Value | Description |

@@ -1,3 +1,7 @@
+---
+description: A generic event alerts overlay widget for SubathonManager with per-type colour customization and customizable animations
+---
+
 # Event Alerts
 
 [:fontawesome-brands-github: View Source](https://github.com/WolfwithSword/SubathonManager/tree/main/presets/popups/alert){ .md-button } &nbsp;&nbsp;

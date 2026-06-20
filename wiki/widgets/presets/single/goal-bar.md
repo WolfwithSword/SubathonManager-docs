@@ -1,3 +1,7 @@
+---
+description: A configurable progress bar overlay for tracking subathon or donothon goals in SubathonManager
+---
+
 # Goal Bar
 
 [:fontawesome-brands-github: View Source](https://github.com/WolfwithSword/SubathonManager/blob/main/presets/generic/goal-bar.html){ .md-button } &nbsp;&nbsp;

@@ -1,3 +1,7 @@
+---
+description: A prompt goal alert overlay widget for SubathonManager
+---
+
 # Prompt Alerts
 
 [:fontawesome-brands-github: View Source](https://github.com/WolfwithSword/SubathonManager/tree/main/presets/popups/alert){ .md-button } &nbsp;&nbsp;

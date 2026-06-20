@@ -1,3 +1,7 @@
+---
+description: A slot machine-style wheelspin overlay widget for SubathonManager
+---
+
 # Wheel Slots
 
 [:fontawesome-brands-github: View Source](https://github.com/WolfwithSword/SubathonManager/tree/main/presets/generic/wheelslots){ .md-button } &nbsp;&nbsp;

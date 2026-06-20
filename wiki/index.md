@@ -1,6 +1,6 @@
 ﻿---
 title: Home
-description: Subathon Manager - a feature reach subathon timer and event manager for streams
+description: Subathon Manager - a feature rich subathon timer and event manager for streaming
 ---
 
 # Subathon Manager

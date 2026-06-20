@@ -1,3 +1,7 @@
+---
+description: Configure external service integrations including KoFi, Throne, FourthWall, and GoAffPro for SubathonManager
+---
+
 # External Services
 
 Configure external service integrations.

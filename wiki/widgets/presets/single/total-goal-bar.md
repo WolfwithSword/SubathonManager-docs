@@ -1,3 +1,7 @@
+---
+description: A progress bar overlay for tracking event counts or sums towards a custom goal in SubathonManager
+---
+
 # Totals Goal Bar
 
 [:fontawesome-brands-github: View Source](https://github.com/WolfwithSword/SubathonManager/blob/main/presets/generic/totals-goal-bar.html){ .md-button } &nbsp;&nbsp;

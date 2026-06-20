@@ -1,3 +1,6 @@
+---
+description: Legacy Ko-Fi setup for SubathonManager using StreamerBot integration
+---
 
 === "KoFi (Legacy)"
 

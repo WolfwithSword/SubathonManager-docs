@@ -1,3 +1,7 @@
+---
+description: A clean, minimal subathon overlay theme for SubathonManager
+---
+
 # Basic Theme
 
 [:fontawesome-brands-github: View Source](https://github.com/WolfwithSword/SubathonManager/tree/main/presets/basic){ .md-button } &nbsp;&nbsp;

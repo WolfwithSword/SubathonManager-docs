@@ -1,3 +1,7 @@
+---
+description: Connect Twitch to SubathonManager to track subs, bits, follows, raids, hypetrains, and more during your subathon
+---
+
 Click **Connect** to link your Twitch account. Once authenticated, it will display your username.
 
 === "Options"

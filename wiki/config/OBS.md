@@ -1,3 +1,7 @@
+---
+description: Connect OBS via WebSocket to automatically import SubathonManager overlay browser sources into your scenes
+---
+
 SubathonManager can connect to OBS via WebSocket to automatically import overlay browser sources directly into your scenes.
 
 

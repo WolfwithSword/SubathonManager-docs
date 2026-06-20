@@ -1,3 +1,7 @@
+---
+description: A compact subathon timer overlay showing the countdown, configurable stats, and the next upcoming goal for SubathonManager
+---
+
 # Compact Timer
 
 [:fontawesome-brands-github: View Source](https://github.com/WolfwithSword/SubathonManager/tree/main/presets/generic/compact){ .md-button } &nbsp;&nbsp;

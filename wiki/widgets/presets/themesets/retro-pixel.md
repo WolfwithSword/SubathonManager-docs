@@ -1,3 +1,7 @@
+---
+description: A retro pixel-art themed overlay collection for SubathonManager
+---
+
 # Retro-Pixel
 
 [:fontawesome-brands-github: View Source](https://github.com/WolfwithSword/SubathonManager/tree/main/presets/retro-pixel){ .md-button } &nbsp;&nbsp;

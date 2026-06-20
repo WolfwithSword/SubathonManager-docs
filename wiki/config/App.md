@@ -1,3 +1,7 @@
+---
+description: SubathonManager general app settings including port, currency, and timer behaviour configuration
+---
+
 === "Config"
 
     | Setting | Description |

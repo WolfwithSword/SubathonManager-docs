@@ -1,3 +1,7 @@
+---
+description: Connect YouTube to SubathonManager to track Super Chats, memberships, and redirects during your subathon
+---
+
 Type in your YT Channel's Handle then click **Connect**.
 
 | Value | Description |

@@ -1,3 +1,7 @@
+---
+description: Browse individual, premade overlay widgets for SubathonManager that can be freely combined and configured
+---
+
 # Single Widgets
 
 Individual widgets you can import into any overlay and combine + configure freely.

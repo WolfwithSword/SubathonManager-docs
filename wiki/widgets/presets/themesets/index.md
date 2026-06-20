@@ -1,3 +1,7 @@
+---
+description: Browse fully themed overlay sets for SubathonManager with widgets such as timer, goals, events, and value displays
+---
+
 # Themed Presets
 
 Full overlay sets with a cohesive visual theme. Each themed preset includes a timer, goals, event displays, value displays, and more - all styled to match.

@@ -1,3 +1,7 @@
+---
+description: A clean, modern subathon overlay collection for SubathonManager
+---
+
 # Simple-1
 
 [:fontawesome-brands-github: View Source](https://github.com/WolfwithSword/SubathonManager/tree/main/presets/simple-1){ .md-button } &nbsp;&nbsp;

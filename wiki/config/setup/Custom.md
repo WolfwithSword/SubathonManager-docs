@@ -1,3 +1,7 @@
+---
+description: Set up custom external services to push subscription and donation events to SubathonManager
+---
+
 Generic external services can push both Subs and Donations. Subs require values in their body unless their value matches a configured subscription name. Donations can be configured per converted currency dollar unit.
 
 See [Development - External Services](../../Development.md#external-services) for integration details.

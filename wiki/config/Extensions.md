@@ -1,3 +1,7 @@
+---
+description: Connect extensions like StreamElements, Tangia, StreamLabs, or Blerp to SubathonManager for donation and tip tracking
+---
+
 ### StreamElements
 
 Go to [your dashboard](https://streamelements.com/dashboard/account/channels) and copy your **JWT Token**, paste it in and click **Connect**.

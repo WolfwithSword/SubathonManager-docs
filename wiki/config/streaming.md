@@ -1,3 +1,7 @@
+---
+description: Configure streaming platform integrations including Twitch and YouTube for SubathonManager
+---
+
 # Streaming Services
 
 Configure your streaming platform integrations.

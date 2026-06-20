@@ -1,4 +1,8 @@
-For Twitch and YouTube Chat, commands can be used to control some aspects of the subathon manager. All commands are triggered via `!<name> <options>`.
+---
+description: Configure chat commands for your platforms to control SubathonManager during your subathon
+---
+
+For Twitch, YouTube, and Picarto Chat, commands can be used to control some aspects of the subathon manager. All commands are triggered via `!<name> <options>`.
 
 Channel owner / broadcaster has permissions for all commands.
 

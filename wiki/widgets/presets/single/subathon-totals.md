@@ -1,3 +1,7 @@
+---
+description: A customizable overlay widget displaying total subathon statistics including subs, bits, follows, donations, and store orders
+---
+
 # Subathon Totals
 
 [:fontawesome-brands-github: View Source](https://github.com/WolfwithSword/SubathonManager/tree/main/presets/generic/totals){ .md-button } &nbsp;&nbsp;
