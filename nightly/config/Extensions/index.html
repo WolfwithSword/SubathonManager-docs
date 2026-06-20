@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="SubathonManager - a feature-rich subathon app for streamers">
+        <meta name="description" content="Connect extensions like StreamElements, Tangia, StreamLabs, or Blerp to SubathonManager for donation and tip tracking">
       
       
         <meta name="author" content="WolfwithSword">
@@ -66,7 +66,7 @@
     
   
   <meta property="og:title" content="Stream Extensions - Subathon Manager">
-  <meta property="og:description" content="[nightly] SubathonManager - a feature-rich subathon app for streamers">
+  <meta property="og:description" content="[nightly] Connect extensions like StreamElements, Tangia, StreamLabs, or Blerp to SubathonManager for donation and tip tracking">
   <meta property="og:image" content="https://assets.subathonmanager.app/docs/icon.png">
   <meta property="og:url" content="https://docs.subathonmanager.app/latest/config/Extensions/">
   <meta name="twitter:card" content="summary">
@@ -1055,6 +1055,17 @@
     <span class="md-ellipsis">
       
         Blerp
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tangia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tangia
       
     </span>
   </a>
@@ -2918,6 +2929,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tangia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tangia
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2932,6 +2954,52 @@
               <article class="md-content__inner md-typeset">
                 
                   
+
+  <nav class="md-tags">
+    
+      
+      
+      
+      
+        <span class="md-tag">Blerp</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">StreamElements</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">StreamLabs</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">Subathon</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">Tangia</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">TipeeeStream</span>
+      
+    
+  </nav>
 
 
 
@@ -2997,11 +3065,27 @@
 <tbody>
 <tr>
 <td><strong>Bits</strong></td>
-<td>Seconds per 100, Points per 100 (rounded down). 1$ of Default Currency after conversion. <strong>Modifier</strong> is the fraction that counts towards currency - e.g. <code>0.8</code> means 80% of bits count as money donations.</td>
+<td>Seconds per 100, Points per 100 (rounded down). <strong>Modifier</strong> is the fraction that counts towards currency - e.g. <code>0.8</code> means 80% of bits count as money donations.</td>
 </tr>
 <tr>
 <td><strong>Beets</strong></td>
-<td>Seconds per 100, Points per 100 (rounded down). 1$ of Default Currency after conversion. <strong>Modifier</strong> works the same as Bits above.</td>
+<td>Seconds per 100, Points per 100 (rounded down). <strong>Modifier</strong> works the same as Bits above.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tangia">Tangia<a class="headerlink" href="#tangia" title="Permanent link">¶</a></h3>
+<p>Tangia will work as long as you have the overlay page open somewhere in your stream. Supports both Tangia's Coins/Tokens and Twitch Bits usage - however there is no way to distinguish them.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tokens</strong></td>
+<td>Seconds per 100, Points per 100 (rounded down).</td>
 </tr>
 </tbody>
 </table>
@@ -3012,6 +3096,9 @@
 
 
 
+
+  
+  
 
 
 
