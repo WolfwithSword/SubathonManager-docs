@@ -95,11 +95,3 @@ jobs:
           else
             mike deploy --push "$VERSION" --template wiki/overrides/redirect.html
           fi
-
-      - name: Update robots.txt on gh-pages
-        run: |
-          git fetch origin gh-pages
-          git checkout gh-pages
-          printf 'User-agent: *\nAllow: /latest/\nDisallow: /\nSitemap: https://docs.subathonmanager.app/latest/sitemap.xml\n' > robots.txt
-          git add robots.txt
-          git diff --cached --quiet && echo "robots.txt unchanged" || (git commit -m "chore: update robots.txt [skip ci]" && git push origin gh-pages)
