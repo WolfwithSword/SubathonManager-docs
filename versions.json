@@ -2,14 +2,14 @@
   {
     "version": "nightly",
     "title": "nightly",
-    "aliases": []
+    "aliases": [
+      "latest"
+    ]
   },
   {
     "version": "v1.2.1",
     "title": "v1.2.1",
-    "aliases": [
-      "latest"
-    ]
+    "aliases": []
   },
   {
     "version": "v1.2.0",
