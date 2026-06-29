@@ -215,4 +215,12 @@ Define CSS variables in a `:root` block in your stylesheet. All CSS variables ca
 }
 ```
 
+## Asset Widgets
+
+In addition to complex HTML widgets, you can import image and videos as asset widgets into your overlay. THese will have minimal configuration - just height/width, scaling, and position. These are handy if you have a premade timed video or decoration accents to display in your overlay, or use as reference images during overlay building.
+
+Videos will auto loop, and be imported at an initial height/width of 720p and fit to container height.
+
+Images will attempt to import at their native aspect ratio, but scaled to ~400px height and adjust accordingly. Scaling and size change operations still work for both images and videos.
+
 ---

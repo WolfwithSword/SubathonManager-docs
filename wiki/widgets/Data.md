@@ -435,7 +435,7 @@ Fires when the spin result is determined, after the configured delay. Contains t
 |---|---|
 | `item` | The winning wheel item. Same as items in `handleWheelData` |
 | `item.action` | `null` for Manual items; see [`handleWheelData`](#handlewheeldata) for action field details |
-| `history.id` | Unique ID for this spin history entry |
+| `history.id` | Unique ID for this spin history entry. Useful for automating status changes via [websocket push](../Development.md#wheelspin-control) |
 | `history.status` | Initial status of the spin: `Pending`, `Done`, or `Cancelled` |
 | `history.created_at` | When the spin history entry was created |
 | `timestamp` | Time the result was resolved |

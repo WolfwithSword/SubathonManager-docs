@@ -46,6 +46,8 @@ To use Blerp, you need to have the default chat message notifications enabled, a
 
 Tangia will work as long as you have the overlay page open somewhere in your stream. Supports both Tangia's Coins/Tokens and Twitch Bits usage - however there is no way to distinguish them.
 
+To connect Tangia, click the `Get Key` button and paste in your Tangia overlay URL.
+
 | Value | Description |
 |---|---|
 | **Tokens** | Seconds per 100, Points per 100 (rounded down).

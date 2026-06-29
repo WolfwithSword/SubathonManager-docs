@@ -262,6 +262,26 @@ You can send any number of values - only those provided will be modified. `secon
 
 ---
 
+## WheelSpin Control
+
+You can update the status of any wheelspin history event if you have its `history id` and a valid status.
+
+Currently, this request is websocket only. For getting the history id, check the [wheelspin result data](./widgets/Data.md#handlewheelspinresult).
+
+There is an example of this control in the [StreamerBot Extension](./config/setup/StreamerBot.md).
+
+=== "WebSocket"
+
+  ```json
+  {
+    "ws_type": "WheelControl",
+    "source": "External",
+    "status": "Done", // Cancelled, Pending
+    "id": "48453875-4078-4626-86ac-2faa87e0228e", // matches a history_id from WheelSpinResult
+  }
+  ```
+---
+
 ## API Reference
 
 ### Amounts
