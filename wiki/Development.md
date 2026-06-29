@@ -262,9 +262,9 @@ You can send any number of values - only those provided will be modified. `secon
 
 ---
 
-### WheelSpin
+## WheelSpin
 
-## WheelSpin Control
+### WheelSpin Control
 
 You can update the status of any wheelspin history event if you have its `history id` and a valid status.
 
