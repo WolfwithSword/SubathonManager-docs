@@ -2,7 +2,7 @@
 description: Connect Ko-Fi to SubathonManager to track donations, commissions, members, and shop orders during your subathon
 ---
 
-KoFi has two setup methods. The suggested method is using *DevTunnels*, which supports all KoFi events. The *Legacy* approach using *StreamerBot* remains as an option, although it requires use of an external tool and does not currently support Shop Orders or Commissions.
+KoFi can be connected by using *DevTunnels*, allowing all webhook events to be sent to your local client, and can be forwarded back out to others.
 
 
 === "DevTunnels"
