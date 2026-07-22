@@ -2,7 +2,7 @@
 description: Connect FourthWall to SubathonManager to track store purchases, gifts, memberships, and donation events during your subathon
 ---
 
-FourthWall requires DevTunnels to be set up and running. If it is not configured, the app will prompt you to set it up before you can connect.
+FourthWall requires [DevTunnels](./DevTunnels.md) to be set up and running. If it is not configured, the app will prompt you to set it up before you can connect.
 
 Click **Connect** to open a browser tab and authorize the SubathonManager FourthWall App to access your store. Once approved, the tab will close automatically and you will be logged in. A webhook will be created on your store automatically - no manual configuration is needed on the FourthWall side.
 

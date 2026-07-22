@@ -7,7 +7,7 @@ description: Connect GoAffPro affiliate stores to SubathonManager for tracking o
 
 GoAffPro is the intermediary service many store partners use for affiliate services.
 
-Click **Connect** and log in to your GoAffPro account in the popup. Your active supported stores will be listed below.
+Click **Connect** and log in to your GoAffPro account in the popup. Your active stores will be detected and enabled below.
 
 === "Options"
 
@@ -25,7 +25,9 @@ Click **Connect** and log in to your GoAffPro account in the popup. Your active 
     | **Points** | Points configuration |
     | **Per X** | How the seconds/points values are counted. <br><br>**Dollar** = per whole unit of order total (excl. shipping) <br><br>**Order** = per individual order<br><br>**Item** = per individual item in the order |
 
-Currently supported:
+## Known supported
+
+GoAffPro compatible stores on your account are automatically detected and added. The below is a sample of known compatible storefronts which are included by default.
 
 <div class="store-grid" markdown="0">
   <script>
@@ -40,7 +42,12 @@ Currently supported:
       { name: "Rogue Energy", url: "https://rogueenergy.com", img: "https://rogueenergy.com/cdn/shop/files/RlogoZ_6769a8b1-7e7d-4791-bb25-8ec5609fe904.png" },
       { name: "Saucy Biz",   url: "https://saucy.biz",    img: "https://saucy.biz/wp-content/uploads/2024/09/SaucyBiz_horz_purplewhite_4x_1ae1fdf6-7a76-4b5f-961c-dfd1e07267be_430x.webp" },
       { name: "GFuel",       url: "https://gfuel.com",       img: "https://gfuel.com/cdn/shop/files/sig_gfuel_logo.png" },
-      { name: "Natura Pine", url: "https://naturapine.com",   img: "https://naturapine.com/cdn/shop/files/NP-Logo-DK.png" }
+      { name: "Natura Pine", url: "https://naturapine.com",   img: "https://naturapine.com/cdn/shop/files/NP-Logo-DK.png" },
+      { name: "Madrinas", url: "https://madrinas.com/",   img: "https://madrinas.com/cdn/shop/files/Madrinas-Logo-blk-Horizontal_eafe6a16-7aa2-4015-9f22-8c615bf895c7_400x.png" },
+      { name: "Otaku", url: "https://otaku.shop",   img: "https://otaku.shop/cdn/shop/files/pfp_512px-02b_eb133fd1-9b1c-4403-9f64-0d4517e9e518.png?v=1765573471" },
+      { name: "V1 Tech", url: "https://www.v1tech.com/",   img: "https://www.v1tech.com/cdn/shop/files/v1techlogo.png?v=1751174629" },
+      { name: "Plush Foundry", url: "https://plushfoundry.com/",   img: "https://plushfoundry.com/cdn/shop/files/plush_foundry_WOOL_V2_BRIGHT_2c81cf69-973f-480c-9168-68d6dc3fc528.png?height=80&v=1690918071" },
+      { name: "Horizons Merch", url: "https://horizonsmerch.com/",   img: "https://horizonsmerch.com/cdn/shop/files/HorizonsMerch_LogoWText_OGW_8x3_300.png?v=1729558999" }
     ];
     var grid = document.currentScript.parentElement;
     stores.forEach(function(s) {

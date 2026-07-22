@@ -18,7 +18,7 @@ tags:
 ## Subathon Controls
 
 <div class="usage-img clip" markdown>
-![Home Page](https://assets.subathonmanager.app/docs/examples/usage/1.2.1/homepage.png)
+![Home Page](https://assets.subathonmanager.app/docs/examples/usage/1.2.3/homepage.png)
 </div>
 
 ### Subathon & Time Management
@@ -83,7 +83,7 @@ On this page, you will see on the left, a list of all your current overlays.
 
 From here, you can create a new overlay, or select one from the list where you can then copy the url, edit it (via button or double click), duplicate it, export it, or permanently delete it.
 
-On the right, you will see a button which will let you quickly refresh all overlays that are open.
+On the right, you will see a button which will let you quickly refresh all overlays that are open. If you have OBS Connected, it will show all your SubathonManager overlays with controllable actions on the right as well. See [OBS](./config/OBS.md) for more details.
 
 !!! info "Overlay Export / Import"
     You can export any overlay and it will attempt to get all associated files, and save all configuration, then create a `.smo` file. This file can be shared and imported again here as a brand new, premade overlay with all config and files needed!
@@ -370,6 +370,7 @@ See [Configuration](config/Commands.md) for the command names. You can change th
     | `!setspins` | Set the spins owed to a specific number. | `!setspins 20` |
     | `!addspins` | Add spins owed. | `!addspins 5` |
     | `!subtractspins` | Subtract spins owed up to 0. | `!subtractspins 5` |
+    | `!spinwheel` | Spin the Wheel. | `!spinwheel` |
 
 === "Other"
 

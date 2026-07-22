@@ -35,7 +35,7 @@ Use the navigation on the left for various configuration settings, or the cards 
 
     ---
 
-    Streaming extensions, such as StreamElements, StreamLabs, TipeeeStream, Blerp.
+    Streaming extensions, such as StreamElements, StreamLabs, and Tangia.
 
     [:octicons-arrow-right-24: Extension Config](config/Extensions.md)
 
@@ -47,11 +47,11 @@ Use the navigation on the left for various configuration settings, or the cards 
 
     [:octicons-arrow-right-24: External Config](config/external.md)
 
--   :material-video: **OBS WebSocket**
+-   :material-video: **External Software**
 
     ---
 
-    Config for OBS WebSocket connection
+    Config for external software, such as OBS or StreamDeck.
 
     [:octicons-arrow-right-24: OBS Config](config/OBS.md)
 

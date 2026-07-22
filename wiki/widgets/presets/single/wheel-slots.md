@@ -70,3 +70,4 @@ A slot machine-style wheelspin widget. Wheel items scroll through a round drum, 
 | `tickSound` | SoundFile | Sound to play as each slot item scrolls past |
 | `tickSoundVolume` | Percent | Tick sound volume |
 | `showSpinsOwed` | Boolean | Show the count of spins remaining in the counter pill |
+| `autoShowHide` | Boolean | If `true`, the slot machine stays hidden until a spin is triggered, then auto-hides again once it finishes spinning |

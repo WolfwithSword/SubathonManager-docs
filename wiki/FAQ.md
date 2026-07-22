@@ -85,15 +85,21 @@ tags:
     - StreamLabs
     - TipeeeStream
     - Blerp
+    - Tangia
+    - TreatStream
     - GoAffPro Affiliate Store Orders
         - GamerSupps
         - UwUMarket
         - Orchid Eight
         - Cheeky Soap
         - And more - see [GoAffPro](config/setup/GoAffPro.md)
+          - Stores on your account will be detected and added dynamically
     - KoFi
     - Throne
     - FourthWall
+    - Pally.GG
+    - MakeShip
+    - JuniperCreates partnered storefronts
 
     And a system for custom external integrations via API.
 
@@ -111,7 +117,9 @@ tags:
     - Multiplier modes for time and/or points with optional duration  
     - External API control for pushing custom events, custom integrations, or modifying configuration  
     - Reverse Subathon option
-    - Quick OBS source setup
+    - OBS source setup and integration/control
+    - StreamDeck Plugin
+    - StreamerBot Extension
     - And more!
 
 ??? question "Currency Conversion?"
@@ -156,7 +164,9 @@ tags:
 ??? question "Contact"
     For questions, issues, or other, you can leave an issue or discussion in the repo.
 
-    Alternatively, you can contact me through Discord.
+    Alternatively, you can contact me through Discord or Twitter.
 
     ![](https://dcbadge.limes.pink/api/shield/153961246910185472?theme=discord-inverted)  
     [![](https://dcbadge.limes.pink/api/server/r8FUvUdCpP)](https://discord.gg/qp4Te3bQTk)
+
+    [![](https://img.shields.io/badge/Twitter-%2523000000.svg?style=for-the-badge&logo=X&logoColor=white&color=black&link=https%3A%2F%2Fx.com%2F_WolfwithSword)](https://x.com/_WolfwithSword)

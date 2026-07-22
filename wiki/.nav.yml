@@ -18,12 +18,17 @@ nav:
           - KoFi: config/setup/KoFi.md
           - FourthWall: config/setup/FourthWall.md
           - Throne: config/setup/Throne.md
-          - DevTunnels: config/setup/DevTunnels.md
+          - Pally.GG: config/setup/Pally.md
+          - MakeShip: config/setup/MakeShip.md
+          - Juniper Creates: config/setup/Juniper.md
           - Custom: config/setup/Custom.md
-      - OBS WebSocket: config/OBS.md
+      - External Software:
+          - DevTunnels: config/setup/DevTunnels.md
+          - OBS WebSocket: config/OBS.md
+          - Streamer.Bot Extension: config/setup/StreamerBot.md
+          - StreamDeck Extension: config/setup/StreamDeck.md
       - Chat Commands: config/Commands.md
       - Discord Logging: config/Webhooks.md
-      - Streamer.Bot Extension: config/setup/StreamerBot.md 
   - Development & Design:
       - Setup & Contribute: develop/Setup.md
       - Integrations & API: Development.md

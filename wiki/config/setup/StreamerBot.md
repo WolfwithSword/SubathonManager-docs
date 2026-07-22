@@ -5,7 +5,7 @@ description: Setting up and using the SubathonManager StreamerBot Extension for 
 
 # StreamerBot Extension
 
-A StreamerBot extension template exists which lets you respond events from SubathonManager or post custom events, commands, and controls to it, all from inside [Streamer.Bot](https://streamer.bot/). This includes updates from goals, pause/resume/lock/unlock listeners, and notifications for when the subathon is complete.
+A StreamerBot extension exists which lets you respond to events from SubathonManager or post custom events, commands, and controls to it, all from inside [Streamer.Bot](https://streamer.bot/). This includes updates from goals, pause/resume/lock/unlock listeners, and notifications for when the subathon is complete, all as custom triggers.
 
 ---
 
@@ -19,11 +19,10 @@ A StreamerBot extension template exists which lets you respond events from Subat
 
 ## Import
 
-1. Download the following `.sb` [file as the latest extension](https://github.com/WolfwithSword/SubathonManager/releases/download/{{ docs_version }}/SubathonManager_Extension.sb) to import.
+1. Download the following `.sb` [file as the latest extension](https://extensions.wolfwithsword.com/extensions/subathonmanager-extension/) to import.
 2. In Streamer.Bot, click **Import** and drop in the file or paste its contents.
 3. Go to **Server/Clients -> Custom WebSocket Clients**, find `SubathonManager`, right-click, and enable **Auto Connect** if not already enabled.
 
-You can also grab the latest file directly from the latest release assets or the latest nightly from [here](https://raw.githubusercontent.com/WolfwithSword/SubathonManager/refs/heads/main/external/streamerbot/SubathonManager_Extension.sb).
 
 ---
 
@@ -35,8 +34,8 @@ The imported template includes pre-wired triggers for the following SubathonMana
 
 Fires whenever a tracked subathon event is received (donations, subscriptions, bits, etc.).
 
-- Subathon_Event
-- Subathon_Command
+- Event Received
+- Command Received
 
 ---
 
@@ -44,13 +43,13 @@ Fires whenever a tracked subathon event is received (donations, subscriptions, b
 
 Fires on any change to the timer state or totals.
 
-- Subathon_Ended
-- Subathon_Timer_Update
+- Timer Ended
+- Timer Update
   - This will be very spammy and not recommended
-- Subathon_Paused
-- Subathon_Resumed
-- Subathon_Locked
-- Subathon_Unlocked  
+- Timer Paused
+- Timer Resumed
+- Timer Locked
+- Timer Unlocked
 
 ---
 
@@ -58,8 +57,8 @@ Fires on any change to the timer state or totals.
 
 Fires when a goal's point threshold is reached, or goals list is updated/changed.
 
-- Subathon_Goals_Updated
-- Subathon_Goal_Completed
+- Goals Updated
+- Goal Completed
 
 ---
 
@@ -67,16 +66,37 @@ Fires when a goal's point threshold is reached, or goals list is updated/changed
 
 Fires for all prompt state transitions, creations, etc.
 
-- Prompt_Started
-- Prompt_Completed
-- Prompt_Expired
-- Prompt_Cancelled
-- Prompt_Update
+- Prompt Started
+- Prompt Completed
+- Prompt Expired
+- Prompt Cancelled
+- Prompt Update
+
+---
+
+### Totals
+
+Fires (very often) whenever the totals count for any tracked count is updated.
+
+- Totals Updated
+
+---
+
+### WheelSpin
+
+Fires for wheel spin related events.
+
+- Wheel Spin Started
+- Wheel Spin Status Change
+  - Whenever a wheel spin is transitioned from say, pending to done/cancelled etc.
+- Wheel Spin Result Received
+
+Also exposed is a function to change the status of a wheel spin by id (found in spin result), useful for auto completing a spin via some streamerbot action.
 
 ---
 
 ## Configuration
 
-After importing, review each action in StreamerBot and wire up your own logic (OBS scene changes, chat messages, sound effects, etc.) to the relevant trigger stubs.
+After importing, review each trigger/action in StreamerBot and wire up your own logic (OBS scene changes, chat messages, sound effects, etc.) to the relevant trigger stubs.
 
 ---

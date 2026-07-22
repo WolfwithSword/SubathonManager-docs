@@ -288,3 +288,4 @@ A steampunk cog-styled spinning wheel. Slices are rendered with alternating pane
     | `tickSound` | SoundFile | Sound to play as a tick while the wheel spins |
     | `tickSoundVolume` | Percent | Tick sound volume |
     | `showSpinsOwed` | Boolean | Show the count of spins remaining in the centre hub |
+    | `autoShowHide` | Boolean | If `true`, the wheel stays hidden until a spin is triggered, then auto-hides again once it finishes spinning |

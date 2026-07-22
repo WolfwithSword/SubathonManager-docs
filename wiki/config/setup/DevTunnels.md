@@ -8,13 +8,13 @@ Dev Tunnels allow your app to receive webhook events from external services like
 
 The tunnel will start automatically on launch if any service that requires it is already configured. For first-time setup, follow the steps below.
 
-![configuration](https://assets.subathonmanager.app/docs/config/setup/devtunnels.png)
+![configuration](https://assets.subathonmanager.app/docs/config/setup/v1.2.3/devtunnels.png)
 
 ---
 
 ## Step 1: Install the DevTunnels CLI
 
-In the **External Services** dropdown of the settings page, go to the **Dev Tunnels** tab, and check the **CLI Status** field.
+In the **External Software** dropdown of the settings page, go to the **Dev Tunnels** tab, and check the **CLI Status** field.
 
 - If it shows **Not installed**, click **Install** to download the Azure DevTunnels CLI from Microsoft. You will be prompted with a link to download and install if it is not able to automatically install.
 - Once installation is complete, click **Check** to confirm it was found successfully.

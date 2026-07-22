@@ -7,6 +7,7 @@ tags:
   - TipeeeStream
   - Blerp
   - Tangia
+  - TreatStream
 ---
 
 ### StreamElements
@@ -51,5 +52,19 @@ To connect Tangia, click the `Get Key` button and paste in your Tangia overlay U
 | Value | Description |
 |---|---|
 | **Tokens** | Seconds per 100, Points per 100 (rounded down).
+
+---
+
+### TreatStream
+
+To integrate TreatStream, go to the connection setup in **Stream Extensions** and click connect. This will open your browser and ask you to sign in and approve the connection.
+
+![treatstream](https://assets.subathonmanager.app/docs/config/setup/treatstream_connect.png)
+
+For each treat order, you can configure seconds and points per.
+
+| Value | Description |
+|---|---|
+| **Treats** | Seconds per treat order, Points per treat order.
 
 ---

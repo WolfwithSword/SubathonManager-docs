@@ -7,7 +7,7 @@ KoFi can be connected by using *DevTunnels*, allowing all webhook events to be s
 
 === "DevTunnels"
 
-KoFi requires DevTunnels to be setup and configured.
+KoFi requires [DevTunnels](./DevTunnels.md) to be setup and configured.
 
 
 | Value | Description |

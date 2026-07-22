@@ -2,7 +2,7 @@
 description: Connect Throne to SubathonManager to track gifts and funding events during your subathon
 ---
 
-Throne requires DevTunnels to be set up and running. If it is not configured, the app will prompt you to set it up before you can connect.
+Throne requires [DevTunnels](./DevTunnels.md) to be set up and running. If it is not configured, the app will prompt you to set it up before you can connect.
 
 Unlike other services, Throne does not use an OAuth login flow. Click **Connect** to enable the integration, then click **Setup Throne** to complete webhook registration.
 
