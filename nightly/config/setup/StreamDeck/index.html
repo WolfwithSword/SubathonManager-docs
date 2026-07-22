@@ -3,19 +3,19 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Legacy Ko-Fi setup for SubathonManager using StreamerBot integration">
+        <meta name="description" content="Setting up SubathonManager StreamDeck extension to control your subathon from an Elgato Stream Deck">
       
       
         <meta name="author" content="WolfwithSword">
       
       
-        <link rel="canonical" href="https://docs.subathonmanager.app/latest/config/setup/KoFiLegacy/">
+        <link rel="canonical" href="https://docs.subathonmanager.app/latest/config/setup/StreamDeck/">
       
       
-        <link rel="prev" href="../KoFi/">
+        <link rel="prev" href="../StreamerBot/">
       
       
-        <link rel="next" href="../FourthWall/">
+        <link rel="next" href="../../Commands/">
       
       
         
@@ -26,7 +26,7 @@
     
     
       
-        <title>Legacy - Subathon Manager</title>
+        <title>StreamDeck Extension - Subathon Manager</title>
       
     
     
@@ -65,13 +65,15 @@
     
     
   
-  <meta property="og:title" content="Legacy - Subathon Manager">
-  <meta property="og:description" content="[nightly] Legacy Ko-Fi setup for SubathonManager using StreamerBot integration">
+  <meta property="og:title" content="StreamDeck Extension - Subathon Manager">
+  <meta property="og:description" content="[nightly] Setting up SubathonManager StreamDeck extension to control your subathon from an Elgato Stream Deck">
   <meta property="og:image" content="https://assets.subathonmanager.app/docs/icon.png">
-  <meta property="og:url" content="https://docs.subathonmanager.app/latest/config/setup/KoFiLegacy/">
+  <meta property="og:url" content="https://docs.subathonmanager.app/latest/config/setup/StreamDeck/">
   <meta name="twitter:card" content="summary">
   
-  <link rel="canonical" href="https://docs.subathonmanager.app/latest/config/setup/KoFiLegacy/">
+    <meta name="robots" content="noindex, nofollow">
+  
+  <link rel="canonical" href="https://docs.subathonmanager.app/latest/config/setup/StreamDeck/">
   
 
   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
@@ -103,7 +105,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#streamerbot-setup" class="md-skip">
+        <a href="#streamdeck-extension" class="md-skip">
           Skip to content
         </a>
       
@@ -142,7 +144,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Legacy
+              StreamDeck Extension
             
           </span>
         </div>
@@ -658,8 +660,6 @@
       
         
       
-        
-      
     
     
     
@@ -983,12 +983,14 @@
                 
   
   
-    
-  
   
   
     
     
+      
+        
+      
+        
       
         
       
@@ -1016,11 +1018,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked="">
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5">
         
           
           <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
@@ -1041,7 +1045,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1112,66 +1116,6 @@
                 
   
   
-    
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_3" checked="">
-        
-          
-          <label class="md-nav__link" for="__nav_3_5_3" id="__nav_3_5_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    KoFi
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_5_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    KoFi
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
@@ -1182,7 +1126,7 @@
   <span class="md-ellipsis">
     
   
-    DevTunnel
+    KoFi
   
 
     
@@ -1191,109 +1135,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Legacy
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Legacy
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#streamerbot-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        StreamerBot Setup
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -1362,14 +1203,70 @@
   
   
     <li class="md-nav__item">
-      <a href="../DevTunnels/" class="md-nav__link">
+      <a href="../Pally/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    DevTunnels
+    Pally.GG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MakeShip/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MakeShip
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Juniper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Juniper Creates
   
 
     
@@ -1423,6 +1320,101 @@
                 
   
   
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    External Software
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    External Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DevTunnels/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DevTunnels
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
@@ -1442,6 +1434,141 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StreamerBot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Streamer.Bot Extension
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StreamDeck Extension
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StreamDeck Extension
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#streamdeck-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StreamDeck Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1490,34 +1617,6 @@
     
   
     Discord Logging
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../StreamerBot/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Streamer.Bot Extension
   
 
     
@@ -2843,6 +2942,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2851,10 +2952,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#streamerbot-setup" class="md-nav__link">
+  <a href="#setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        StreamerBot Setup
+        Setup
       
     </span>
   </a>
@@ -2862,10 +2963,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
+  <a href="#streamdeck-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configuration
+        StreamDeck Configuration
       
     </span>
   </a>
@@ -2889,58 +2990,16 @@
 
 
 
-  <h1>Legacy</h1>
-
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">KoFi (Legacy)</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block"></div>
-</div>
-</div>
-<p>KoFi legacy setup requires Streamer.Bot. Clicking the <strong>Setup</strong> button will open this guide for connecting KoFi to Streamer.Bot and configuring the required actions.</p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Donations</strong></td>
-<td>Seconds per 1$, Points per 1$ (rounded down). 1$ of Default Currency after conversion.</td>
-</tr>
-<tr>
-<td><strong>Memberships</strong></td>
-<td>Seconds and points per membership. Add tiers with the <strong>Add Membership Tier</strong> button - the name must match the tier name from KoFi exactly.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="streamerbot-setup">StreamerBot Setup<a class="headerlink" href="#streamerbot-setup" title="Permanent link">¶</a></h2>
-<p>To integrate KoFi (Legacy Method), StreamerBot is currently required.</p>
-<ul>
-<li>Install &amp; Setup <a href="https://streamer.bot/">Streamer.Bot</a></li>
-<li><a href="https://docs.streamer.bot/guide/integrations/ko-fi">Set Up KoFi with Streamer.Bot</a><ul>
-<li>This requires the Streamer.bot Website Integration setup, with a logged in account.</li>
-</ul>
-</li>
-<li>Copy the string/text from in SubathonManager</li>
-<li>In Streamer.Bot's desktop app, click "Import" and paste in the string.</li>
-<li>In Streamer.Bot, go to Server/Clients -&gt; Custom WebSocket Clients -&gt; Find <code>SubathonManager</code>. Right click it, and enable "Auto Connect" if it is not already enabled.</li>
-</ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://assets.subathonmanager.app/docs/config/setup/streamerbotwebsocketsetup.png" data-desc-position="bottom"><img alt="img" src="https://assets.subathonmanager.app/docs/config/setup/streamerbotwebsocketsetup.png"></a></p>
-<p>You can test the connection from KoFi -&gt; StreamerBot -&gt; SubathonManager by firing events from <a href="https://ko-fi.com/manage/webhooks?src=sidemenu">KoFi here</a>.</p>
-<p>You can verify Streamer.Bot is connected to SubathonManager by checking its configuration in the settings and it will say Connected or Disconnected next to the import string copy button.</p>
-<p>Supports:</p>
-<ul>
-<li>Donation/Tips, Memberships subscriptions, Membership resubscriptions</li>
-<li>Monthly recurring tips are treated as Donation/Tips</li>
-</ul>
-<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">¶</a></h2>
-<p>You can configure KoFi natively in the UI's Settings tab.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://assets.subathonmanager.app/docs/config/setup/kofisetuplegacy.png" data-desc-position="bottom"><img alt="kofi" src="https://assets.subathonmanager.app/docs/config/setup/kofisetuplegacy.png"></a></p>
-<p>By default, all memberships/subs will be treated using the values for DEFAULT. If you want to support your custom membership tiers, please add new tiers with the button and match the tier name with the first text field.</p>
-<p>To import the action string, you can copy it from within the application, find it in the latest release assets, or get the <a href="https://raw.githubusercontent.com/WolfwithSword/SubathonManager/refs/heads/main/external/streamerbot/SubathonManager_KoFi.sb">raw file here</a>.</p>
+<h1 id="streamdeck-extension">StreamDeck Extension<a class="headerlink" href="#streamdeck-extension" title="Permanent link">¶</a></h1>
+<p>A StreamDeck extension is available which lets you control SubathonManager directly from your Elgato Stream Deck. All commands available via chat or websocket can be done via streamdeck - adding wheel spins, pausing/resuming, adding time, etc.</p>
 <hr>
+<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">¶</a></h2>
+<p>To setup or update the streamdeck plugin, in SubathonManager go to <strong>Settings</strong> &gt; <strong>External Software</strong> &gt; <strong>StreamDeck</strong> and click "Download Stream Deck Plugin".</p>
+<p>Download the file linked and double click it to install into your StreamDeck software as a plugin.</p>
+<hr>
+<h2 id="streamdeck-configuration">StreamDeck Configuration<a class="headerlink" href="#streamdeck-configuration" title="Permanent link">¶</a></h2>
+<p>Once the plugin is installed, you can add buttons for each command right in the UI. For only one do you need to setup the port of SubathonManager.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://assets.subathonmanager.app/docs/config/setup/streamdeck_example.png" data-desc-position="bottom"><img alt="streamdeck-example" src="https://assets.subathonmanager.app/docs/config/setup/streamdeck_example.png"></a></p>
 
 
 
