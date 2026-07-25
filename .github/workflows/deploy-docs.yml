@@ -4,9 +4,10 @@ on:
   push:
     paths:
       - 'wiki/**'
-      - 'wiki/docs/**'
       - 'mkdocs.yml'
       - 'requirements.txt'
+      - '!wiki/docs/**.drawio'
+      - '!wiki/docs/**.svg'
     branches:
       - main
 
@@ -78,6 +79,10 @@ jobs:
           DOCS_CANONICAL: true
         run: |
           VERSION="${{ github.event.client_payload.version }}"
+          if [ -z "$VERSION" ] || [ "$VERSION" = "nightly" ]; then
+            echo "::error::Refusing to publish '$VERSION' as a release. 'nightly' (or an empty version) must never become the 'latest' alias."
+            exit 1
+          fi
           mike deploy --push --update-aliases "$VERSION" latest --template wiki/overrides/redirect.html
           mike set-default --push latest --template wiki/overrides/redirect.html
 
@@ -85,11 +90,16 @@ jobs:
         if: github.event_name == 'workflow_dispatch'
         env:
           DOCS_VERSION: ${{ github.event.inputs.version }}
-          NOINDEX: ${{ github.event.inputs.set_latest == 'false' }}
-          DOCS_CANONICAL: ${{ github.event.inputs.set_latest == 'true' }}
+          NOINDEX: ${{ github.event.inputs.set_latest == 'false' || github.event.inputs.version == 'nightly' }}
+          DOCS_CANONICAL: ${{ github.event.inputs.set_latest == 'true' && github.event.inputs.version != 'nightly' }}
         run: |
           VERSION="${{ github.event.inputs.version }}"
-          if [ "${{ github.event.inputs.set_latest }}" = "true" ]; then
+          SET_LATEST="${{ github.event.inputs.set_latest }}"
+          if [ "$VERSION" = "nightly" ] && [ "$SET_LATEST" = "true" ]; then
+            echo "::warning::'nightly' cannot be marked as latest - deploying it as a plain version instead."
+            SET_LATEST="false"
+          fi
+          if [ "$SET_LATEST" = "true" ]; then
             mike deploy --push --update-aliases "$VERSION" latest --template wiki/overrides/redirect.html
             mike set-default --push latest --template wiki/overrides/redirect.html
           else
