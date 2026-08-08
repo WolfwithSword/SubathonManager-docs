@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="How to import and export custom overlays">
+        <meta name="description" content="How to import and export custom overlays, widgets, and widget collections">
       
       
         <meta name="author" content="WolfwithSword">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Import/Export Overlays - Subathon Manager</title>
+        <title>Import/Export - Subathon Manager</title>
       
     
     
@@ -54,6 +54,8 @@
     
       <link rel="stylesheet" href="../../assets/extra.css">
     
+      <link rel="stylesheet" href="../../assets/marketplace.css">
+    
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
       <link rel="stylesheet" href="../../css/drawio-darkmode.css">
@@ -66,10 +68,12 @@
     
   
   <meta property="og:title" content="Import/Export - Subathon Manager">
-  <meta property="og:description" content="[nightly] How to import and export custom overlays">
+  <meta property="og:description" content="[nightly] How to import and export custom overlays, widgets, and widget collections">
   <meta property="og:image" content="https://assets.subathonmanager.app/docs/icon.png">
   <meta property="og:url" content="https://docs.subathonmanager.app/latest/widgets/Porting/">
   <meta name="twitter:card" content="summary">
+  
+    <meta name="robots" content="noindex, nofollow">
   
   <link rel="canonical" href="https://docs.subathonmanager.app/latest/widgets/Porting/">
   
@@ -103,7 +107,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exporting" class="md-skip">
+        <a href="#overlays-smo" class="md-skip">
           Skip to content
         </a>
       
@@ -142,7 +146,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Import/Export Overlays
+              Import/Export
             
           </span>
         </div>
@@ -379,17 +383,20 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../browse/" class="md-tabs__link">
-        
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../browse/" class="md-tabs__link">
+          
   
   
     
   
   Marketplace
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -1911,8 +1918,24 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Import/Export
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1930,6 +1953,197 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overlays-smo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overlays (.smo)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overlays (.smo)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exporting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smo-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        .smo structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#widgets-smw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Widgets (.smw)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Widgets (.smw)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#widgetjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        widget.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exporting_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exporting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unpacking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unpacking
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#widget-collections-smwc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Widget Collections (.smwc)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Widget Collections (.smwc)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collectionjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        collection.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2776,9 +2990,33 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../browse/" class="md-nav__link">
+    
+    
+      
         
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7">
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -2792,7 +3030,79 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Marketplace
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../browse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overlay Marketplace
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../browse-widgets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Widget Marketplace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2870,8 +3180,186 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overlays-smo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overlays (.smo)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overlays (.smo)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exporting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smo-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        .smo structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#widgets-smw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Widgets (.smw)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Widgets (.smw)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#widgetjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        widget.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exporting_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exporting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unpacking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unpacking
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#widget-collections-smwc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Widget Collections (.smwc)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Widget Collections (.smwc)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collectionjson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        collection.json
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2888,16 +3376,243 @@
 
 
 
-<p>Overlays can be import and exported using <code>.smo</code> files.</p>
-<p><code>.smo</code> files are essentially zip files containing all the required files and structure needed for an overlay, and all preconfigured values.</p>
-<p>This can be used as a backup system, migrating across systems, or sharing preconfigured layouts of overlays. It also functions as an easy packaging system for distributing/sharing custom widgets and overlays.</p>
-<h1 id="exporting">Exporting<a class="headerlink" href="#exporting" title="Permanent link">¶</a></h1>
+  <h1>Import/Export</h1>
+
+<p>SubathonManager uses three portable file formats. All three are plain zip archives with a JSON manifest at the root, so you can inspect or build them with any zip tool.</p>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>Contains</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#overlays-smo"><code>.smo</code></a></td>
+<td>A whole overlay - every widget, file, and configured value</td>
+<td>Share or back up a complete, ready-to-go overlay</td>
+</tr>
+<tr>
+<td><a href="#widgets-smw"><code>.smw</code></a></td>
+<td>A single packaged widget</td>
+<td>Share one widget; installs into the <a href="../../Usage/#widget-browser">Widget Browser</a></td>
+</tr>
+<tr>
+<td><a href="#widget-collections-smwc"><code>.smwc</code></a></td>
+<td>Many <code>.smw</code> files bundled together</td>
+<td>Install a whole theme set / preset pack in one go</td>
+</tr>
+</tbody>
+</table>
+<p>All three can be installed by <strong>double-clicking</strong> the file, which opens your latest install of SubathonManager and imports it. On Windows and Linux the app registers these associations on launch (see <a href="../../Installation/#platforms">Installation</a>).</p>
+<p>For developers, any of them can also be imported from the web using the custom protocol <code>subathonmanager://import?url=</code> followed by a link to the file.</p>
+<hr>
+<h2 id="overlays-smo">Overlays (<code>.smo</code>)<a class="headerlink" href="#overlays-smo" title="Permanent link">¶</a></h2>
+<p><code>.smo</code> files are zip files containing all the required files and structure needed for an overlay, and all preconfigured values.</p>
+<p>This can be used as a backup system, migrating across systems, or sharing preconfigured layouts of overlays.</p>
+<h3 id="exporting">Exporting<a class="headerlink" href="#exporting" title="Permanent link">¶</a></h3>
 <p>When exporting an overlay, you are given a chance to preview what the contents will look like. Please ensure all required files are included. Many unused files may be included as well, due to being in the same folders as used files, so please be aware of this.</p>
-<p>You can rename the exported <code>.smo</code> file before it is saved. All configuration of each widget will be saved. The file can be found in the <code>exports</code> folder in the installation path.</p>
-<h1 id="importing">Importing<a class="headerlink" href="#importing" title="Permanent link">¶</a></h1>
-<p>When importing a <code>.smo</code> file, it will instantly create a new overlay named after the export. It can be found in the <code>imports</code> folder of the installation path of Subathon Manager, and is isolated from all other overlays unless it was an existing one being overwritten.</p>
+<p>The export dialog lets you set:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Export Name</strong></td>
+<td>The overlay's name. Defaults to the current overlay name.</td>
+</tr>
+<tr>
+<td><strong>Version</strong></td>
+<td>The overlay's own version, e.g. <code>1.0.0</code>.</td>
+</tr>
+<tr>
+<td><strong>Author</strong></td>
+<td>Your name, used to namespace the overlay on import.</td>
+</tr>
+<tr>
+<td><strong>Tags</strong></td>
+<td>Comma-separated tags, e.g. <code>alerts, goals</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>All configuration of each widget will be saved. The file can be found in the <code>exports</code> folder in the installation path.</p>
+<p>Any widget in the overlay that came from a packaged <code>.smw</code> is embedded as that original <code>.smw</code> under <code>packs/&lt;pack_id&gt;/&lt;version&gt;.smw</code>, rather than being flattened into loose files. This keeps the widget's identity and version intact through the round trip.</p>
+<h3 id="importing">Importing<a class="headerlink" href="#importing" title="Permanent link">¶</a></h3>
+<div class="admonition info">
+<p class="admonition-title">New in 2.0.0 - versioned overlay imports</p>
+<p>Overlays now import <strong>with their version number</strong>. The created overlay is named <code>&lt;Name&gt; v&lt;Version&gt;</code> (for example <code>Retro Pixel v1.2.0</code>), and the archive is stored per author, name, and version:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>imports/overlays/&lt;author&gt;/&lt;overlay-name&gt;/1.0.0.smo
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>imports/overlays/&lt;author&gt;/&lt;overlay-name&gt;/1.2.0.smo
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>imports/overlays/&lt;author&gt;/&lt;overlay-name&gt;/unpack/
+</span></code></pre></div>
+<p>That means importing a newer version of an overlay you already have no longer overwrites the older one - both stay side by side, and you can keep using the old one while trying the new.</p>
+<p>Older <code>.smo</code> files without version information are treated as version <code>1.0.0</code>.</p>
+</div>
+<p>When importing a <code>.smo</code> file, it will instantly create a new overlay named after the export. It can be found in the <code>imports/overlays</code> folder of the installation path of Subathon Manager, and is isolated from all other overlays unless it was an existing one being overwritten.</p>
+<p>Any embedded widget packs are installed into your Widget Browser as well, so they become available for use in your <em>other</em> overlays too.</p>
 <p>You can also import via double-clicking a valid <code>.smo</code> file, as it will open your latest install of Subathon Manager and auto import. If you already had it imported, it will update any changed files.</p>
-<p>For developers, you can also import an <code>.smo</code> file from the web using the custom protocol <code>subathonmanager://import?url=</code> followed by a link to the file.</p>
+<h3 id="smo-structure"><code>.smo</code> structure<a class="headerlink" href="#smo-structure" title="Permanent link">¶</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>my-overlay.smo
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├-- overlay.json           # manifest
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>├-- packs/                 # widgets that came from .smw packages
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>│   └-- wolfwithsword.generic.goal-bar/
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>│       └-- 2.0.0.smw
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>└-- &lt;widget folders&gt;/      # loose widget files (html, css, js, media)
+</span></code></pre></div>
+<hr>
+<h2 id="widgets-smw">Widgets (<code>.smw</code>)<a class="headerlink" href="#widgets-smw" title="Permanent link">¶</a></h2>
+<p>A <code>.smw</code> is a single packaged widget: one zip containing the widget's entry HTML file, everything it references, its metadata sidecars, and a <code>widget.json</code> manifest.</p>
+<p>Packaged widgets are <strong>loaded straight from the archive</strong> rather than being extracted. Entries are read into memory on demand and cached, so small widgets never touch the disk. Large entries (big videos, sounds, images) are materialised into <code>cache/widgets/&lt;pack&gt;-&lt;hash&gt;/</code> on first use instead of being held in memory. That cache is disposable - it is swept automatically when packages are no longer referenced by any overlay, and rebuilt on demand.</p>
+<h3 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link">¶</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>WolfwithSword_Generic_Goal-Bar.smw
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>├-- widget.json                  # manifest (required, must be at the archive root)
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>├-- preview.png                  # optional preview image
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>└-- content/
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    ├-- goal-bar.html            # the entry file
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    ├-- goal-bar.html.json       # widget metadata (author, size, JS vars)
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    ├-- goal-bar.css
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    └-- goal-bar.css.json        # CSS variable metadata
+</span></code></pre></div>
+<p>The folder layout inside the archive is up to you - only <code>widget.json</code> must be at the root, and <code>entry</code> must point at the widget's HTML file. See <a href="../Structure/">Structure</a> for the metadata sidecar formats.</p>
+<h3 id="widgetjson"><code>widget.json</code><a class="headerlink" href="#widgetjson" title="Permanent link">¶</a></h3>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">"app_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0.0"</span><span class="p">,</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nt">"exported_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-07-31T13:33:01.6959835Z"</span><span class="p">,</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="nt">"widget"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="nt">"pack_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wolfwithsword.generic.goal-bar"</span><span class="p">,</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Goal Bar"</span><span class="p">,</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="nt">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WolfwithSword"</span><span class="p">,</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="nt">"group"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Generic"</span><span class="p">,</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="nt">"widget_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0.0"</span><span class="p">,</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="nt">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"goal"</span><span class="p">,</span><span class="w"> </span><span class="s2">"points"</span><span class="p">,</span><span class="w"> </span><span class="s2">"money"</span><span class="p">,</span><span class="w"> </span><span class="s2">"goals"</span><span class="p">,</span><span class="w"> </span><span class="s2">"custom"</span><span class="p">],</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="nt">"preview_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"preview.png"</span><span class="p">,</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="nt">"docsUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://docs.subathonmanager.app/latest/widgets/presets/single/goal-bar/"</span><span class="p">,</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Html"</span><span class="p">,</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="nt">"entry"</span><span class="p">:</span><span class="w"> </span><span class="s2">"content/goal-bar.html"</span><span class="p">,</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="nt">"height"</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="nt">"scale"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"x"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">"y"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="p">}</span>
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>version</code></td>
+<td>Manifest format version. Currently <code>"1"</code>.</td>
+</tr>
+<tr>
+<td><code>app_version</code></td>
+<td>The SubathonManager version the widget was built against. Informational.</td>
+</tr>
+<tr>
+<td><code>widget.pack_id</code></td>
+<td>Stable identity for the widget. If omitted it is generated as <code>&lt;author&gt;.&lt;group&gt;.&lt;name&gt;</code>, slugified.</td>
+</tr>
+<tr>
+<td><code>widget.name</code></td>
+<td>Display name in the Widget Browser. Falls back to the filename.</td>
+</tr>
+<tr>
+<td><code>widget.author</code></td>
+<td>Author name. Also used to namespace unpack folders.</td>
+</tr>
+<tr>
+<td><code>widget.group</code></td>
+<td>Theme set / grouping, e.g. <code>Generic</code>, <code>Retro Pixel</code>. Defaults to <code>widgets</code>.</td>
+</tr>
+<tr>
+<td><code>widget.widget_version</code></td>
+<td>The widget's own version, e.g. <code>2.0.0</code>. Defaults to <code>1.0.0</code>.</td>
+</tr>
+<tr>
+<td><code>widget.tags</code></td>
+<td>Array of strings, searchable in the Widget Browser.</td>
+</tr>
+<tr>
+<td><code>widget.preview_image</code></td>
+<td>Archive-relative path to a preview image shown on the browser card.</td>
+</tr>
+<tr>
+<td><code>widget.docsUrl</code></td>
+<td>Optional documentation link, surfaced as a button in the editor.</td>
+</tr>
+<tr>
+<td><code>widget.entry</code></td>
+<td><strong>Required.</strong> Archive-relative path to the widget's HTML file.</td>
+</tr>
+<tr>
+<td><code>widget.size</code></td>
+<td>Default <code>width</code> / <code>height</code> in pixels.</td>
+</tr>
+<tr>
+<td><code>widget.scale</code></td>
+<td>Default <code>x</code> / <code>y</code> scale factors.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>A <code>.smw</code> with no <code>widget.json</code>, or with an empty <code>entry</code>, is ignored entirely and will not appear in the Widget Browser.</p>
+</div>
+<h3 id="installing">Installing<a class="headerlink" href="#installing" title="Permanent link">¶</a></h3>
+<p>Installed packages are stored by pack id and version:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>imports/widgets/packed/&lt;pack_id&gt;/&lt;version&gt;.smw
+</span></code></pre></div>
+<p>Because the version is part of the path, installing a new version sits alongside the old one rather than replacing it. The Widget Browser shows only the newest version of each widget by default; tick <strong>All versions</strong> to see them all.</p>
+<p>When an overlay uses a widget from a package and a newer version of that package is installed, the widget's card in the editor shows an <strong>Update Available</strong> button that swaps it over while keeping your configuration.</p>
+<h3 id="exporting_1">Exporting<a class="headerlink" href="#exporting_1" title="Permanent link">¶</a></h3>
+<p>Right-click any widget in the overlay editor's widget list and choose <strong>Export Packed Widget</strong>. You can set the name, group, version, author, tags, and preview image, and pick which files to bundle.</p>
+<p>Your current CSS and JS variable values are baked in as the exported widget's defaults, so whoever installs it starts with your configuration.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Files referenced by hardcoded paths inside the HTML, JS, or CSS may not be detected and bundled automatically. Check the file list in the export dialogue before confirming.</p>
+</div>
+<p>The result lands in the <code>exports</code> folder.</p>
+<h3 id="unpacking">Unpacking<a class="headerlink" href="#unpacking" title="Permanent link">¶</a></h3>
+<p>Because a package is read from inside the archive, its files are not directly editable. Right-click a packaged widget in the editor and choose <strong>Unpack Widget</strong> to extract it to loose files:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>imports/widgets/unpacked/&lt;author&gt;/&lt;group&gt;/&lt;name&gt;/&lt;version&gt;/
+</span></code></pre></div>
+<p>The overlay's widget is repointed at the extracted files, so edits take effect immediately. The original <code>.smw</code> is untouched and stays in your Widget Browser.</p>
+<hr>
+<h2 id="widget-collections-smwc">Widget Collections (<code>.smwc</code>)<a class="headerlink" href="#widget-collections-smwc" title="Permanent link">¶</a></h2>
+<p>A <code>.smwc</code> is simply a zip containing multiple <code>.smw</code> files - a way to hand someone an entire theme set or preset pack that installs in one action.</p>
+<h3 id="structure_1">Structure<a class="headerlink" href="#structure_1" title="Permanent link">¶</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>retro-pixel.smwc
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>├-- collection.json # optional manifest
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>├-- WolfwithSword_Retro_Timer.smw
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>├-- WolfwithSword_Retro_Goal-Bar.smw
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>└-- WolfwithSword_Retro_Alerts.smw
+</span></code></pre></div>
+<p>Any entry ending in <code>.smw</code> is installed, regardless of what folder it sits in. Anything else in the archive is ignored.</p>
+<h3 id="collectionjson"><code>collection.json</code><a class="headerlink" href="#collectionjson" title="Permanent link">¶</a></h3>
+<p>The manifest is optional - a <code>.smwc</code> with nothing but <code>.smw</code> files still installs fine.</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">"format_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="nt">"app_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0.0"</span><span class="p">,</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="nt">"collection"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Retro Pixel"</span><span class="p">,</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="nt">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WolfwithSword"</span><span class="p">,</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The full Retro Pixel widget set."</span><span class="p">,</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="nt">"tags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"retro"</span><span class="p">,</span><span class="w"> </span><span class="s2">"pixel"</span><span class="p">,</span><span class="w"> </span><span class="s2">"themeset"</span><span class="p">]</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>If <code>name</code> is missing it falls back to the filename, and <code>version</code> defaults to <code>1.0.0</code>.</p>
+<h3 id="installing_1">Installing<a class="headerlink" href="#installing_1" title="Permanent link">¶</a></h3>
+<p>Double-click the <code>.smwc</code>, or import it via the protocol handler. Each contained <code>.smw</code> is installed individually using the <a href="#installing">normal package rules</a> - so a collection can safely mix updates to widgets you already have with brand new ones.</p>
 
 
 
@@ -3017,6 +3732,8 @@
         <script src="../../assets/javascripts/drawio-reload.js"></script>
       
         <script src="../../assets/javascripts/marketplace.js"></script>
+      
+        <script src="../../assets/javascripts/downloads.js"></script>
       
     
   

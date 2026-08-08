@@ -54,6 +54,8 @@
     
       <link rel="stylesheet" href="../../../assets/extra.css">
     
+      <link rel="stylesheet" href="../../../assets/marketplace.css">
+    
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
       <link rel="stylesheet" href="../../../css/drawio-darkmode.css">
@@ -70,6 +72,8 @@
   <meta property="og:image" content="https://assets.subathonmanager.app/docs/icon.png">
   <meta property="og:url" content="https://docs.subathonmanager.app/latest/config/setup/DevTunnels/">
   <meta name="twitter:card" content="summary">
+  
+    <meta name="robots" content="noindex, nofollow">
   
   <link rel="canonical" href="https://docs.subathonmanager.app/latest/config/setup/DevTunnels/">
   
@@ -379,17 +383,20 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../../browse/" class="md-tabs__link">
-        
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../browse/" class="md-tabs__link">
+          
   
   
     
   
   Marketplace
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -2857,9 +2864,33 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../browse/" class="md-nav__link">
+    
+    
+      
         
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7">
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -2873,7 +2904,79 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Marketplace
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../browse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overlay Marketplace
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../browse-widgets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Widget Marketplace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3013,7 +3116,7 @@
 <h1 id="dev-tunnels">Dev Tunnels<a class="headerlink" href="#dev-tunnels" title="Permanent link">¶</a></h1>
 <p>Dev Tunnels allow your app to receive webhook events from external services like Ko-Fi, FourthWall, and Throne by exposing a local endpoint to the internet via Microsoft's Azure DevTunnels service.</p>
 <p>The tunnel will start automatically on launch if any service that requires it is already configured. For first-time setup, follow the steps below.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://assets.subathonmanager.app/docs/config/setup/v1.2.3/devtunnels.png" data-desc-position="bottom"><img alt="configuration" src="https://assets.subathonmanager.app/docs/config/setup/v1.2.3/devtunnels.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://assets.subathonmanager.app/docs/config/setup/2.0.0/devtunnels.png" data-desc-position="bottom"><img alt="configuration" src="https://assets.subathonmanager.app/docs/config/setup/2.0.0/devtunnels.png"></a></p>
 <hr>
 <h2 id="step-1-install-the-devtunnels-cli">Step 1: Install the DevTunnels CLI<a class="headerlink" href="#step-1-install-the-devtunnels-cli" title="Permanent link">¶</a></h2>
 <p>In the <strong>External Software</strong> dropdown of the settings page, go to the <strong>Dev Tunnels</strong> tab, and check the <strong>CLI Status</strong> field.</p>
@@ -3189,6 +3292,8 @@
         <script src="../../../assets/javascripts/drawio-reload.js"></script>
       
         <script src="../../../assets/javascripts/marketplace.js"></script>
+      
+        <script src="../../../assets/javascripts/downloads.js"></script>
       
     
   

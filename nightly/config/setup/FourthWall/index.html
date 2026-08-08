@@ -54,6 +54,8 @@
     
       <link rel="stylesheet" href="../../../assets/extra.css">
     
+      <link rel="stylesheet" href="../../../assets/marketplace.css">
+    
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
       <link rel="stylesheet" href="../../../css/drawio-darkmode.css">
@@ -70,6 +72,8 @@
   <meta property="og:image" content="https://assets.subathonmanager.app/docs/icon.png">
   <meta property="og:url" content="https://docs.subathonmanager.app/latest/config/setup/FourthWall/">
   <meta name="twitter:card" content="summary">
+  
+    <meta name="robots" content="noindex, nofollow">
   
   <link rel="canonical" href="https://docs.subathonmanager.app/latest/config/setup/FourthWall/">
   
@@ -379,17 +383,20 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../../browse/" class="md-tabs__link">
-        
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../browse/" class="md-tabs__link">
+          
   
   
     
   
   Marketplace
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -2831,9 +2838,33 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../browse/" class="md-nav__link">
+    
+    
+      
         
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7">
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -2847,7 +2878,79 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Marketplace
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../browse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overlay Marketplace
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../browse-widgets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Widget Marketplace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2965,7 +3068,7 @@
 <p>FourthWall requires <a href="../DevTunnels/">DevTunnels</a> to be set up and running. If it is not configured, the app will prompt you to set it up before you can connect.</p>
 <p>Click <strong>Connect</strong> to open a browser tab and authorize the SubathonManager FourthWall App to access your store. Once approved, the tab will close automatically and you will be logged in. A webhook will be created on your store automatically - no manual configuration is needed on the FourthWall side.</p>
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">¶</a></h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://assets.subathonmanager.app/docs/config/setup/fourthwall1.png" data-desc-position="bottom"><img alt="fourthwall" src="https://assets.subathonmanager.app/docs/config/setup/fourthwall1.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://assets.subathonmanager.app/docs/config/setup/2.0.0/fourthwall1.png" data-desc-position="bottom"><img alt="fourthwall" src="https://assets.subathonmanager.app/docs/config/setup/2.0.0/fourthwall1.png"></a></p>
 <p>Once connected, your <strong>Status</strong> will show as <strong>Connected</strong> and <strong>DevTunnels</strong> as <strong>Running</strong>. Your webhook URL is shown (hidden by default) and can be copied with the <strong>Copy</strong> button.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://assets.subathonmanager.app/docs/config/setup/fourthwall2.png" data-desc-position="bottom"><img alt="fourthwall" src="https://assets.subathonmanager.app/docs/config/setup/fourthwall2.png"></a></p>
 <p>Use <strong>Reconnect</strong> to refresh the connection, or <strong>Disconnect</strong> to unlink your store. Membership tiers are pre-filled automatically and will update on bootup or whenever you reconnect.</p>
@@ -3119,6 +3222,8 @@
         <script src="../../../assets/javascripts/drawio-reload.js"></script>
       
         <script src="../../../assets/javascripts/marketplace.js"></script>
+      
+        <script src="../../../assets/javascripts/downloads.js"></script>
       
     
   

@@ -54,6 +54,8 @@
     
       <link rel="stylesheet" href="../assets/extra.css">
     
+      <link rel="stylesheet" href="../assets/marketplace.css">
+    
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
       <link rel="stylesheet" href="../css/drawio-darkmode.css">
@@ -70,6 +72,8 @@
   <meta property="og:image" content="https://assets.subathonmanager.app/docs/icon.png">
   <meta property="og:url" content="https://docs.subathonmanager.app/latest/Development/">
   <meta name="twitter:card" content="summary">
+  
+    <meta name="robots" content="noindex, nofollow">
   
   <link rel="canonical" href="https://docs.subathonmanager.app/latest/Development/">
   
@@ -379,17 +383,20 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../browse/" class="md-tabs__link">
-        
+    
+    
+      <li class="md-tabs__item">
+        <a href="../browse/" class="md-tabs__link">
+          
   
   
     
   
   Marketplace
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -1831,6 +1838,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#api-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3002,9 +3020,33 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../browse/" class="md-nav__link">
+    
+    
+      
         
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7">
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -3018,7 +3060,79 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Marketplace
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../browse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overlay Marketplace
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../browse-widgets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Widget Marketplace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3219,6 +3333,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
   
 </li>
       
@@ -3748,6 +3873,9 @@
 </div>
 </div>
 <hr>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">¶</a></h2>
+<p>SubathonManager provides a <code>resources</code> directory at the root of your installation, which is served as an accessible path via the webserver. This is useful for having shared assets or scripts for widgets, or anything else you want served from a webserver.</p>
+<p><code>/resources/...</code></p>
 <h2 id="api-reference">API Reference<a class="headerlink" href="#api-reference" title="Permanent link">¶</a></h2>
 <h3 id="amounts">Amounts<a class="headerlink" href="#amounts" title="Permanent link">¶</a></h3>
 <p><code>GET /api/data/amounts</code></p>
@@ -3949,6 +4077,8 @@
         <script src="../assets/javascripts/drawio-reload.js"></script>
       
         <script src="../assets/javascripts/marketplace.js"></script>
+      
+        <script src="../assets/javascripts/downloads.js"></script>
       
     
   

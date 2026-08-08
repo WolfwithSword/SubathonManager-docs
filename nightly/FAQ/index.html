@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://docs.subathonmanager.app/latest/FAQ/">
       
       
-        <link rel="prev" href="../browse/">
+        <link rel="prev" href="../browse-widgets/">
       
       
         <link rel="next" href="../Credits/">
@@ -54,6 +54,8 @@
     
       <link rel="stylesheet" href="../assets/extra.css">
     
+      <link rel="stylesheet" href="../assets/marketplace.css">
+    
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
       <link rel="stylesheet" href="../css/drawio-darkmode.css">
@@ -70,6 +72,8 @@
   <meta property="og:image" content="https://assets.subathonmanager.app/docs/icon.png">
   <meta property="og:url" content="https://docs.subathonmanager.app/latest/FAQ/">
   <meta name="twitter:card" content="summary">
+  
+    <meta name="robots" content="noindex, nofollow">
   
   <link rel="canonical" href="https://docs.subathonmanager.app/latest/FAQ/">
   
@@ -377,17 +381,20 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../browse/" class="md-tabs__link">
-        
+    
+    
+      <li class="md-tabs__item">
+        <a href="../browse/" class="md-tabs__link">
+          
   
   
     
   
   Marketplace
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -2763,9 +2770,33 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../browse/" class="md-nav__link">
+    
+    
+      
         
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7">
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -2779,7 +2810,79 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Marketplace
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../browse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overlay Marketplace
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../browse-widgets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Widget Marketplace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3189,8 +3292,10 @@
 </details>
 <details class="question">
 <summary>Linux? Mac?</summary>
-<p>While this is a primarily Windows application, tweaks have been made and users have reported that it can work under WINE or Steam Proton.</p>
-<p>Not everything is tested or guaranteed to work - for example, the widget editor embedded preview will instead show a button to open it in your browser. Aside from that, most things should work.</p>
+<p>As of <code>v2.0.0</code> the UI was rebuilt from WPF-UI to Avalonia, and native builds are published for <strong>Windows</strong> (<code>win-x64</code>), <strong>Linux</strong> (<code>linux-x64</code>), and <strong>macOS</strong> for both Apple Silicon (<code>osx-arm64</code>) and Intel (<code>osx-x64</code>). See <a href="../Installation/#platforms">Installation</a>.</p>
+<p>Windows remains the primary support target. Linux and macOS are considered experimental - not everything is tested or guaranteed to work. There is a known bug with the embedded WebView for the Overlay Editor on some Linux distributions. In these cases, there is a button to open the editor preview in browser.</p>
+<p>macOS builds are not signed with an Apple Developer ID, so you will need to approve the app once in <strong>Privacy &amp; Security</strong>. The steps are in the <code>README.txt</code> inside the zip and on the <a href="../Installation/#platforms">Installation</a> page.</p>
+<p>Prior to <code>v2.0.0</code> the app was Windows-only, though it mostly worked through Proton on Linux.</p>
 </details>
 <details class="question">
 <summary>Roadmap?</summary>
@@ -3323,6 +3428,8 @@
         <script src="../assets/javascripts/drawio-reload.js"></script>
       
         <script src="../assets/javascripts/marketplace.js"></script>
+      
+        <script src="../assets/javascripts/downloads.js"></script>
       
     
   

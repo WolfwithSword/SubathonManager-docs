@@ -54,6 +54,8 @@
     
       <link rel="stylesheet" href="../assets/extra.css">
     
+      <link rel="stylesheet" href="../assets/marketplace.css">
+    
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
       <link rel="stylesheet" href="../css/drawio-darkmode.css">
@@ -70,6 +72,8 @@
   <meta property="og:image" content="https://assets.subathonmanager.app/docs/icon.png">
   <meta property="og:url" content="https://docs.subathonmanager.app/latest/Installation/">
   <meta name="twitter:card" content="summary">
+  
+    <meta name="robots" content="noindex, nofollow">
   
   <link rel="canonical" href="https://docs.subathonmanager.app/latest/Installation/">
   
@@ -379,17 +383,20 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../browse/" class="md-tabs__link">
-        
+    
+    
+      <li class="md-tabs__item">
+        <a href="../browse/" class="md-tabs__link">
+          
   
   
     
   
   Marketplace
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -638,6 +645,17 @@
       On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Platforms
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#updating" class="md-nav__link">
@@ -2837,9 +2855,33 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../browse/" class="md-nav__link">
+    
+    
+      
         
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7">
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -2853,7 +2895,79 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Marketplace
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../browse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overlay Marketplace
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../browse-widgets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Widget Marketplace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2941,6 +3055,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Platforms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#updating" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3006,13 +3131,75 @@
 
 <h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">¶</a></h1>
 <p><a href="https://github.com/WolfwithSword/SubathonManager/releases/latest"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/WolfwithSword/SubathonManager?include_prereleases&amp;style=for-the-badge&amp;logo=github&amp;color=3f4fa3"></a>
-<a href="https://github.com/WolfwithSword/SubathonManager/releases/latest"><img alt="GitHub Downloads" src="https://img.shields.io/github/downloads/WolfwithSword/SubathonManager/total?style=for-the-badge&amp;logo=github&amp;color=3f4fa3"></a></p>
-<p><a class="md-button md-button--primary" href="https://github.com/WolfwithSword/SubathonManager/releases/latest">Download the latest release <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"></path></svg></span></a></p>
-<p><a class="md-button md-button--primary" href="https://github.com/WolfwithSword/SubathonManager/releases/nightly">Download nightly <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"></path></svg></span></a></p>
-<p>Extract the zip file to a location of your choosing.</p>
+<a href="https://github.com/WolfwithSword/SubathonManager/releases/latest"><img alt="GitHub Downloads" src="https://img.shields.io/github/downloads/WolfwithSword/SubathonManager/total?style=for-the-badge&amp;logo=github&amp;color=3f4fa3&amp;label=downloads"></a></p>
+<p><a class="md-button md-button--primary" data-download-channel="latest" href="https://github.com/WolfwithSword/SubathonManager/releases/latest">Download the latest release <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"></path></svg></span></a></p>
+<p><a class="md-button md-button--primary" data-download-channel="nightly" href="https://github.com/WolfwithSword/SubathonManager/releases/tag/nightly">Download nightly <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"></path></svg></span></a></p>
+<p>Extract the zip file to a location of your choosing, this will become your SubathonManager installation going forward.</p>
+<hr>
+<h2 id="platforms">Platforms<a class="headerlink" href="#platforms" title="Permanent link">¶</a></h2>
+<p>As of <code>v2.0.0</code>, SubathonManager runs on Windows, macOS, and Linux. Every release ships one zip per platform, named <code>SubathonManager_[platform]_[version].zip</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Build</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td><code>win-x64</code></td>
+<td>Primary supported platform</td>
+</tr>
+<tr>
+<td>macOS (Apple Silicon)</td>
+<td><code>osx-arm64</code></td>
+<td>For M1 / M2 / M3 / M4 Macs</td>
+</tr>
+<tr>
+<td>macOS (Intel)</td>
+<td><code>osx-x64</code></td>
+<td>For Intel Macs</td>
+</tr>
+<tr>
+<td>Linux</td>
+<td><code>linux-x64</code></td>
+<td>64-bit linux (glibc) distributions</td>
+</tr>
+</tbody>
+</table>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">macOS</label><label for="__tabbed_1_3">Linux</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Extract the zip and run <code>SubathonManager.exe</code>.</p>
+<p>The app registers the <code>subathonmanager://</code> protocol and the <code>.smo</code>, <code>.smw</code>, and <code>.smwc</code> file associations for the current user on launch.</p>
+</div>
+<div class="tabbed-block">
+<p>Extract the zip, then drag <code>SubathonManager.app</code> <strong>out of your Downloads folder</strong> - into <code>Applications</code> or anywhere else.</p>
+<p>The app is not signed with an Apple Developer ID, so macOS will block it the first time. Open <strong>System Settings -&gt; Privacy &amp; Security</strong>, scroll to the message about SubathonManager, and click <strong>Open Anyway</strong>. On macOS 14 and older, right-click the app and choose <strong>Open</strong> instead.</p>
+<p>A <code>README.txt</code> with the same steps is included in the zip.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>macOS support is considered experimental and is not the primary support target.</p>
+</div>
+</div>
+<div class="tabbed-block">
+<p>Extract the zip and run the <code>SubathonManager</code> binary (<code>chmod +x SubathonManager</code> if needed).</p>
+<p>The app self-registers the <code>subathonmanager://</code> protocol handler and the <code>.smo</code> / <code>.smw</code> / <code>.smwc</code> file associations after first launch. If you would rather do it manually, or want to point the associations at a specific install, a helper script is bundled at <code>linux/install.sh</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>./linux/install.sh<span class="w">                </span><span class="c1"># register using the binary next to the script</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>./linux/install.sh<span class="w"> </span>/path/to/dir<span class="w">   </span><span class="c1"># register using the binary in that directory</span>
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Linux support is considered experimental. There is a known bug with the embedded WebView on some distributions.</p>
+</div>
+</div>
+</div>
+</div>
 <hr>
 <h2 id="updating">Updating<a class="headerlink" href="#updating" title="Permanent link">¶</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Automatic</label><label for="__tabbed_1_2">Manual</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Automatic</label><label for="__tabbed_2_2">Manual</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Go to the <strong>Settings</strong> tab and click <strong>Check for Updates</strong>. If one is available, you will be prompted to update in place.</p>
@@ -3026,10 +3213,25 @@
 </div>
 <hr>
 <h2 id="uninstallation">Uninstallation<a class="headerlink" href="#uninstallation" title="Permanent link">¶</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Windows</label><label for="__tabbed_3_2">macOS</label><label for="__tabbed_3_3">Linux</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>Delete the installed files (<code>SubathonManager.exe</code> &amp; related files).</p>
+</div>
+<div class="tabbed-block">
+<p>Delete <code>SubathonManager.app</code>.</p>
+</div>
+<div class="tabbed-block">
+<p>Delete the installed files, then unregister the desktop entry and file associations with the bundled helper script:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>./linux/install.sh<span class="w"> </span>--uninstall
+</span></code></pre></div>
+<p>This removes the <code>subathonmanager.desktop</code> entry, the <code>.smo</code> / <code>.smw</code> / <code>.smwc</code> MIME definitions, and the installed icons from your user's <code>~/.local/share</code> (or <code>$XDG_DATA_HOME</code>). Run it <em>before</em> deleting the app folder, since the script lives inside it.</p>
+</div>
+</div>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Everything related to SubathonManager is located within the folder the executable is in.</p>
+<p>Everything related to SubathonManager is located within the folder the executable is in (or, on macOS, inside the <code>.app</code> bundle). The only exception is the Linux desktop/MIME registration described above.</p>
 </div>
 <hr>
 <div class="admonition warning">
@@ -3156,6 +3358,8 @@
         <script src="../assets/javascripts/drawio-reload.js"></script>
       
         <script src="../assets/javascripts/marketplace.js"></script>
+      
+        <script src="../assets/javascripts/downloads.js"></script>
       
     
   
