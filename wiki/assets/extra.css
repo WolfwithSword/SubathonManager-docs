@@ -165,3 +165,136 @@ img[src$=".svg"], img[src$=".SVG"] {
   text-align: center;
   line-height: 1.3;
 }
+
+#dl-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+#dl-modal {
+  position: relative;
+  width: 100%;
+  max-width: 34rem;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: var(--md-default-bg-color);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.4);
+}
+
+#dl-modal h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+#dl-modal-sub {
+  margin: 0.25rem 0 1rem;
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--light);
+}
+
+#dl-modal-close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--md-default-fg-color);
+}
+
+#dl-modal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dl-loading {
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.dl-option {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  color: var(--md-default-fg-color) !important;
+  text-decoration: none !important;
+  transition: border-color 0.15s, background 0.15s, transform 0.15s;
+}
+
+.dl-option:hover {
+  border-color: var(--md-primary-fg-color);
+  transform: translateY(-1px);
+}
+
+.dl-option.recommended {
+  border-color: var(--md-primary-fg-color);
+  background: var(--md-primary-fg-color--light);
+  color: var(--md-primary-bg-color) !important;
+}
+
+.dl-option.disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.dl-option i {
+  font-size: 1.4rem;
+  width: 1.6rem;
+  text-align: center;
+}
+
+.dl-option-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.dl-option-text strong {
+  font-size: 0.9rem;
+}
+
+.dl-option-text small {
+  font-size: 0.7rem;
+  opacity: 0.75;
+}
+
+.dl-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.25);
+  white-space: nowrap;
+}
+
+.dl-arrow {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+#dl-modal-footer {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.dl-release-link {
+  font-size: 0.75rem;
+  color: var(--md-primary-fg-color) !important;
+}

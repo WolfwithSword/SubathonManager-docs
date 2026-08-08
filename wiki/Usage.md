@@ -88,6 +88,29 @@ On the right, you will see a button which will let you quickly refresh all overl
 !!! info "Overlay Export / Import"
     You can export any overlay and it will attempt to get all associated files, and save all configuration, then create a `.smo` file. This file can be shared and imported again here as a brand new, premade overlay with all config and files needed!
 
+### Widget Browser
+
+<div class="usage-img clip" markdown>
+![Widget Browser](https://assets.subathonmanager.app/docs/examples/usage/2.0.0/widgetbrowser.png)
+</div>
+
+The **Widget Browser** is your library of installed widgets. It shows both the preset widgets that ship with SubathonManager and any widgets you have installed or exported yourself as [`.smw` files](widgets/Porting.md).
+
+Widgets are grouped by author, then by their **group** name. Each card shows the widget's preview image, name, author, version, and tags.
+
+| Control | Description |
+|---|---|
+| **Search** | Filters by name, author, group, or tag. |
+| **All versions** | By default only the newest version of each widget is shown. Enable this to list every installed version. |
+| **Refresh** | Rescans the `presets` and `imports` folders for new or changed packages. |
+| **Add to Overlay** | Adds the selected widget(s) to the overlay you currently have open in the editor. |
+| **View Docs** | Opens the widget's documentation if available. |
+| **Open Containing Folder** | Opens the folder holding the `.smw` file. |
+| **Delete** | Removes an imported widget from your library. Preset widgets cannot be deleted. |
+
+!!! info "Where widgets live"
+    Preset widgets live in the `presets` folder of your install. Imported widgets live under `imports/widgets/packed`.
+
 ### Editor
 
 <div class="usage-img clip" markdown>
@@ -113,7 +136,11 @@ On the right, you will see a button which will let you quickly refresh all overl
 
     A list of widgets will be shown here that are active in the overlay.
 
-    You can also import new widgets as html files from your system with the **Import Widget** button.
+    You can add widgets in three ways:
+
+    - **Browse installed widgets** opens the [Widget Browser](#widget-browser), where you can pick any preset or imported widget(s).
+    - **Import Widget** imports a raw `.html` file from your system.
+    - **Import Asset** imports an image or video as an [asset widget](widgets/Structure.md#asset-widgets). This is its own widget type with very little customization.
 
     Their order (also indicated by the Z value) dictates overlapping rules. Widgets higher up / with a bigger number will appear above others.
 
@@ -122,9 +149,41 @@ On the right, you will see a button which will let you quickly refresh all overl
 
     When you double click or click the edit button on a widget in this list, it will populate it in the *Widget Editor* for customization.
 
+    If a widget came from a packaged `.smw` and a newer version of that package is installed, an **Update Available** button appears on its card. Clicking it swaps the widget over to the newer version, keeping your configuration.
+
     <div class="usage-img" markdown>
     ![Widget Control](https://assets.subathonmanager.app/docs/examples/usage/widget_control.png)
     </div>
+
+    **Right-click any widget** in the list for packaging actions:
+
+    | Action | Description |
+    |---|---|
+    | **Open Folder** | Reveals the widget's files in your file system. |
+    | **Export Packed Widget** | Packages the widget and its *current* settings into a portable `.smw` file for sharing. |
+    | **Unpack Widget** | Only shown for widgets that came from a `.smw`. Extracts the package to loose files so you can edit or copy the source. |
+
+    <div class="usage-img" markdown>
+    ![Widget Context Menu](https://assets.subathonmanager.app/docs/examples/usage/2.0.0/widget_contextmenu.png)
+    </div>
+
+    !!! info "Export Packed Widget"
+        The export dialog lets you set the widget's **name**, **group**, **version**, **author**, **tags**, a **preview image**, and choose exactly which files get bundled. Your current CSS/JS variable values are baked in as the widget's defaults, but are still configurable later.
+
+        The resulting `.smw` is saved in the `exports` folder and can be shared - double-clicking the smw will install it into their Widget Browser. See [Import/Export](widgets/Porting.md) for the full format.
+
+        <div class="usage-img" markdown>
+        ![Export Widget Dialog](https://assets.subathonmanager.app/docs/examples/usage/2.0.0/widget_export.png)
+        </div>
+
+    !!! info "Unpack Widget"
+        Packaged widgets are read straight out of their `.smw` archive, so their files are not directly editable. **Unpack Widget** extracts them to a real folder under `imports/widgets/unpacked/` and repoints this overlay's widget at the loose files, so you can modify the HTML, CSS, and JS however you want.
+
+        Unpacking is per-widget and does not touch the original package, so the packed version stays in your Widget Browser.
+
+        <div class="usage-img" markdown>
+        ![Unpack Widget](https://assets.subathonmanager.app/docs/examples/usage/2.0.0/widget_unpack.png)
+        </div>
 
 === "Built-In Editor"
 
@@ -313,6 +372,26 @@ See [Configuration](Configuration.md)
 <div class="usage-img clip" markdown>
 ![Settings Page](https://assets.subathonmanager.app/docs/examples/usage/1.2.0/settingspage.png)
 </div>
+
+### Connection Status
+
+!!! tip "Check your connections from any page"
+    A **status dot** sits in the top bar on the right side of the app. Clicking it gives you a quick view into which configured services and integrations are connected or have issues.
+
+<div class="usage-img clip" markdown>
+![Connection Status](https://assets.subathonmanager.app/docs/examples/usage/2.0.0/connectionstatus.png)
+</div>
+
+The dot shows every configured service and integration at a glance, along with the counts for some where available.
+
+| Colour | Meaning |
+|---|---|
+| :material-circle:{ style="color: #3FB950" } **Green** | Everything configured is connected. |
+| :material-circle:{ style="color: #E8A33D" } **Amber** | Some services are connected, some are not. |
+| :material-circle:{ style="color: #E84A4A" } **Red** | Nothing configured is connected. |
+| :material-circle:{ style="color: #808080" } **Grey** | Nothing is configured yet. |
+
+Click the dot to open a breakdown grouped by service/integration type, with an individual status dot for each connection that service uses. Anything that is not configured is shown greyed out rather than failing.
 
 ---
 

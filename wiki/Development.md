@@ -284,6 +284,13 @@ There is an example of this control in the [StreamerBot Extension](./config/setu
     ```
 ---
 
+## Resources
+
+SubathonManager provides a `resources` directory at the root of your installation, which is served as an accessible path via the webserver. This is useful for having shared assets or scripts for widgets, or anything else you want served from a webserver.
+
+`/resources/...`
+
+
 ## API Reference
 
 ### Amounts

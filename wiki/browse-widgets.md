@@ -1,23 +1,25 @@
 ---
-title: Overlay Marketplace
-description: Browse and download overlay themes for SubathonManager.
+title: Widget Marketplace
+description: Browse and download individual widgets for SubathonManager.
 ---
 
-# Overlay Marketplace
+# Widget Marketplace
 
 <div class="marketplace-intro" markdown>
-Browse and download premade overlays. These overlays can serve as starting points before customization, or be ready to go!
+Browse and download widgets. You can download a widget (or collection) and open it, or import it directly into SubathonManager.
 
-Looking for individual widgets instead of whole overlays? See the [Widget Marketplace](browse-widgets.md).
+Installed widgets can be found in the [Widget Browser](Usage.md#widget-browser), ready to use in any overlay. Note that already included preset widgets are also available here.
 
-To submit your own overlays to be included, please make a forum post in the [discord](https://discord.gg/qp4Te3bQTk).
+
+To submit your own widgets, please make a forum post in the [discord](https://discord.gg/qp4Te3bQTk) or contact me otherwise.
+
 </div>
 
 <div id="marketplace"
-     data-source="https://assets.subathonmanager.app/presets/overlays/data"
-     data-collection="overlays"
-     data-hash-key="overlay"
-     data-noun="overlay">
+     data-source="https://assets.subathonmanager.app/presets/widgets/data"
+     data-collection="widgets"
+     data-hash-key="widget"
+     data-noun="widget">
   <div id="controls">
     <div class="controls-row">
       <input type="text" id="search" placeholder="Search..." />
@@ -25,14 +27,18 @@ To submit your own overlays to be included, please make a forum post in the [dis
       <button id="sort-toggle" class="sort-toggle">
         Sort by: Downloads ⬇
       </button>
+
     </div>
 
+    <div id="author-tabs" class="mp-tabs"></div>
+    <div id="set-tabs" class="mp-tabs"></div>
     <div id="tag-filters"></div>
   </div>
+  <div id="collection-actions"></div>
   <div id="gallery"></div>
   <div id="empty" style="display:none"
-       data-unavailable="The overlay marketplace is unavailable right now. Please try again later.">
-    No overlays match your search.
+       data-unavailable="The widget marketplace isn't live yet - check back soon! Preset widgets are already installed with your install.">
+    No widgets match your search.
   </div>
   <div id="pagination"></div>
 </div>
@@ -55,8 +61,8 @@ To submit your own overlays to be included, please make a forum post in the [dis
         <a id="modal-download" href="#" download>
           ⬇ Download
         </a>
-        <a id="modal-protocol" href="#" data-tooltip="Only available for v1.2.0+">
-          ⚙ Open in App
+        <a id="modal-protocol" href="#" data-tooltip="Only available for v2.0.0+">
+          ⚙ Import into App
         </a>
       </div>
       <p id="modal-appversion"></p>

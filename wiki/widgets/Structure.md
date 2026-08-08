@@ -3,7 +3,7 @@ title: Widget Structure
 description: Details for how custom widgets are structured
 ---
 
-When imported into SubathonManager, only a single `.html` file is imported. Any relative imports to media files, `.css`, or `.js` files will resolve correctly, including configuration `.json` files.
+A widget internally is a single `.html` file plus whatever it references. Any relative imports to media files, `.css`, or `.js` files will resolve correctly, including configuration `.json` files.
 
 For required functions and anything important script-wise, it is recommended to embed them in `<script>` tags in the HTML file so they are loaded properly.
 
@@ -13,6 +13,50 @@ You can import any scripts, CSS, fonts, etc you want - but **only local CSS file
 
 !!! info
     Script variable injection overrides are not yet supported but are planned.
+
+---
+
+## Loose vs Packaged
+
+There are two ways a widget can exist in SubathonManager, and both behave identically at runtime.
+
+=== "Loose widget"
+
+    A plain folder of files that you import a single `.html` file from. This is the simplest form and the easiest to iterate on - edit the files on disk, save the widget, and the change appears.
+
+    ```
+    my-widget/
+    ├-- cool-widget.html
+    ├-- cool-widget.html.json     # widget metadata
+    ├-- cool-widget.css
+    ├-- cool-widget.css.json      # CSS variable metadata
+    └-- dinkdonk.mp3
+    ```
+
+=== "Packaged widget (`.smw`)"
+
+    The same folder, zipped with a `widget.json` manifest at the root. Packages carry a name, author, group, version, tags, and preview image, appear in the [Widget Browser](../Usage.md#widget-browser) when installed, and can be updated in place.
+
+    ```
+    my-widget.smw
+    ├-- widget.json               # pack manifest
+    ├-- preview.png
+    └-- content/
+        ├-- cool-widget.html
+        ├-- cool-widget.html.json
+        ├-- cool-widget.css
+        ├-- cool-widget.css.json
+        └-- dinkdonk.mp3
+    ```
+
+    Relative paths inside the widget resolve against the archive exactly as they would on disk, so the *same* files work either way - packaging is purely a wrapper. Files are read from the archive on demand; large entries spill to a disposable cache folder instead of memory.
+
+    Packaged widgets are not directly editable. Use **Unpack Widget** in the overlay editor to extract one back to loose files.
+
+See [Import/Export](Porting.md#widgets-smw) for the full `.smw` and `.smwc` specifications.
+
+!!! tip "Develop loose, ship packaged"
+    Build and iterate as a loose widget, then use **Export Packed Widget** in the overlay editor to produce a `.smw` for distribution. Your current variable values are baked in as the defaults.
 
 ---
 
@@ -57,6 +101,14 @@ Priot to version `1.2.0`, metadata was defined within the html file as a header.
 `Width` and `Height` pre-set the widget dimensions. `Url` appears as a clickable documentation button in the editor.
 
 The `Author` field is for documentation purposes only internally, but may have a use in the future.
+
+!!! note "This is not `widget.json`"
+    Don't confuse this metadata file with the [`widget.json` pack manifest](Porting.md#widgetjson). They serve different jobs and both can be present:
+
+    - `<name>.html.json` - the **widget's own** metadata config: variables, size, docs URL. Used whether the widget is loose or packaged.
+    - `widget.json` - the **package's** metadata: pack id, version, group, tags, preview image, entry point. Only exists inside a `.smw`, and is generated for you on export.
+
+    Where they overlap (size, author, docs URL), the pack manifest's values are what the Widget Browser displays, and the export dialogue from the metadata file.
 
 Under `Vars`, you can setup all JS variable or Font variable config you need for the widget, which will autopopulate within the overlay widget editor. See [JS Variable Injection](#js-variable-injection) for more details.
 

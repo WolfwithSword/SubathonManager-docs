@@ -15,6 +15,7 @@ Implement only the functions you need. Each is called automatically when the cor
 | [`handleSubathonDisconnect()`](#handlesubathondisconnect) | - | Socket disconnected from SubathonManager |
 | [`handleValueConfig(data)`](#handlevalueconfig) | `value_config` | Seconds/points config updated |
 | [`handleTotalsUpdate(data)`](#handletotalsupdate) | `subathon_totals` | Subathon totals updated |
+| [`handleSubscriptionTotalsUpdate(data)`](#handlesubscriptiontotalsupdate) | `subscription_totals` | Subscription/membership counts, broken down by event and tier |
 | [`handleWheelData(data)`](#handlewheeldata) | `wheel_data` | Active wheel state and spins owed, fires when wheel spins or changes, or spins owed changes |
 | [`handleWheelSpinStart(data)`](#handlewheelspinstart) | `wheel_spin_start` | Fires when a wheel spin begins, before the result |
 | [`handleWheelSpinResult(data)`](#handlewheelspinresult) | `wheel_spin_result` | Fires when the spin result is determined, after a delay |
@@ -291,6 +292,62 @@ Keys in `*_by_type` objects are valid [SubathonEventTypes](https://github.com/Wo
         "follow_count": 130,
         "follow_count_by_type": {
           "TwitchFollow": 130
+        }
+      }
+    }
+    ```
+
+---
+
+### handleSubscriptionTotalsUpdate
+
+Fires alongside [`handleTotalsUpdate`](#handletotalsupdate) whenever totals are recalculated.
+
+Where `subathon_totals` gives you one flat `sub_like_total`, this message breaks subscriptions and memberships down **per event type and per tier**, which is what you want for "12x T1, 3x T2, 1x T3" style displays.
+
+Only events of a subscription-like type that were successfully processed into the active subathon are counted, and the amount of each event is summed - so a 10-gift-sub bomb contributes `10`, not `1`.
+
+Keys in `*_by_type` objects are valid [SubathonEventTypes](https://github.com/WolfwithSword/SubathonManager/tree/main/SubathonManager.Core/Enums/SubathonEventType.cs).
+
+Keys within `sub_total_by_type_tier` are tier labels. For Twitch subs and gift subs these are normalised to `T1`, `T2`, and `T3`. Other platforms use their own meta value (for example a YouTube membership level name), and events with no tier information fall under `DEFAULT`.
+
+!!! note
+    Simulated and test events are kept out of the top-level numbers and reported separately under `simulated`, using the exact same structure.
+
+??? example "Example payload"
+
+    ```json
+    {
+      "type": "subscription_totals",
+      "sub_total": 27,
+      "sub_total_by_type": {
+        "TwitchSub": 14,
+        "TwitchGiftSub": 10,
+        "YouTubeMembership": 3
+      },
+      "sub_total_by_type_tier": {
+        "TwitchSub": {
+          "T1": 11,
+          "T2": 2,
+          "T3": 1
+        },
+        "TwitchGiftSub": {
+          "T1": 10
+        },
+        "YouTubeMembership": {
+          "DEFAULT": 3
+        }
+      },
+      "simulated": {
+        // same structure as above, for test/simulated events
+        "sub_total": 5,
+        "sub_total_by_type": {
+          "TwitchSub": 5
+        },
+        "sub_total_by_type_tier": {
+          "TwitchSub": {
+            "T1": 5
+          }
         }
       }
     }

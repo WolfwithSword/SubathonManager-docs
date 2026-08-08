@@ -154,9 +154,13 @@ tags:
     If you are experiencing problems with your widgets, please check [their troubleshooting page](widgets/troubleshooting/Troubleshooting.md)
 
 ??? question "Linux? Mac?"
-    While this is a primarily Windows application, tweaks have been made and users have reported that it can work under WINE or Steam Proton.
+    As of `v2.0.0` the UI was rebuilt from WPF-UI to Avalonia, and native builds are published for **Windows** (`win-x64`), **Linux** (`linux-x64`), and **macOS** for both Apple Silicon (`osx-arm64`) and Intel (`osx-x64`). See [Installation](Installation.md#platforms).
 
-    Not everything is tested or guaranteed to work - for example, the widget editor embedded preview will instead show a button to open it in your browser. Aside from that, most things should work.
+    Windows remains the primary support target. Linux and macOS are considered experimental - not everything is tested or guaranteed to work. There is a known bug with the embedded WebView for the Overlay Editor on some Linux distributions. In these cases, there is a button to open the editor preview in browser.
+
+    macOS builds are not signed with an Apple Developer ID, so you will need to approve the app once in **Privacy & Security**. The steps are in the `README.txt` inside the zip and on the [Installation](Installation.md#platforms) page.
+
+    Prior to `v2.0.0` the app was Windows-only, though it mostly worked through Proton on Linux.
 
 ??? question "Roadmap?"
     Currently planned features are (mostly) created as issues over on the [main repository](https://github.com/WolfwithSword/SubathonManager/issues). However, please contact me if you have any suggestions that are not over there!

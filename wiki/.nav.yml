@@ -49,6 +49,8 @@ nav:
       - Single Widgets:
           - widgets/presets/single/index.md
           - widgets/presets/single
-  - Marketplace: browse.md
+  - Marketplace:
+      - Overlay Marketplace: browse.md
+      - Widget Marketplace: browse-widgets.md
   - FAQ: FAQ.md
   - Credits: Credits.md
