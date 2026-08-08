@@ -8,7 +8,7 @@ Click **Connect** to open a browser tab and authorize the SubathonManager Fourth
 
 ## Configuration
 
-![fourthwall](https://assets.subathonmanager.app/docs/config/setup/fourthwall1.png)
+![fourthwall](https://assets.subathonmanager.app/docs/config/setup/2.0.0/fourthwall1.png)
 
 Once connected, your **Status** will show as **Connected** and **DevTunnels** as **Running**. Your webhook URL is shown (hidden by default) and can be copied with the **Copy** button.
 

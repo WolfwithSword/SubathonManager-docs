@@ -35,7 +35,7 @@ When importing, you can:
 
 ## Overlay Management
 
-![obs-overlay-management](https://assets.subathonmanager.app/docs/config/setup/v1.2.3/obs_control.png)
+![obs-overlay-management](https://assets.subathonmanager.app/docs/examples/usage/2.0.0/overlaypage.png)
 
 Once OBS is connected, you can manage your imported overlays directly from the **Overlays** tab in SubathonManager. From there you can manage your overlay, such as toggle visibility, modify resolution, refresh it or toggle blending method.
 

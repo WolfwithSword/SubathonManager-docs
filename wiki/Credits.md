@@ -9,7 +9,7 @@ description: Credits and Special Thanks
 
 - [@WolfwithSword](https://github.com/WolfwithSword)
 
-## Preset Developers
+## Preset Widget Developers
 
 - [@WolfwithSword](https://github.com/WolfwithSword)
 

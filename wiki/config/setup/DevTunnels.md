@@ -8,7 +8,7 @@ Dev Tunnels allow your app to receive webhook events from external services like
 
 The tunnel will start automatically on launch if any service that requires it is already configured. For first-time setup, follow the steps below.
 
-![configuration](https://assets.subathonmanager.app/docs/config/setup/v1.2.3/devtunnels.png)
+![configuration](https://assets.subathonmanager.app/docs/config/setup/2.0.0/devtunnels.png)
 
 ---
 

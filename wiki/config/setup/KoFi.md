@@ -29,7 +29,7 @@ Supports:
 
 You can configure KoFi natively in the UI's Settings tab.
 
-![kofi](https://assets.subathonmanager.app/docs/config/setup/kofisetupdevtunnels.png)
+![kofi](https://assets.subathonmanager.app/docs/config/setup/2.0.0/kofisetup.png)
 
 By default, all memberships/subs will be treated using the values for DEFAULT. If you want to support your custom membership tiers, please add new tiers with the button and match the tier name with the first text field.
 

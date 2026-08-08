@@ -18,7 +18,7 @@ tags:
 ## Subathon Controls
 
 <div class="usage-img clip" markdown>
-![Home Page](https://assets.subathonmanager.app/docs/examples/usage/1.2.3/homepage.png)
+![Home Page](https://assets.subathonmanager.app/docs/examples/usage/2.0.0/homepage.png)
 </div>
 
 ### Subathon & Time Management
@@ -28,7 +28,7 @@ In this section, you can create a new subathon with an initial time set by click
 To the left of this button is an end-date configuration button. If you wish to set an end date and time for the subathon, you can do so here. If the time of your timer exceeds this value, then what will be displayed in widgets, data, and the app, will be *time until the end date*, and will "count down" even if paused - time can still be "added" if unlocked, but will not increase visually until end date is removed, so no data is lost. You can enable/disable the end date at any time.
 
 <div class="usage-img clip" markdown>
-![Home Page](https://assets.subathonmanager.app/docs/examples/usage/1.2.0/enddate.png)
+![Home Page](https://assets.subathonmanager.app/docs/examples/usage/2.0.0/enddate.png)
 </div>
 
 
@@ -75,7 +75,7 @@ To use an overlay in OBS, please create a browser source of the correct height a
 ### Overlays Page
 
 <div class="usage-img clip" markdown>
-![Overlays Page](https://assets.subathonmanager.app/docs/examples/usage/overlaypage.png)
+![Overlays Page](https://assets.subathonmanager.app/docs/examples/usage/2.0.0/overlaypage.png)
 </div>
 
 
@@ -114,7 +114,7 @@ Widgets are grouped by author, then by their **group** name. Each card shows the
 ### Editor
 
 <div class="usage-img clip" markdown>
-![Overlays Editor Page](https://assets.subathonmanager.app/docs/examples/usage/1.2.0/overlayeditorpage.png)
+![Overlays Editor Page](https://assets.subathonmanager.app/docs/examples/usage/2.0.0/overlayeditorpage.png)
 </div>
 
 
@@ -129,7 +129,7 @@ Widgets are grouped by author, then by their **group** name. Each card shows the
     Saving the overlay will cause it to refresh in all places.
 
     <div class="usage-img" markdown>
-    ![Overlay Settings](https://assets.subathonmanager.app/docs/examples/usage/overlay_settings.png)
+    ![Overlay Settings](https://assets.subathonmanager.app/docs/examples/usage/2.0.0/overlay_settings.png)
     </div>
 
 === "Widget Control"
@@ -152,7 +152,7 @@ Widgets are grouped by author, then by their **group** name. Each card shows the
     If a widget came from a packaged `.smw` and a newer version of that package is installed, an **Update Available** button appears on its card. Clicking it swaps the widget over to the newer version, keeping your configuration.
 
     <div class="usage-img" markdown>
-    ![Widget Control](https://assets.subathonmanager.app/docs/examples/usage/widget_control.png)
+    ![Widget Control](https://assets.subathonmanager.app/docs/examples/usage/2.0.0/widget_control.png)
     </div>
 
     **Right-click any widget** in the list for packaging actions:
@@ -181,10 +181,6 @@ Widgets are grouped by author, then by their **group** name. Each card shows the
 
         Unpacking is per-widget and does not touch the original package, so the packed version stays in your Widget Browser.
 
-        <div class="usage-img" markdown>
-        ![Unpack Widget](https://assets.subathonmanager.app/docs/examples/usage/2.0.0/widget_unpack.png)
-        </div>
-
 === "Built-In Editor"
 
     This editor preview allows you to view what the widgets in the overlay will currently look like.
@@ -198,7 +194,7 @@ Widgets are grouped by author, then by their **group** name. Each card shows the
     There is grid shapping by holding Alt.
     
     <div class="usage-img" markdown>
-    ![Preview Editor](https://assets.subathonmanager.app/docs/examples/usage/builtin-editor.png)
+    ![Preview Editor](https://assets.subathonmanager.app/docs/examples/usage/2.0.0/builtin-editor.png)
     </div>
 
 === "Widget Editor/Settings"
@@ -208,21 +204,21 @@ Widgets are grouped by author, then by their **group** name. Each card shows the
     You can rename the widget, set its width and height, and change its X and Y position (will also update when you drag them around).
 
     <div class="usage-img" markdown>
-    ![Widget Settings](https://assets.subathonmanager.app/docs/examples/usage/widgeteditor_1.png)
+    ![Widget Settings](https://assets.subathonmanager.app/docs/examples/usage/2.0.0/widgeteditor_1.png)
     </div>
 
     A list of detected CSS, JS, and Font variables will also be displayed, which you can customize to *override* defaults found as CSS Vars in your linked CSS variables from within the widget's local referenced css files.
 
     <div class="usage-img" markdown>
-    ![Widget Settings](https://assets.subathonmanager.app/docs/examples/usage/widgeteditor_css.png)
+    ![Widget Settings](https://assets.subathonmanager.app/docs/examples/usage/2.0.0/widgeteditor_css.png)
     </div>
 
     <div class="usage-img" markdown>
-    ![Widget Settings](https://assets.subathonmanager.app/docs/examples/usage/widgeteditor_js.png)
+    ![Widget Settings](https://assets.subathonmanager.app/docs/examples/usage/2.0.0/widgeteditor_js.png)
     </div>
 
     <div class="usage-img" markdown>
-    ![Widget Settings](https://assets.subathonmanager.app/docs/examples/usage/1.2.0/widgeteditor_font.png)
+    ![Widget Settings](https://assets.subathonmanager.app/docs/examples/usage/2.0.0/widgeteditor_font.png)
     </div>
 
     To load and preview your customizations, you will need to click **Save**. To reload CSS variable detection from your raw files, click the **Reload Vars** button. CSS Variables can be previewed instantly without saving, however JS and Font variables require saving. If you swap between widgets without saving, they will be highlighted in yellow.
@@ -236,7 +232,7 @@ Widgets are grouped by author, then by their **group** name. Each card shows the
 ## Goals
 
 <div class="usage-img clip" markdown>
-![Goals Page](https://assets.subathonmanager.app/docs/examples/usage/1.2.0/goalspage.png)
+![Goals Page](https://assets.subathonmanager.app/docs/examples/usage/2.0.0/goalspage.png)
 </div>
 
 ### Goals List
@@ -262,7 +258,7 @@ To save changes to your list, click **Save Changes**.
 ## Prompts
 
 <div class="usage-img clip" markdown>
-![Prompts Page](https://assets.subathonmanager.app/docs/examples/usage/1.2.0/promptspage.png)
+![Prompts Page](https://assets.subathonmanager.app/docs/examples/usage/2.0.0/promptspage.png)
 </div>
 
 In the prompts tab, you can setup "prompts", which are similar to mini goals during your subathon.
@@ -303,7 +299,7 @@ SubathonManager includes an integrated Wheel Spin feature with two tabs: **Wheel
 ### Wheel
 
 <div class="usage-img clip" markdown>
-![Wheel Spin Page](https://assets.subathonmanager.app/docs/features/wheelspin/wheel_spins.png)
+![Wheel Spin Page](https://assets.subathonmanager.app/docs/features/2.0.0/wheelspin/wheel_spins.png)
 </div>
 
 You can configure multiple wheels and swap between them at any time. The active wheel is whichever one is currently viewed on this page. You can view the total number of times each individual wheel has been spun via the **Total Spins** counter.
@@ -331,7 +327,7 @@ The spin history shows past spins for the active wheel. You can filter and expor
 ### Triggers
 
 <div class="usage-img clip" markdown>
-![Wheel Triggers Page](https://assets.subathonmanager.app/docs/features/wheelspin/wheel_triggers.png)
+![Wheel Triggers Page](https://assets.subathonmanager.app/docs/features/2.0.0/wheelspin/wheel_triggers.png)
 </div>
 
 The **Triggers** tab lets you define events and conditions that automatically add spins owed. Each trigger can be individually enabled or disabled and is tied to a single event type and condition.
@@ -370,7 +366,7 @@ The trigger history shows past trigger events, which you can export as CSV. Each
 See [Configuration](Configuration.md)
 
 <div class="usage-img clip" markdown>
-![Settings Page](https://assets.subathonmanager.app/docs/examples/usage/1.2.0/settingspage.png)
+![Settings Page](https://assets.subathonmanager.app/docs/examples/usage/2.0.0/settingspage.png)
 </div>
 
 ### Connection Status
