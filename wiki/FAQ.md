@@ -132,12 +132,12 @@ tags:
 ## Widgets
 
 ??? question "Where do I get widgets?"
-    You can find a selection of premade widgets in the `presets` folder after installing. 
+    In the base install, a number of preset widgets are included in the [widget browser](Usage.md#widget-browser), but you can find more [here](browse-widgets.md).
 
 ??? question "Can I make my own widgets?"
     Yes! We have a slew of documentation for this [here](Widget-Development.md).
 
-    If you want to customize a preset beyond what the UI configuration allows, I recommend copying its source files somewhere else, so as to not wipe your changes if you update SubathonManager. Anything changed via the UI will never be overwritten like this.
+    If you want to customize a preset beyond what the UI configuration allows, I recommend unpacking it then copying its source files somewhere else, so as to not wipe your changes if you update SubathonManager. Anything changed via the UI will never be overwritten like this.
 
 ??? question "Can I share or sell my custom widgets?"
     Yes! In fact, we encourage this.
