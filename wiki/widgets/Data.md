@@ -3,29 +3,102 @@ title: Widget Data
 description: Functions and Data spec available for custom widgets
 ---
 
-Implement only the functions you need. Each is called automatically when the corresponding WebSocket data is received.
+There are two ways for a widget to receive data from SubathonManager.
 
-| Function | `data.type` | Description |
-|---|---|---|
-| [`handleSubathonUpdate(data)`](#handlesubathonupdate) | `subathon_timer` | Timer, points, lock/pause status, multiplier - fires frequently |
-| [`handleSubathonEvent(data)`](#handlesubathonevent) | `event` | Fired whenever an event is successfully processed |
-| [`handlePromptUpdate(data)`](#handlepromptupdate) | `prompt_update` | Fired whenever a prompt starts, ends, is completed, or progresses |
-| [`handleGoalsUpdate(data)`](#handlegoalsupdate) | `goals_list` | Goals list changes |
-| [`handleGoalCompleted(data)`](#handlegoalcompleted) | `goal_completed` | A new goal is completed |
-| [`handleSubathonDisconnect()`](#handlesubathondisconnect) | - | Socket disconnected from SubathonManager |
-| [`handleValueConfig(data)`](#handlevalueconfig) | `value_config` | Seconds/points config updated |
-| [`handleTotalsUpdate(data)`](#handletotalsupdate) | `subathon_totals` | Subathon totals updated |
-| [`handleSubscriptionTotalsUpdate(data)`](#handlesubscriptiontotalsupdate) | `subscription_totals` | Subscription/membership counts, broken down by event and tier |
-| [`handleWheelData(data)`](#handlewheeldata) | `wheel_data` | Active wheel state and spins owed, fires when wheel spins or changes, or spins owed changes |
-| [`handleWheelSpinStart(data)`](#handlewheelspinstart) | `wheel_spin_start` | Fires when a wheel spin begins, before the result |
-| [`handleWheelSpinResult(data)`](#handlewheelspinresult) | `wheel_spin_result` | Fires when the spin result is determined, after a delay |
-| [`handleWheelSpinStatus(data)`](#handlewheelspinstatus) | `wheel_spin_status` | Fires when a spin history entry's status changes from the initial |
+=== "Subathon object (recommended)"
+
+    Each *overlay* holds a single socket and pipes the data down to every widget on it. Widgets subscribe to the messages they care about through the injected `Subathon` object.
+
+    ```js
+    Subathon.on('subathon_timer', data => {
+        document.querySelector('#clock').textContent = data.total_seconds;
+    });
+
+    Subathon.on('event', data => showEvent(data));
+    Subathon.on('*', data => console.log(data.type));
+    ```
+
+=== "Global functions (legacy)"
+
+    Declare a global function per message type. Each is called automatically when the corresponding WebSocket data is received - implement only the ones you need.
+
+    ```js
+    function handleSubathonUpdate(data) {
+        document.querySelector('#clock').textContent = data.total_seconds;
+    }
+    ```
+
+    With this method, each widget opens its own websocket connection, unless it is version v2.0.2+, where it only opens a new websocket connection as a fallback.
+
+!!! note
+    The legacy global functions still work and will not go away, as they are the fallback method - you do not need to port existing widgets.
+
+## Message types
+
+| `Subathon.on(...)` | Legacy function | Replayed | Description |
+|---|---|:---:|---|
+| `subathon_timer` | [`handleSubathonUpdate(data)`](#handlesubathonupdate) | yes | Timer, points, lock/pause status, multiplier - fires frequently |
+| `event` | [`handleSubathonEvent(data)`](#handlesubathonevent) | no | Fired whenever an event is successfully processed |
+| `prompt_update` | [`handlePromptUpdate(data)`](#handlepromptupdate) | yes | Fired whenever a prompt starts, ends, is completed, or progresses |
+| `goals_list` | [`handleGoalsUpdate(data)`](#handlegoalsupdate) | yes | Goals list changes |
+| `goal_completed` | [`handleGoalCompleted(data)`](#handlegoalcompleted) | no | A new goal is completed |
+| `disconnect` | [`handleSubathonDisconnect()`](#handlesubathondisconnect) | - | Socket disconnected from SubathonManager |
+| `value_config` | [`handleValueConfig(data)`](#handlevalueconfig) | yes | Seconds/points config updated |
+| `subathon_totals` | [`handleTotalsUpdate(data)`](#handletotalsupdate) | yes | Subathon totals updated |
+| `subscription_totals` | [`handleSubscriptionTotalsUpdate(data)`](#handlesubscriptiontotalsupdate) | yes | Subscription/membership counts, broken down by event and tier |
+| `wheel_data` | [`handleWheelData(data)`](#handlewheeldata) | yes | Active wheel state and spins owed, fires when wheel spins or changes, or spins owed changes |
+| `wheel_spin_start` | [`handleWheelSpinStart(data)`](#handlewheelspinstart) | no | Fires when a wheel spin begins, before the result |
+| `wheel_spin_result` | [`handleWheelSpinResult(data)`](#handlewheelspinresult) | no | Fires when the spin result is determined, after a delay |
+| `wheel_spin_status` | [`handleWheelSpinStatus(data)`](#handlewheelspinstatus) | no | Fires when a spin history entry's status changes from the initial |
 
 See the [Overlay Websocket Data diagram](../Design.md#overlay-websocket-data) for field-level detail.
+
+## Late listeners get the current state
+
+Using the Subathon Object, state messages are cached, so `on()` fires immediately with the last message if it already arrived - a widget that loads late does not have to wait for the next update.
+
+```js
+Subathon.on('goals_list', renderGoals);
+```
+
+Pass `{ replay: false }` to opt out of the cached state:
+
+```js
+Subathon.on('goals_list', renderGoals, { replay: false });
+```
+
+Replay only applies to the state types marked **yes** in the table above. Discrete events are never replayed.
+
+You can also read the cache directly, without a listener:
+
+```js
+const timer = Subathon.get('subathon_timer');
+```
+
+## Connection state
+
+```js
+Subathon.on('connect',    () => hide('#offline'));
+Subathon.on('disconnect', () => show('#offline'));
+
+Subathon.connected;
+```
+
+## Other members
+
+```js
+Subathon.isOverlay;   // true on an overlay page
+Subathon.routeId;     // overlay route id, or null
+Subathon.widgetId;    // this widget's id, or null on an overlay page
+Subathon.transport;   // 'relay' | 'socket' | 'pending'
+Subathon.state;       // the whole cache, keyed by type
+```
 
 ---
 
 ### handleSubathonUpdate
+
+`Subathon.on('subathon_timer', data => { ... })` / legacy `handleSubathonUpdate(data)`
 
 Fires very frequently - use for the timer display, points, lock/pause state, and multiplier values.
 
@@ -61,6 +134,8 @@ Fires very frequently - use for the timer display, points, lock/pause state, and
 ---
 
 ### handleSubathonEvent
+
+`Subathon.on('event', data => { ... })` / legacy `handleSubathonEvent(data)`
 
 Fires whenever an event is successfully processed and has added to the subathon timer.
 
@@ -118,6 +193,8 @@ Fires whenever an event is successfully processed and has added to the subathon 
 
 ### handlePromptUpdate
 
+`Subathon.on('prompt_update', data => { ... })` / legacy `handlePromptUpdate(data)`
+
 Fires whenever a prompt run is started, progressed, completed, expired/cancelled.
 
 ??? example "Example payload"
@@ -161,6 +238,8 @@ Fires whenever a prompt run is started, progressed, completed, expired/cancelled
 
 ### handleGoalsUpdate
 
+`Subathon.on('goals_list', data => { ... })` / legacy `handleGoalsUpdate(data)`
+
 Fires when the goals list updates - new goals, changed goals, or point changes. Including when goal list is swapped.
 
 ??? example "Example payload"
@@ -188,6 +267,8 @@ Fires when the goals list updates - new goals, changed goals, or point changes. 
 
 ### handleGoalCompleted
 
+`Subathon.on('goal_completed', data => { ... })` / legacy `handleGoalCompleted(data)`
+
 Fires whenever a new goal is completed (and unchanged from the current list).
 
 ??? example "Example payload"
@@ -206,13 +287,19 @@ Fires whenever a new goal is completed (and unchanged from the current list).
 
 ### handleSubathonDisconnect
 
+`Subathon.on('disconnect', () => { ... })` / legacy `handleSubathonDisconnect()`
+
 Fires whenever the socket disconnects from SubathonManager.
 
 On reconnection, initial messages for all other handlers are always re-sent, so you can simply wait for new data to arrive.
 
+With the `Subathon` object there is also a matching `connect` event, and `Subathon.connected` for the current state.
+
 ---
 
 ### handleValueConfig
+
+`Subathon.on('value_config', data => { ... })` / legacy `handleValueConfig(data)`
 
 Fires whenever the subathon seconds/points configuration is updated - either from the UI or via a remote config patch.
 
@@ -237,6 +324,8 @@ Fires whenever the subathon seconds/points configuration is updated - either fro
 ---
 
 ### handleTotalsUpdate
+
+`Subathon.on('subathon_totals', data => { ... })` / legacy `handleTotalsUpdate(data)`
 
 Fires whenever subathon totals change - from events being processed, money recalculated, etc.
 
@@ -301,6 +390,8 @@ Keys in `*_by_type` objects are valid [SubathonEventTypes](https://github.com/Wo
 
 ### handleSubscriptionTotalsUpdate
 
+`Subathon.on('subscription_totals', data => { ... })` / legacy `handleSubscriptionTotalsUpdate(data)`
+
 Fires alongside [`handleTotalsUpdate`](#handletotalsupdate) whenever totals are recalculated.
 
 Where `subathon_totals` gives you one flat `sub_like_total`, this message breaks subscriptions and memberships down **per event type and per tier**, which is what you want for "12x T1, 3x T2, 1x T3" style displays.
@@ -356,6 +447,8 @@ Keys within `sub_total_by_type_tier` are tier labels. For Twitch subs and gift s
 ---
 
 ### handleWheelData
+
+`Subathon.on('wheel_data', data => { ... })` / legacy `handleWheelData(data)`
 
 Fires when the active wheel state changes, such as when items are updated, or when spins owed changes or the wheel swaps.
 
@@ -435,6 +528,8 @@ Fires when the active wheel state changes, such as when items are updated, or wh
 
 ### handleWheelSpinStart
 
+`Subathon.on('wheel_spin_start', data => { ... })` / legacy `handleWheelSpinStart(data)`
+
 Fires when a wheel spin begins, before the result is revealed. Use this to start a spin animation. `spin_delay_seconds` is how long until the result arrives.
 
 ??? example "Example payload"
@@ -457,6 +552,8 @@ Fires when a wheel spin begins, before the result is revealed. Use this to start
 ---
 
 ### handleWheelSpinResult
+
+`Subathon.on('wheel_spin_result', data => { ... })` / legacy `handleWheelSpinResult(data)`
 
 Fires when the spin result is determined, after the configured delay. Contains the winning item and its new history entry.
 
@@ -500,6 +597,8 @@ Fires when the spin result is determined, after the configured delay. Contains t
 ---
 
 ### handleWheelSpinStatus
+
+`Subathon.on('wheel_spin_status', data => { ... })` / legacy `handleWheelSpinStatus(data)`
 
 Fires when a spin history entry's status is changesd. Only manually by the user action.
 
