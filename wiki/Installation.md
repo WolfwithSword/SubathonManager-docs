@@ -23,6 +23,9 @@ tags:
 
 Extract the zip file to a location of your choosing, this will become your SubathonManager installation going forward.
 
+!!! info
+    When you extract the zip file, I highly recommend *not* keeping it in a folder named after the version downloaded. I.E., move it to a folder called "Subathon Manager" or similar. 
+
 ---
 
 ## Platforms
