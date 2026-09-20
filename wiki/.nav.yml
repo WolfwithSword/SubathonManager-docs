@@ -3,6 +3,7 @@ nav:
   - Installation & Usage:
       - Installation: Installation.md
       - Usage: Usage.md
+      - Subathon Summary: SubathonSummary.md
   - Configuration:
       - Overview: Configuration.md
       - App: config/App.md
@@ -27,6 +28,7 @@ nav:
           - OBS WebSocket: config/OBS.md
           - Streamer.Bot Extension: config/setup/StreamerBot.md
           - StreamDeck Extension: config/setup/StreamDeck.md
+          - VTube Studio: config/setup/VTubeStudio.md
       - Chat Commands: config/Commands.md
       - Discord Logging: config/Webhooks.md
   - Development & Design:

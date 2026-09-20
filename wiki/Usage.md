@@ -317,6 +317,7 @@ Each item has an **Action** that determines what happens when it is spun:
 | **Multiplier** | Queues a new multiplier event with custom settings and duration. Must be manually started from the Spin History. |
 | **Reroll** | Adds new spins owed rather than performing a direct action. Value of 1 is essentially a reroll for dramatic expense. Does not automatiocally roll. |
 | **Manual** | No automatic action. Handled externally by you. |
+| **VTube Studio** | Runs an expression, parameter or hotkey action on your VTube Studio model, with an optional timed follow-up. See [VTube Studio](config/setup/VTubeStudio.md#wheel-spin-rewards). |
 
 ### Spin History
 
@@ -364,6 +365,9 @@ The trigger history shows past trigger events, which you can export as CSV. Each
 ## Settings
 
 See [Configuration](Configuration.md)
+
+!!! tip "Subathon Summary"
+    The **Subathon Summary** button at the top of the Settings page opens a window where you can browse, filter, edit, and export events from every subathon, see breakdowns, and build user leaderboards. See [Subathon Summary](SubathonSummary.md).
 
 <div class="usage-img clip" markdown>
 ![Settings Page](https://assets.subathonmanager.app/docs/examples/usage/2.0.0/settingspage.png)

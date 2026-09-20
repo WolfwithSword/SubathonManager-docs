@@ -299,10 +299,17 @@ SubathonManager provides a `resources` directory at the root of your installatio
 
 Returns a summary of all event amounts processed - number of subs by type, total dollars per currency, etc. Split between `real` and `simulated`/`system` events.
 
+| Query Parameter | Description |
+|---|---|
+| `subathon` | Optional. A subathon Id, or `active`. Defaults to the active subathon. |
+
 ??? example "Example response"
 
     ```json
     {
+      "subathon_id": "0b6f3c1e-2a4d-4f7e-9c1a-6d2e8f4b7a90",
+      "subathon_name": "Subathon 2026",
+      "subathon_active": true,
       "simulated": {
         "DonationAdjustment": { "CAD": -138990 },
         "TwitchCheer": 15300,
@@ -354,6 +361,129 @@ Returns the current state of the subathon.
       }
     }
     ```
+
+### Leaderboard
+
+`GET /api/data/leaderboard`
+
+Groups a subathon's events by user and ranks them. Use it to get the top contributers for one or many events in a widget, bot, spreadsheet, or other tool. You can build a leaderboard and copy its URL from the [Subathon Summary](SubathonSummary.md#leaderboard) window.
+
+```text
+/api/data/leaderboard?type=TwitchGiftSub,YouTubeGiftMembership&top=5&blacklist=SYSTEM*
+```
+
+Usernames are grouped without regard to casing, and a leading `@` is ignored. Only processed events are counted unless `includeUnprocessed` is set.
+
+| Query Parameter | Aliases | Description |
+|---|---|---|
+| `type` | `types`, `event`, `eventtype`, `eventtypes` | **Required.** One or more event type names, comma separated or repeated, such as `TwitchSub`, `KoFiDonation`. Case-insensitive. More than one type makes a **combined** leaderboard (see below). |
+| `method` | `mode` | How users are ranked. Defaults depend on the event type. See [Methods](#leaderboard-methods). |
+| `top` | `n`, `limit` | How many users to return. Default `10`. Use `all` or `0` for everyone. Maximum `10000`. |
+| `meta` | `metas`, `tier`, `tiers` | Only count events with one of these meta values, comma separated. `T1`/`T2`/`T3` are the same as `1000`/`2000`/`3000`. Ignored for combined leaderboards. |
+| `blacklist` | `exclude`, `ignore` | Comma-separated users to leave out. A trailing `*` matches by prefix, e.g. `SYSTEM*`. |
+| `alias` | `aliases`, `merge` | Count several names as one user. See [Aliases](#leaderboard-aliases). |
+| `includeUnprocessed` | `unprocessed` | `true` to also count events that were not applied to the subathon. |
+| `currency` | `target` | Three-letter currency code to convert money into. Defaults to your primary currency. Only used by money methods. |
+| `subathon` | `subathonid` | A subathon ID, or `active`. Defaults to the active subathon. |
+
+#### Leaderboard Methods
+
+Which methods you can use depends on the category of the event type. If you leave `method` out, the **default** for that category is used.
+
+| Category | Example Types | Methods | Default |
+|---|---|---|---|
+| Subscriptions & Gifts | `TwitchSub`, `TwitchGiftSub`, `YouTubeMembership`, `KoFiSub` | `ByPoints`, `ByCount` | `ByPoints` |
+| Tokens | `TwitchCheer`, `BlerpBits`, `BlerpBeets` | `ByValue`, `ByPoints`, `ByCount` | `ByValue` |
+| Donations | `KoFiDonation`, `YouTubeSuperChat`, `ExternalDonation` | `ByAmount`, `ByPoints`, `ByCount` | `ByAmount` |
+| Orders | Merch store order events | `ByValue`, `ByOrder`, `ByItems`, `ByPoints` | `ByValue` |
+| Other | `TwitchFollow`, `TwitchRaid` | `ByCount`, `ByPoints` | `ByCount` |
+| Combined (2+ types) | Any mix | `ByPoints` | `ByPoints` |
+
+| Method | Ranks By | Unit |
+|---|---|---|
+| `ByPoints` | Total points added, after multipliers. | `points` |
+| `ByCount` | Total event amount, e.g. number of subs gifted. | `count` |
+| `ByValue` | **Tokens:** total tokens, e.g. bits. **Orders:** money spent, converted to `currency`. | `tokens` / currency code |
+| `ByAmount` | Money donated, converted to `currency`. | currency code |
+| `ByOrder` | Number of orders placed. | `orders` |
+| `ByItems` | Number of items ordered. | `items` |
+
+Some methods are accepted as aliases of another: `ByAmount` and `ByValue` are the same for donations, tokens and orders, and `ByCount` is the same as `ByOrder` for orders. A method that doesn't apply to the event type returns an error.
+
+#### Leaderboard Aliases
+
+Aliases combine the events of several usernames into one user, without editing the saved events. This is useful when a viewer uses different names across different platforms,
+
+If trying to attribute a merch order where the username is not available, it's recommended to change the username via the `Events` tab for that order manually, if you know it.
+
+Each entry is the name to show, a colon, then the other names separated by `|`. Separate entries with commas, or repeat the parameter:
+
+```text
+alias=someguy1:AltGuy_ttv|AltGuy_YT,other:alt
+```
+
+Chains are followed, so `a:b` together with `b:c` counts all three as `a`. A name mapped to two different users, or a loop, returns an error.
+
+!!! note
+    Encode `|` as `%7C` if your HTTP client doesn't do it for you.
+
+#### Response
+
+??? example "Example response - `?type=TwitchGiftSub&top=3`"
+
+    ```json
+    {
+      "subathon_id": "0b6f3c1e-2a4d-4f7e-9c1a-6d2e8f4b7a90",
+      "subathon_name": "Subathon 2026",
+      "subathon_active": true,
+      "event_type": "TwitchGiftSub",
+      "event_types": [ "TwitchGiftSub" ],
+      "source": "Twitch",
+      "sources": [ "Twitch" ],
+      "label": "Gift Subscription",
+      "combined": false,
+      "method": "ByPoints",
+      "unit": "points",
+      "currency": null,
+      "meta": null,
+      "meta_ignored": false,
+      "blacklist": [],
+      "aliases": null,
+      "include_unprocessed": false,
+      "top": 3,
+      "user_count": 42,
+      "event_count": 118,
+      "total": 1885,
+      "unconverted_currencies": null,
+      "results": [
+        { "rank": 1, "user": "SomeViewer", "value": 500, "events": 6, "count": 500 },
+        { "rank": 2, "user": "AnotherViewer", "value": 250, "events": 3, "count": 250 },
+        { "rank": 3, "user": "ThirdViewer", "value": 100, "events": 10, "count": 100 }
+      ]
+    }
+    ```
+
+| Field | Description |
+|---|---|
+| `subathon_id` / `subathon_name` / `subathon_active` | The subathon the leaderboard was built from. |
+| `event_type` / `source` / `label` | The single event type, its source and display label. `null` for combined leaderboards. |
+| `event_types` / `sources` | Every event type and source included. |
+| `combined` | `true` when more than one event type was requested. |
+| `method` / `unit` | The method used, and the unit of `value` (`points`, `count`, `tokens`, `orders`, `items`, or a currency code). |
+| `currency` | The currency that money was converted into. `null` if the method isn't a money method. |
+| `meta` / `meta_ignored` | The meta filter used. `meta_ignored` is `true` if a meta filter was sent with a combined leaderboard. |
+| `blacklist` / `aliases` | The blacklist and aliases that were applied. `aliases` is grouped by the name shown. |
+| `include_unprocessed` | Whether unprocessed events were counted. |
+| `top` | The number of results requested. `0` means all. |
+| `user_count` / `event_count` / `total` | Totals across **all** ranked users, not just the ones returned by `top`. |
+| `unconverted_currencies` | Currencies that could not be converted and so were counted as `0`. `null` if there were none. |
+| `results[]` | The ranked users: `rank`, `user`, `value` (rounded to 2 decimals), `events` (number of events), and `count` (total event amount, e.g. subs or items). |
+
+Invalid requests return status `400` with an error message:
+
+```json
+{ "error": "Method 'ByItems' is not valid for subscription events" }
+```
 
 ---
 

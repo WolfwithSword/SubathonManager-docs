@@ -51,7 +51,7 @@ Use the navigation on the left for various configuration settings, or the cards 
 
     ---
 
-    Config for external software, such as OBS or StreamDeck.
+    Config for external software, such as OBS, StreamDeck, or VTube Studio.
 
     [:octicons-arrow-right-24: OBS Config](config/OBS.md)
 
