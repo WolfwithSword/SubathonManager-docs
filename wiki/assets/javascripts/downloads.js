@@ -7,7 +7,8 @@ const DL_TARGETS = [
     rid: "win-x64",
     name: "Windows",
     detail: "64-bit - Windows 10 / 11",
-    icon: "fa-brands fa-windows"
+    icon: "fa-brands fa-windows",
+    installer: { ext: "exe", label: "Installer" }
   },
   {
     rid: "osx-arm64",
@@ -133,9 +134,25 @@ function assetFor(release, rid) {
   ) || null;
 }
 
+function installerAssetFor(release, rid, target) {
+  if (!target.installer) return null;
+  const suffix = `_${rid}_Setup_`;
+  return release.assets.find(a =>
+    a.name.startsWith("SubathonManager") &&
+    a.name.includes(suffix) &&
+    a.name.endsWith(`.${target.installer.ext}`)
+  ) || null;
+}
+
 function fallbackUrl(tag, rid) {
   if (!tag) return null;
   return `${DL_RELEASES}/download/${tag}/SubathonManager_${rid}_${tag}.zip`;
+}
+
+function installerFallbackUrl(tag, rid, target) {
+  if (!tag || !target.installer) return null;
+  const version = tag.replace(/^v/, "");
+  return `${DL_RELEASES}/download/${tag}/SubathonManager_${rid}_Setup_${version}.${target.installer.ext}`;
 }
 
 function formatSize(bytes) {
@@ -209,18 +226,19 @@ async function openDownloadModal(channel) {
 
   const detected = detectRid();
   const tag = release.tag || (channel === "nightly" ? "nightly" : "");
+  const haveAssets = release.assets.length > 0;
 
   const rows = DL_TARGETS.map(target => {
-    const asset = assetFor(release, target.rid);
-    const href = asset?.url || fallbackUrl(tag, target.rid);
+    const zipAsset = assetFor(release, target.rid);
+    const zipHref = zipAsset?.url || (haveAssets ? null : fallbackUrl(tag, target.rid));
+
+    const setupAsset = installerAssetFor(release, target.rid, target);
+    const setupHref = setupAsset?.url
+      || (haveAssets ? null : installerFallbackUrl(tag, target.rid, target));
+
     const recommended = target.rid === detected;
 
-    const meta = [
-      target.detail,
-      asset ? formatSize(asset.size) : null
-    ].filter(Boolean).join(" · ");
-
-    if (!href) {
+    if (!zipHref && !setupHref) {
       return `
         <div class="dl-option disabled">
           <i class="${target.icon}" aria-hidden="true"></i>
@@ -231,16 +249,38 @@ async function openDownloadModal(channel) {
         </div>`;
     }
 
+    const actions = [];
+
+    if (setupHref) {
+      actions.push(`
+        <a class="dl-action primary" href="${setupHref}" download>
+          <i class="fa-solid fa-download" aria-hidden="true"></i>
+          <span>${target.installer.label}
+            <small>.${target.installer.ext}${setupAsset ? ` · ${formatSize(setupAsset.size)}` : ""}</small>
+          </span>
+        </a>`);
+    }
+
+    if (zipHref) {
+      actions.push(`
+        <a class="dl-action" href="${zipHref}" download>
+          <i class="fa-solid fa-file-zipper" aria-hidden="true"></i>
+          <span>Portable
+            <small>.zip${zipAsset ? ` · ${formatSize(zipAsset.size)}` : ""}</small>
+          </span>
+        </a>`);
+    }
+
     return `
-      <a class="dl-option${recommended ? " recommended" : ""}" href="${href}" download>
+      <div class="dl-option${recommended ? " recommended" : ""}">
         <i class="${target.icon}" aria-hidden="true"></i>
         <span class="dl-option-text">
           <strong>${target.name}</strong>
-          <small>${meta}</small>
+          <small>${target.detail}</small>
         </span>
         ${recommended ? `<span class="dl-badge">Detected</span>` : ""}
-        <span class="dl-arrow">⬇</span>
-      </a>`;
+        <span class="dl-actions${actions.length === 1 ? " single" : ""}">${actions.join("")}</span>
+      </div>`;
   }).join("");
 
   list.innerHTML = rows;
