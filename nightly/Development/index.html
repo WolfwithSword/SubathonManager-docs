@@ -528,6 +528,8 @@
       
         
       
+        
+      
     
     
     
@@ -618,6 +620,34 @@
     
   
     Usage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SubathonSummary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Subathon Summary
   
 
     
@@ -1329,6 +1359,8 @@
       
         
       
+        
+      
     
     
     
@@ -1475,6 +1507,34 @@
     
   
     StreamDeck Extension
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/setup/VTubeStudio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VTube Studio
   
 
     
@@ -1879,6 +1939,56 @@
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leaderboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leaderboard
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Leaderboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leaderboard-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leaderboard Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leaderboard-aliases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leaderboard Aliases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -3381,6 +3491,56 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#leaderboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leaderboard
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Leaderboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leaderboard-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leaderboard Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leaderboard-aliases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leaderboard Aliases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Response
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3880,25 +4040,42 @@
 <h3 id="amounts">Amounts<a class="headerlink" href="#amounts" title="Permanent link">¶</a></h3>
 <p><code>GET /api/data/amounts</code></p>
 <p>Returns a summary of all event amounts processed - number of subs by type, total dollars per currency, etc. Split between <code>real</code> and <code>simulated</code>/<code>system</code> events.</p>
+<table>
+<thead>
+<tr>
+<th>Query Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>subathon</code></td>
+<td>Optional. A subathon Id, or <code>active</code>. Defaults to the active subathon.</td>
+</tr>
+</tbody>
+</table>
 <details class="example">
 <summary>Example response</summary>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">{</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="nt">"simulated"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span><span class="nt">"DonationAdjustment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"CAD"</span><span class="p">:</span><span class="w"> </span><span class="mi">-138990</span><span class="w"> </span><span class="p">},</span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="nt">"TwitchCheer"</span><span class="p">:</span><span class="w"> </span><span class="mi">15300</span><span class="p">,</span>
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="nt">"TwitchCharityDonation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"CAD"</span><span class="p">:</span><span class="w"> </span><span class="mi">310</span><span class="w"> </span><span class="p">},</span>
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span><span class="nt">"TwitchSub"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"T1"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">},</span>
-</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">    </span><span class="nt">"TwitchGiftSub"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"T1"</span><span class="p">:</span><span class="w"> </span><span class="mi">1595</span><span class="p">,</span><span class="w"> </span><span class="nt">"T2"</span><span class="p">:</span><span class="w"> </span><span class="mi">240</span><span class="p">,</span><span class="w"> </span><span class="nt">"T3"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="p">},</span>
-</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">    </span><span class="nt">"TwitchRaid"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nt">"total_viewers"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="p">},</span>
-</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">    </span><span class="nt">"YouTubeSuperChat"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"CAD"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="p">},</span>
-</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">    </span><span class="nt">"YouTubeMembership"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"DEFAULT"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">},</span>
-</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">    </span><span class="nt">"YouTubeGiftMembership"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"DEFAULT"</span><span class="p">:</span><span class="w"> </span><span class="mi">199</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">  </span><span class="p">},</span>
-</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">  </span><span class="nt">"real"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">    </span><span class="nt">"TwitchFollow"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="w">    </span><span class="nt">"ExternalDonation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"USD"</span><span class="p">:</span><span class="w"> </span><span class="mf">119057.12</span><span class="w"> </span><span class="p">}</span>
-</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="p">}</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="nt">"subathon_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0b6f3c1e-2a4d-4f7e-9c1a-6d2e8f4b7a90"</span><span class="p">,</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span><span class="nt">"subathon_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Subathon 2026"</span><span class="p">,</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">  </span><span class="nt">"subathon_active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">  </span><span class="nt">"simulated"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span><span class="nt">"DonationAdjustment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"CAD"</span><span class="p">:</span><span class="w"> </span><span class="mi">-138990</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">    </span><span class="nt">"TwitchCheer"</span><span class="p">:</span><span class="w"> </span><span class="mi">15300</span><span class="p">,</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">    </span><span class="nt">"TwitchCharityDonation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"CAD"</span><span class="p">:</span><span class="w"> </span><span class="mi">310</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">    </span><span class="nt">"TwitchSub"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"T1"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">    </span><span class="nt">"TwitchGiftSub"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"T1"</span><span class="p">:</span><span class="w"> </span><span class="mi">1595</span><span class="p">,</span><span class="w"> </span><span class="nt">"T2"</span><span class="p">:</span><span class="w"> </span><span class="mi">240</span><span class="p">,</span><span class="w"> </span><span class="nt">"T3"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">    </span><span class="nt">"TwitchRaid"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nt">"total_viewers"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">    </span><span class="nt">"YouTubeSuperChat"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"CAD"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">    </span><span class="nt">"YouTubeMembership"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"DEFAULT"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">    </span><span class="nt">"YouTubeGiftMembership"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"DEFAULT"</span><span class="p">:</span><span class="w"> </span><span class="mi">199</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="w">  </span><span class="nt">"real"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="w">    </span><span class="nt">"TwitchFollow"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="w">    </span><span class="nt">"ExternalDonation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"USD"</span><span class="p">:</span><span class="w"> </span><span class="mf">119057.12</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="p">}</span>
 </span></code></pre></div>
 </details>
 <h3 id="status">Status<a class="headerlink" href="#status" title="Permanent link">¶</a></h3>
@@ -3931,6 +4108,270 @@
 </span><span id="__span-13-23"><a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a><span class="p">}</span>
 </span></code></pre></div>
 </details>
+<h3 id="leaderboard">Leaderboard<a class="headerlink" href="#leaderboard" title="Permanent link">¶</a></h3>
+<p><code>GET /api/data/leaderboard</code></p>
+<p>Groups a subathon's events by user and ranks them. Use it to get the top contributers for one or many events in a widget, bot, spreadsheet, or other tool. You can build a leaderboard and copy its URL from the <a href="../SubathonSummary/#leaderboard">Subathon Summary</a> window.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>/api/data/leaderboard?type=TwitchGiftSub,YouTubeGiftMembership&amp;top=5&amp;blacklist=SYSTEM*
+</span></code></pre></div>
+<p>Usernames are grouped without regard to casing, and a leading <code>@</code> is ignored. Only processed events are counted unless <code>includeUnprocessed</code> is set.</p>
+<table>
+<thead>
+<tr>
+<th>Query Parameter</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type</code></td>
+<td><code>types</code>, <code>event</code>, <code>eventtype</code>, <code>eventtypes</code></td>
+<td><strong>Required.</strong> One or more event type names, comma separated or repeated, such as <code>TwitchSub</code>, <code>KoFiDonation</code>. Case-insensitive. More than one type makes a <strong>combined</strong> leaderboard (see below).</td>
+</tr>
+<tr>
+<td><code>method</code></td>
+<td><code>mode</code></td>
+<td>How users are ranked. Defaults depend on the event type. See <a href="#leaderboard-methods">Methods</a>.</td>
+</tr>
+<tr>
+<td><code>top</code></td>
+<td><code>n</code>, <code>limit</code></td>
+<td>How many users to return. Default <code>10</code>. Use <code>all</code> or <code>0</code> for everyone. Maximum <code>10000</code>.</td>
+</tr>
+<tr>
+<td><code>meta</code></td>
+<td><code>metas</code>, <code>tier</code>, <code>tiers</code></td>
+<td>Only count events with one of these meta values, comma separated. <code>T1</code>/<code>T2</code>/<code>T3</code> are the same as <code>1000</code>/<code>2000</code>/<code>3000</code>. Ignored for combined leaderboards.</td>
+</tr>
+<tr>
+<td><code>blacklist</code></td>
+<td><code>exclude</code>, <code>ignore</code></td>
+<td>Comma-separated users to leave out. A trailing <code>*</code> matches by prefix, e.g. <code>SYSTEM*</code>.</td>
+</tr>
+<tr>
+<td><code>alias</code></td>
+<td><code>aliases</code>, <code>merge</code></td>
+<td>Count several names as one user. See <a href="#leaderboard-aliases">Aliases</a>.</td>
+</tr>
+<tr>
+<td><code>includeUnprocessed</code></td>
+<td><code>unprocessed</code></td>
+<td><code>true</code> to also count events that were not applied to the subathon.</td>
+</tr>
+<tr>
+<td><code>currency</code></td>
+<td><code>target</code></td>
+<td>Three-letter currency code to convert money into. Defaults to your primary currency. Only used by money methods.</td>
+</tr>
+<tr>
+<td><code>subathon</code></td>
+<td><code>subathonid</code></td>
+<td>A subathon ID, or <code>active</code>. Defaults to the active subathon.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="leaderboard-methods">Leaderboard Methods<a class="headerlink" href="#leaderboard-methods" title="Permanent link">¶</a></h4>
+<p>Which methods you can use depends on the category of the event type. If you leave <code>method</code> out, the <strong>default</strong> for that category is used.</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Example Types</th>
+<th>Methods</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subscriptions &amp; Gifts</td>
+<td><code>TwitchSub</code>, <code>TwitchGiftSub</code>, <code>YouTubeMembership</code>, <code>KoFiSub</code></td>
+<td><code>ByPoints</code>, <code>ByCount</code></td>
+<td><code>ByPoints</code></td>
+</tr>
+<tr>
+<td>Tokens</td>
+<td><code>TwitchCheer</code>, <code>BlerpBits</code>, <code>BlerpBeets</code></td>
+<td><code>ByValue</code>, <code>ByPoints</code>, <code>ByCount</code></td>
+<td><code>ByValue</code></td>
+</tr>
+<tr>
+<td>Donations</td>
+<td><code>KoFiDonation</code>, <code>YouTubeSuperChat</code>, <code>ExternalDonation</code></td>
+<td><code>ByAmount</code>, <code>ByPoints</code>, <code>ByCount</code></td>
+<td><code>ByAmount</code></td>
+</tr>
+<tr>
+<td>Orders</td>
+<td>Merch store order events</td>
+<td><code>ByValue</code>, <code>ByOrder</code>, <code>ByItems</code>, <code>ByPoints</code></td>
+<td><code>ByValue</code></td>
+</tr>
+<tr>
+<td>Other</td>
+<td><code>TwitchFollow</code>, <code>TwitchRaid</code></td>
+<td><code>ByCount</code>, <code>ByPoints</code></td>
+<td><code>ByCount</code></td>
+</tr>
+<tr>
+<td>Combined (2+ types)</td>
+<td>Any mix</td>
+<td><code>ByPoints</code></td>
+<td><code>ByPoints</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Ranks By</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ByPoints</code></td>
+<td>Total points added, after multipliers.</td>
+<td><code>points</code></td>
+</tr>
+<tr>
+<td><code>ByCount</code></td>
+<td>Total event amount, e.g. number of subs gifted.</td>
+<td><code>count</code></td>
+</tr>
+<tr>
+<td><code>ByValue</code></td>
+<td><strong>Tokens:</strong> total tokens, e.g. bits. <strong>Orders:</strong> money spent, converted to <code>currency</code>.</td>
+<td><code>tokens</code> / currency code</td>
+</tr>
+<tr>
+<td><code>ByAmount</code></td>
+<td>Money donated, converted to <code>currency</code>.</td>
+<td>currency code</td>
+</tr>
+<tr>
+<td><code>ByOrder</code></td>
+<td>Number of orders placed.</td>
+<td><code>orders</code></td>
+</tr>
+<tr>
+<td><code>ByItems</code></td>
+<td>Number of items ordered.</td>
+<td><code>items</code></td>
+</tr>
+</tbody>
+</table>
+<p>Some methods are accepted as aliases of another: <code>ByAmount</code> and <code>ByValue</code> are the same for donations, tokens and orders, and <code>ByCount</code> is the same as <code>ByOrder</code> for orders. A method that doesn't apply to the event type returns an error.</p>
+<h4 id="leaderboard-aliases">Leaderboard Aliases<a class="headerlink" href="#leaderboard-aliases" title="Permanent link">¶</a></h4>
+<p>Aliases combine the events of several usernames into one user, without editing the saved events. This is useful when a viewer uses different names across different platforms,</p>
+<p>If trying to attribute a merch order where the username is not available, it's recommended to change the username via the <code>Events</code> tab for that order manually, if you know it.</p>
+<p>Each entry is the name to show, a colon, then the other names separated by <code>|</code>. Separate entries with commas, or repeat the parameter:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>alias=someguy1:AltGuy_ttv|AltGuy_YT,other:alt
+</span></code></pre></div>
+<p>Chains are followed, so <code>a:b</code> together with <code>b:c</code> counts all three as <code>a</code>. A name mapped to two different users, or a loop, returns an error.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Encode <code>|</code> as <code>%7C</code> if your HTTP client doesn't do it for you.</p>
+</div>
+<h4 id="response">Response<a class="headerlink" href="#response" title="Permanent link">¶</a></h4>
+<details class="example">
+<summary>Example response - <code>?type=TwitchGiftSub&amp;top=3</code></summary>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="p">{</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span><span class="nt">"subathon_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0b6f3c1e-2a4d-4f7e-9c1a-6d2e8f4b7a90"</span><span class="p">,</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">  </span><span class="nt">"subathon_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Subathon 2026"</span><span class="p">,</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">  </span><span class="nt">"subathon_active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">  </span><span class="nt">"event_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TwitchGiftSub"</span><span class="p">,</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">  </span><span class="nt">"event_types"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"TwitchGiftSub"</span><span class="w"> </span><span class="p">],</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">  </span><span class="nt">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Twitch"</span><span class="p">,</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">  </span><span class="nt">"sources"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"Twitch"</span><span class="w"> </span><span class="p">],</span>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">  </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Gift Subscription"</span><span class="p">,</span>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">  </span><span class="nt">"combined"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="w">  </span><span class="nt">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ByPoints"</span><span class="p">,</span>
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="w">  </span><span class="nt">"unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"points"</span><span class="p">,</span>
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="w">  </span><span class="nt">"currency"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="w">  </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+</span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="w">  </span><span class="nt">"meta_ignored"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-16-16"><a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="w">  </span><span class="nt">"blacklist"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+</span><span id="__span-16-17"><a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="w">  </span><span class="nt">"aliases"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+</span><span id="__span-16-18"><a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a><span class="w">  </span><span class="nt">"include_unprocessed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-16-19"><a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a><span class="w">  </span><span class="nt">"top"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+</span><span id="__span-16-20"><a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a><span class="w">  </span><span class="nt">"user_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span>
+</span><span id="__span-16-21"><a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a><span class="w">  </span><span class="nt">"event_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">118</span><span class="p">,</span>
+</span><span id="__span-16-22"><a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a><span class="w">  </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1885</span><span class="p">,</span>
+</span><span id="__span-16-23"><a id="__codelineno-16-23" name="__codelineno-16-23" href="#__codelineno-16-23"></a><span class="w">  </span><span class="nt">"unconverted_currencies"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+</span><span id="__span-16-24"><a id="__codelineno-16-24" name="__codelineno-16-24" href="#__codelineno-16-24"></a><span class="w">  </span><span class="nt">"results"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-16-25"><a id="__codelineno-16-25" name="__codelineno-16-25" href="#__codelineno-16-25"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SomeViewer"</span><span class="p">,</span><span class="w"> </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="w"> </span><span class="nt">"events"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-16-26"><a id="__codelineno-16-26" name="__codelineno-16-26" href="#__codelineno-16-26"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AnotherViewer"</span><span class="p">,</span><span class="w"> </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="w"> </span><span class="nt">"events"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">250</span><span class="w"> </span><span class="p">},</span>
+</span><span id="__span-16-27"><a id="__codelineno-16-27" name="__codelineno-16-27" href="#__codelineno-16-27"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ThirdViewer"</span><span class="p">,</span><span class="w"> </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="nt">"events"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-16-28"><a id="__codelineno-16-28" name="__codelineno-16-28" href="#__codelineno-16-28"></a><span class="w">  </span><span class="p">]</span>
+</span><span id="__span-16-29"><a id="__codelineno-16-29" name="__codelineno-16-29" href="#__codelineno-16-29"></a><span class="p">}</span>
+</span></code></pre></div>
+</details>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>subathon_id</code> / <code>subathon_name</code> / <code>subathon_active</code></td>
+<td>The subathon the leaderboard was built from.</td>
+</tr>
+<tr>
+<td><code>event_type</code> / <code>source</code> / <code>label</code></td>
+<td>The single event type, its source and display label. <code>null</code> for combined leaderboards.</td>
+</tr>
+<tr>
+<td><code>event_types</code> / <code>sources</code></td>
+<td>Every event type and source included.</td>
+</tr>
+<tr>
+<td><code>combined</code></td>
+<td><code>true</code> when more than one event type was requested.</td>
+</tr>
+<tr>
+<td><code>method</code> / <code>unit</code></td>
+<td>The method used, and the unit of <code>value</code> (<code>points</code>, <code>count</code>, <code>tokens</code>, <code>orders</code>, <code>items</code>, or a currency code).</td>
+</tr>
+<tr>
+<td><code>currency</code></td>
+<td>The currency that money was converted into. <code>null</code> if the method isn't a money method.</td>
+</tr>
+<tr>
+<td><code>meta</code> / <code>meta_ignored</code></td>
+<td>The meta filter used. <code>meta_ignored</code> is <code>true</code> if a meta filter was sent with a combined leaderboard.</td>
+</tr>
+<tr>
+<td><code>blacklist</code> / <code>aliases</code></td>
+<td>The blacklist and aliases that were applied. <code>aliases</code> is grouped by the name shown.</td>
+</tr>
+<tr>
+<td><code>include_unprocessed</code></td>
+<td>Whether unprocessed events were counted.</td>
+</tr>
+<tr>
+<td><code>top</code></td>
+<td>The number of results requested. <code>0</code> means all.</td>
+</tr>
+<tr>
+<td><code>user_count</code> / <code>event_count</code> / <code>total</code></td>
+<td>Totals across <strong>all</strong> ranked users, not just the ones returned by <code>top</code>.</td>
+</tr>
+<tr>
+<td><code>unconverted_currencies</code></td>
+<td>Currencies that could not be converted and so were counted as <code>0</code>. <code>null</code> if there were none.</td>
+</tr>
+<tr>
+<td><code>results[]</code></td>
+<td>The ranked users: <code>rank</code>, <code>user</code>, <code>value</code> (rounded to 2 decimals), <code>events</code> (number of events), and <code>count</code> (total event amount, e.g. subs or items).</td>
+</tr>
+</tbody>
+</table>
+<p>Invalid requests return status <code>400</code> with an error message:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="p">{</span><span class="w"> </span><span class="nt">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Method 'ByItems' is not valid for subscription events"</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div>
 <hr>
 <h2 id="websocket-notes">WebSocket Notes<a class="headerlink" href="#websocket-notes" title="Permanent link">¶</a></h2>
 <p>Connect to the WebSocket server at the <code>/ws</code> endpoint, e.g. <code>ws://localhost:14040/ws</code>.</p>
