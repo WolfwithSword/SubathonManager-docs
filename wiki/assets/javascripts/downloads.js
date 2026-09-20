@@ -30,6 +30,8 @@ const DL_TARGETS = [
   }
 ];
 
+const DL_CACHE_TTL = 10 * 60 * 1000;
+
 const dlReleaseCache = {};
 let dlLastFocus = null;
 
@@ -88,14 +90,16 @@ function isAppleSilicon() {
 }
 
 async function fetchRelease(channel) {
-  if (dlReleaseCache[channel]) return dlReleaseCache[channel];
+  const now = Date.now();
+  const fresh = entry => entry && (now - entry.at) < DL_CACHE_TTL;
 
-  const cacheKey = `sm-release-${channel}`;
+  if (fresh(dlReleaseCache[channel])) return dlReleaseCache[channel].release;
+  const cacheKey = `sm-release-v2-${channel}`;
   try {
-    const stored = sessionStorage.getItem(cacheKey);
-    if (stored) {
-      dlReleaseCache[channel] = JSON.parse(stored);
-      return dlReleaseCache[channel];
+    const stored = JSON.parse(sessionStorage.getItem(cacheKey));
+    if (fresh(stored)) {
+      dlReleaseCache[channel] = stored;
+      return stored.release;
     }
   } catch { /**/ }
 
@@ -117,9 +121,10 @@ async function fetchRelease(channel) {
     }))
   };
 
-  dlReleaseCache[channel] = release;
+  const entry = { at: now, release };
+  dlReleaseCache[channel] = entry;
   try {
-     sessionStorage.setItem(cacheKey, JSON.stringify(release));
+     sessionStorage.setItem(cacheKey, JSON.stringify(entry));
   } catch { /**/ }
 
   return release;
