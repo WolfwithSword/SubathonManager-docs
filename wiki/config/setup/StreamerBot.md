@@ -21,7 +21,8 @@ A StreamerBot extension exists which lets you respond to events from SubathonMan
 
 1. Download the following `.sb` [file as the latest extension](https://extensions.wolfwithsword.com/extensions/subathonmanager-extension/) to import.
 2. In Streamer.Bot, click **Import** and drop in the file or paste its contents.
-3. Go to **Server/Clients -> Custom WebSocket Clients**, find `SubathonManager`, right-click, and enable **Auto Connect** if not already enabled.
+3. In Streamer.Bot Actions, find the `Subathon Manager` Group -> Action `[SM] StartUp` -> Double click the `Execute Code ([SM] Extension)` Subaction -> Click `Find Refs` and `Save`.
+4. Go to **Server/Clients -> Custom WebSocket Clients**, find `SubathonManager`, right-click, and enable **Auto Connect** if not already enabled.
 
 
 ---
