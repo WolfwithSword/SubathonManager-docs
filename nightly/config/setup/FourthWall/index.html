@@ -530,6 +530,8 @@
       
         
       
+        
+      
     
     
     
@@ -648,6 +650,34 @@
     
   
     Subathon Summary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
   
 
     
@@ -1248,6 +1278,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cancelled-orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cancelled Orders
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1426,6 +1473,8 @@
       
         
       
+        
+      
     
     
     
@@ -1547,6 +1596,34 @@
     
   
     Streamer.Bot Extension
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MixItUp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mix It Up
   
 
     
@@ -3104,6 +3181,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cancelled-orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cancelled Orders
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -3159,9 +3253,17 @@
 </tbody>
 </table>
 <p>There are checkboxes which if enabled, will count the commission value of <strong>Orders</strong> and <strong>Gift Orders</strong> as a donation toward your subathon's total money donated.</p>
+<h3 id="cancelled-orders">Cancelled Orders<a class="headerlink" href="#cancelled-orders" title="Permanent link">¶</a></h3>
+<p>There is a tiny bit of support for cancelled orders. If <strong>Auto delete cancelled orders?</strong> is enabled, when a shop order is cancelled its event is removed from the subathon, along with the time, points, and money it added.</p>
+<p>This only works if SubathonManager was running and connected both when the order was placed and when it was cancelled, and only for orders in the active subathon. Gift orders are not covered. It is off by default.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you connected FourthWall before this feature was added, the existing webhook is updated automatically to also receive order updates.</p>
+</div>
 <p>Supports:</p>
 <ul>
 <li>Donations, Orders, Gift Orders, Memberships</li>
+<li>Order cancellations (optional, see <a href="#cancelled-orders">Cancelled Orders</a>)</li>
 </ul>
 
 
