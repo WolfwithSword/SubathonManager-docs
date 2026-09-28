@@ -25,6 +25,16 @@ Use **Reconnect** to refresh the connection, or **Disconnect** to unlink your st
 
 There are checkboxes which if enabled, will count the commission value of **Orders** and **Gift Orders** as a donation toward your subathon's total money donated.
 
+### Cancelled Orders
+
+There is a tiny bit of support for cancelled orders. If **Auto delete cancelled orders?** is enabled, when a shop order is cancelled its event is removed from the subathon, along with the time, points, and money it added.
+
+This only works if SubathonManager was running and connected both when the order was placed and when it was cancelled, and only for orders in the active subathon. Gift orders are not covered. It is off by default.
+
+!!! note
+    If you connected FourthWall before this feature was added, the existing webhook is updated automatically to also receive order updates.
+
 Supports:
 
 - Donations, Orders, Gift Orders, Memberships
+- Order cancellations (optional, see [Cancelled Orders](#cancelled-orders))
