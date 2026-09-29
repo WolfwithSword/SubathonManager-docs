@@ -3,37 +3,37 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Specifications for developing custom widgets">
+        <meta name="description" content="Connect Tiltify to SubathonManager to track charity campaign donations and donation matches during your subathon">
       
       
         <meta name="author" content="WolfwithSword">
       
       
-        <link rel="canonical" href="https://docs.subathonmanager.app/latest/Widget-Development/">
+        <link rel="canonical" href="https://docs.subathonmanager.app/latest/config/setup/Tiltify/">
       
       
-        <link rel="prev" href="../Design-Interactive/">
+        <link rel="prev" href="../Pally/">
       
       
-        <link rel="next" href="../widgets/Porting/">
+        <link rel="next" href="../MakeShip/">
       
       
         
       
       
-      <link rel="icon" href="../assets/icon.png">
+      <link rel="icon" href="../../../assets/icon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>Widget Development - Subathon Manager</title>
+        <title>Tiltify - Subathon Manager</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -52,33 +52,33 @@
       
     
     
-      <link rel="stylesheet" href="../assets/extra.css">
+      <link rel="stylesheet" href="../../../assets/extra.css">
     
-      <link rel="stylesheet" href="../assets/marketplace.css">
+      <link rel="stylesheet" href="../../../assets/marketplace.css">
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
-      <link rel="stylesheet" href="../css/drawio-darkmode.css">
+      <link rel="stylesheet" href="../../../css/drawio-darkmode.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
   
-  <meta property="og:title" content="Overview - Subathon Manager">
-  <meta property="og:description" content="[nightly] Specifications for developing custom widgets">
+  <meta property="og:title" content="Tiltify - Subathon Manager">
+  <meta property="og:description" content="[nightly] Connect Tiltify to SubathonManager to track charity campaign donations and donation matches during your subathon">
   <meta property="og:image" content="https://assets.subathonmanager.app/docs/icon.png">
-  <meta property="og:url" content="https://docs.subathonmanager.app/latest/Widget-Development/">
+  <meta property="og:url" content="https://docs.subathonmanager.app/latest/config/setup/Tiltify/">
   <meta name="twitter:card" content="summary">
   
     <meta name="robots" content="noindex, nofollow">
   
-  <link rel="canonical" href="https://docs.subathonmanager.app/latest/Widget-Development/">
+  <link rel="canonical" href="https://docs.subathonmanager.app/latest/config/setup/Tiltify/">
   
 
-  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -107,7 +107,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#widget-development" class="md-skip">
+        <a href="#tiltify" class="md-skip">
           Skip to content
         </a>
       
@@ -127,9 +127,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Subathon Manager" class="md-header__button md-logo" aria-label="Subathon Manager" data-md-component="logo">
+    <a href="../../.." title="Subathon Manager" class="md-header__button md-logo" aria-label="Subathon Manager" data-md-component="logo">
       
-  <img src="../assets/icon.png" alt="logo">
+  <img src="../../../assets/icon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -146,7 +146,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Widget Development
+              Tiltify
             
           </span>
         </div>
@@ -253,7 +253,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -274,7 +274,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../Installation/" class="md-tabs__link">
+        <a href="../../../Installation/" class="md-tabs__link">
           
   
   
@@ -292,11 +292,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../Configuration/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../Configuration/" class="md-tabs__link">
           
   
   
@@ -318,7 +320,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../develop/Setup/" class="md-tabs__link">
+        <a href="../../../develop/Setup/" class="md-tabs__link">
           
   
   
@@ -336,13 +338,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../Widget-Development/" class="md-tabs__link">
           
   
   
@@ -364,7 +364,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../widgets/presets/Presets/" class="md-tabs__link">
+        <a href="../../../widgets/presets/Presets/" class="md-tabs__link">
           
   
   
@@ -386,7 +386,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../browse/" class="md-tabs__link">
+        <a href="../../../browse/" class="md-tabs__link">
           
   
   
@@ -406,7 +406,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../FAQ/" class="md-tabs__link">
+      <a href="../../../FAQ/" class="md-tabs__link">
         
   
   
@@ -425,7 +425,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../Credits/" class="md-tabs__link">
+      <a href="../../../Credits/" class="md-tabs__link">
         
   
   
@@ -466,9 +466,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Subathon Manager" class="md-nav__button md-logo" aria-label="Subathon Manager" data-md-component="logo">
+    <a href="../../.." title="Subathon Manager" class="md-nav__button md-logo" aria-label="Subathon Manager" data-md-component="logo">
       
-  <img src="../assets/icon.png" alt="logo">
+  <img src="../../../assets/icon.png" alt="logo">
 
     </a>
     Subathon Manager
@@ -495,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -586,7 +586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Installation/" class="md-nav__link">
+      <a href="../../../Installation/" class="md-nav__link">
         
   
   
@@ -614,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Usage/" class="md-nav__link">
+      <a href="../../../Usage/" class="md-nav__link">
         
   
   
@@ -642,7 +642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../SubathonSummary/" class="md-nav__link">
+      <a href="../../../SubathonSummary/" class="md-nav__link">
         
   
   
@@ -670,7 +670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Schedule/" class="md-nav__link">
+      <a href="../../../Schedule/" class="md-nav__link">
         
   
   
@@ -702,8 +702,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -727,21 +729,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3">
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -759,7 +762,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -777,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Configuration/" class="md-nav__link">
+      <a href="../../../Configuration/" class="md-nav__link">
         
   
   
@@ -805,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/App/" class="md-nav__link">
+      <a href="../../App/" class="md-nav__link">
         
   
   
@@ -849,10 +852,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -861,7 +867,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3">
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
             
   
   
@@ -897,7 +903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/streaming/" class="md-nav__link">
+      <a href="../../streaming/" class="md-nav__link">
         
   
   
@@ -925,7 +931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/setup/Twitch/" class="md-nav__link">
+      <a href="../Twitch/" class="md-nav__link">
         
   
   
@@ -953,7 +959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/setup/YouTube/" class="md-nav__link">
+      <a href="../YouTube/" class="md-nav__link">
         
   
   
@@ -981,7 +987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/setup/Picarto/" class="md-nav__link">
+      <a href="../Picarto/" class="md-nav__link">
         
   
   
@@ -1017,7 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/Extensions/" class="md-nav__link">
+      <a href="../../Extensions/" class="md-nav__link">
         
   
   
@@ -1042,8 +1048,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1072,20 +1080,21 @@
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
         
           
+          
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5">
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked="">
         
           
-          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
             
   
   
@@ -1103,7 +1112,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1121,7 +1130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/external/" class="md-nav__link">
+      <a href="../../external/" class="md-nav__link">
         
   
   
@@ -1149,7 +1158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/setup/GoAffPro/" class="md-nav__link">
+      <a href="../GoAffPro/" class="md-nav__link">
         
   
   
@@ -1177,7 +1186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/setup/KoFi/" class="md-nav__link">
+      <a href="../KoFi/" class="md-nav__link">
         
   
   
@@ -1205,7 +1214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/setup/FourthWall/" class="md-nav__link">
+      <a href="../FourthWall/" class="md-nav__link">
         
   
   
@@ -1233,7 +1242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/setup/Throne/" class="md-nav__link">
+      <a href="../Throne/" class="md-nav__link">
         
   
   
@@ -1261,7 +1270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/setup/Pally/" class="md-nav__link">
+      <a href="../Pally/" class="md-nav__link">
         
   
   
@@ -1286,10 +1295,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../config/setup/Tiltify/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tiltify
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1305,6 +1341,50 @@
   
 
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#campaigns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Campaigns
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1317,7 +1397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/setup/MakeShip/" class="md-nav__link">
+      <a href="../MakeShip/" class="md-nav__link">
         
   
   
@@ -1345,7 +1425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/setup/Juniper/" class="md-nav__link">
+      <a href="../Juniper/" class="md-nav__link">
         
   
   
@@ -1373,7 +1453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/setup/Custom/" class="md-nav__link">
+      <a href="../Custom/" class="md-nav__link">
         
   
   
@@ -1429,10 +1509,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -1441,7 +1524,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6">
         
           
-          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
             
   
   
@@ -1477,7 +1560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/setup/DevTunnels/" class="md-nav__link">
+      <a href="../DevTunnels/" class="md-nav__link">
         
   
   
@@ -1505,7 +1588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/OBS/" class="md-nav__link">
+      <a href="../../OBS/" class="md-nav__link">
         
   
   
@@ -1533,7 +1616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/setup/StreamerBot/" class="md-nav__link">
+      <a href="../StreamerBot/" class="md-nav__link">
         
   
   
@@ -1561,7 +1644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/setup/MixItUp/" class="md-nav__link">
+      <a href="../MixItUp/" class="md-nav__link">
         
   
   
@@ -1589,7 +1672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/setup/StreamDeck/" class="md-nav__link">
+      <a href="../StreamDeck/" class="md-nav__link">
         
   
   
@@ -1617,7 +1700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/setup/VTubeStudio/" class="md-nav__link">
+      <a href="../VTubeStudio/" class="md-nav__link">
         
   
   
@@ -1653,7 +1736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/Commands/" class="md-nav__link">
+      <a href="../../Commands/" class="md-nav__link">
         
   
   
@@ -1681,7 +1764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config/Webhooks/" class="md-nav__link">
+      <a href="../../Webhooks/" class="md-nav__link">
         
   
   
@@ -1778,7 +1861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../develop/Setup/" class="md-nav__link">
+      <a href="../../../develop/Setup/" class="md-nav__link">
         
   
   
@@ -1806,7 +1889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Development/" class="md-nav__link">
+      <a href="../../../Development/" class="md-nav__link">
         
   
   
@@ -1894,7 +1977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Design/" class="md-nav__link">
+      <a href="../../../Design/" class="md-nav__link">
         
   
   
@@ -1922,7 +2005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Design-Interactive/" class="md-nav__link">
+      <a href="../../../Design-Interactive/" class="md-nav__link">
         
   
   
@@ -1962,10 +2045,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -1983,22 +2064,21 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked="">
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -2016,7 +2096,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2031,37 +2111,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Overview
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../Widget-Development/" class="md-nav__link">
         
   
   
@@ -2077,39 +2130,6 @@
   
 
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#redistribution" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Redistribution
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2122,7 +2142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../widgets/Porting/" class="md-nav__link">
+      <a href="../../../widgets/Porting/" class="md-nav__link">
         
   
   
@@ -2150,7 +2170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../widgets/Structure/" class="md-nav__link">
+      <a href="../../../widgets/Structure/" class="md-nav__link">
         
   
   
@@ -2178,7 +2198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../widgets/Data/" class="md-nav__link">
+      <a href="../../../widgets/Data/" class="md-nav__link">
         
   
   
@@ -2206,7 +2226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../widgets/troubleshooting/Troubleshooting/" class="md-nav__link">
+      <a href="../../../widgets/troubleshooting/Troubleshooting/" class="md-nav__link">
         
   
   
@@ -2303,7 +2323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../widgets/presets/Presets/" class="md-nav__link">
+      <a href="../../../widgets/presets/Presets/" class="md-nav__link">
         
   
   
@@ -2358,7 +2378,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../widgets/presets/themesets/" class="md-nav__link ">
+            <a href="../../../widgets/presets/themesets/" class="md-nav__link ">
               
   
   
@@ -2466,7 +2486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../widgets/presets/themesets/basic/" class="md-nav__link">
+      <a href="../../../widgets/presets/themesets/basic/" class="md-nav__link">
         
   
   
@@ -2494,7 +2514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../widgets/presets/themesets/retro-pixel/" class="md-nav__link">
+      <a href="../../../widgets/presets/themesets/retro-pixel/" class="md-nav__link">
         
   
   
@@ -2522,7 +2542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../widgets/presets/themesets/simple-1/" class="md-nav__link">
+      <a href="../../../widgets/presets/themesets/simple-1/" class="md-nav__link">
         
   
   
@@ -2550,7 +2570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../widgets/presets/themesets/steampunk/" class="md-nav__link">
+      <a href="../../../widgets/presets/themesets/steampunk/" class="md-nav__link">
         
   
   
@@ -2621,7 +2641,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../widgets/presets/single/" class="md-nav__link ">
+            <a href="../../../widgets/presets/single/" class="md-nav__link ">
               
   
   
@@ -2737,7 +2757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../widgets/presets/single/compact-timer/" class="md-nav__link">
+      <a href="../../../widgets/presets/single/compact-timer/" class="md-nav__link">
         
   
   
@@ -2765,7 +2785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../widgets/presets/single/event-alerts/" class="md-nav__link">
+      <a href="../../../widgets/presets/single/event-alerts/" class="md-nav__link">
         
   
   
@@ -2793,7 +2813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../widgets/presets/single/event-popups/" class="md-nav__link">
+      <a href="../../../widgets/presets/single/event-popups/" class="md-nav__link">
         
   
   
@@ -2821,7 +2841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../widgets/presets/single/goal-bar/" class="md-nav__link">
+      <a href="../../../widgets/presets/single/goal-bar/" class="md-nav__link">
         
   
   
@@ -2849,7 +2869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../widgets/presets/single/prompt-alerts/" class="md-nav__link">
+      <a href="../../../widgets/presets/single/prompt-alerts/" class="md-nav__link">
         
   
   
@@ -2877,7 +2897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../widgets/presets/single/subathon-totals/" class="md-nav__link">
+      <a href="../../../widgets/presets/single/subathon-totals/" class="md-nav__link">
         
   
   
@@ -2905,7 +2925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../widgets/presets/single/total-goal-bar/" class="md-nav__link">
+      <a href="../../../widgets/presets/single/total-goal-bar/" class="md-nav__link">
         
   
   
@@ -2933,7 +2953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../widgets/presets/single/wheel-slots/" class="md-nav__link">
+      <a href="../../../widgets/presets/single/wheel-slots/" class="md-nav__link">
         
   
   
@@ -3044,7 +3064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../browse/" class="md-nav__link">
+      <a href="../../../browse/" class="md-nav__link">
         
   
   
@@ -3072,7 +3092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../browse-widgets/" class="md-nav__link">
+      <a href="../../../browse-widgets/" class="md-nav__link">
         
   
   
@@ -3107,7 +3127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../FAQ/" class="md-nav__link">
+      <a href="../../../FAQ/" class="md-nav__link">
         
   
   
@@ -3134,7 +3154,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Credits/" class="md-nav__link">
+      <a href="../../../Credits/" class="md-nav__link">
         
   
   
@@ -3183,10 +3203,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#redistribution" class="md-nav__link">
+  <a href="#campaigns" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Redistribution
+        Campaigns
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration
       
     </span>
   </a>
@@ -3210,21 +3241,39 @@
 
 
 
-<h1 id="widget-development">Widget Development<a class="headerlink" href="#widget-development" title="Permanent link">¶</a></h1>
-<p>You can develop your own widgets by either modifying the existing <a href="https://github.com/WolfwithSword/SubathonManager-presets/tree/main/presets">presets</a> or building your own from scratch.</p>
-<p>For custom widgets, you only need to implement certain function names to accept data pushed to each widget - the internal WebSocket connection is handled automatically.</p>
-<p>Each widget is treated as an isolated iframe within an overlay, and will automatically connect to the localhost WebSocket.</p>
-<div class="admonition tip">
-<p class="admonition-title">Start from a preset</p>
-<p>It is recommended to look at the existing <a href="https://github.com/WolfwithSword/SubathonManager-presets/tree/main/presets">presets</a> as a guide before building from scratch.</p>
+<h1 id="tiltify">Tiltify<a class="headerlink" href="#tiltify" title="Permanent link">¶</a></h1>
+<p>Tiltify is configured under <strong>External Services</strong>.</p>
+<p>Click <strong>Connect</strong> to open a browser tab and authorize SubathonManager to access your Tiltify account. Once approved, you will be logged in and your Tiltify username will be shown next to the buttons.</p>
+<p>Use <strong>Reconnect</strong> to refresh the connection, or <strong>Disconnect</strong> to unlink your account.</p>
+<h2 id="campaigns">Campaigns<a class="headerlink" href="#campaigns" title="Permanent link">¶</a></h2>
+<p>Once connected, your active campaigns will show up under <strong>Campaigns</strong>, each with a checkbox to enable or disable tracking for it. This includes campaigns on your own account as well as campaigns from any teams you are a member of (marked with <strong>(team)</strong>).</p>
+<p>Donations are only tracked for <strong>checked</strong> campaigns. If nothing is checked, no donations will be tracked.</p>
+<p>If you create a new campaign, or join a team campaign, after connecting, click <strong>Refresh</strong> to add it to the list.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Tiltify donations are checked for every ~15 seconds, so they may take a few moments to show up in SubathonManager after they appear on Tiltify.</p>
 </div>
-<hr>
-<h2 id="redistribution">Redistribution<a class="headerlink" href="#redistribution" title="Permanent link">¶</a></h2>
-<p>As a widget developer, you have full rights to your developed widget(s) and associated files. You are free to redistribute your widgets, commercially or not, as you wish.</p>
-<p>SubathonManager aims to be an open ecosystem for creatives, artists, hobbyists, and content creators. While the program itself is non-commercial and should not be redistributed, widgets are perfectly fine to share and sell.</p>
-<div class="admonition note">
-<p class="admonition-title">A note on AI assistance</p>
-<p>In the spirit of this project and in support of creatives and developers, we request you to not use AI to assist in development of your widgets.</p>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Donations</strong></td>
+<td>Seconds per 1$, Points per 1$ (rounded down).</td>
+</tr>
+</tbody>
+</table>
+<p>You can send a test donation with the <strong>Test</strong> button, choosing the amount, currency and which campaign the test donation is tagged with.</p>
+<p>For the subathon, currency is convered to your selected primary currency and the "1$" is relative to that currency.</p>
+<div class="admonition warning">
+<p class="admonition-title">Donation Matches</p>
+<p>When a donation comes in that fulfills part or all of a <strong>donation match</strong>, you will receive a <strong>second event</strong> right after the original donation for the matched amount, as if it were a donation itself. It will show the name of the matcher (or <strong>Donation Match</strong> if none is set) as the user.</p>
+<p>This means a matched donation will add its own time and points for the newly matched amount added.</p>
 </div>
 
 
@@ -3335,18 +3384,18 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "navigation.instant", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "announce.dismiss"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "nightly", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "navigation.instant", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "announce.dismiss"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "nightly", "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
       
-        <script src="../assets/javascripts/drawio-reload.js"></script>
+        <script src="../../../assets/javascripts/drawio-reload.js"></script>
       
-        <script src="../assets/javascripts/marketplace.js"></script>
+        <script src="../../../assets/javascripts/marketplace.js"></script>
       
-        <script src="../assets/javascripts/downloads.js"></script>
+        <script src="../../../assets/javascripts/downloads.js"></script>
       
     
   
