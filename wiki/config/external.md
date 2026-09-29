@@ -48,6 +48,14 @@ Configure external service integrations.
 
     [:octicons-arrow-right-24: Pally.GG Config](setup/Pally.md)
 
+-   :material-hand-heart-outline: **Tiltify**
+
+    ---
+
+    Connect and configure Tiltify charity campaign donations.
+
+    [:octicons-arrow-right-24: Tiltify Config](setup/Tiltify.md)
+
 -   :material-storefront-outline: **MakeShip**
 
     ---

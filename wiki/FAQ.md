@@ -98,6 +98,7 @@ tags:
     - Throne
     - FourthWall
     - Pally.GG
+    - Tiltify
     - MakeShip
     - JuniperCreates partnered storefronts
 
