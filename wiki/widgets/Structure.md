@@ -143,10 +143,14 @@ Without a metadata file, all unknown variables are treated as plain string input
 |---|---|
 | `Color` | Color picker |
 | `Opacity` | Slider from 0 to 1 |
-| `Size` | Float + size unit selector |
+| `Percent` | Slider from 0 to 100, saved with a `%` suffix (e.g. `50%`) |
+| `Size` | Float + size unit selector (`px`, `%`, `pt`, `rem`, `em`, `vh`, `vw`, `vmin`, `vmax`, `cm`, `mm`, `in`, `ch`, `ex`) |
+| `Angle` | Float + angle unit selector (`deg`, `rad`, `turn`) |
+| `Time` | Float + time unit selector (`s`, `ms`) |
+| `Int` | Integer input |
+| `Float` | Decimal number input |
 | `Alignment` | Dropdown: `left`, `right`, `center` |
 | `String` | Text input (default for unknown types) |
-| `Opacity` | Slider for 0-1.0 |
 | `Weight` | Dropdown select for all valid CSS font weights |
 
 ### JS Variable Injection
@@ -170,7 +174,7 @@ Please look at the `.json` files for the preset widgets included for examples.
 | `Int` | Integer input |
 | `Float` | Float input |
 | `Boolean` | Checkbox in the UI |
-| `Percent` | Integer clamped 0–100 |
+| `Percent` | Integer clamped 0-100 |
 | `StringList` | Comma-separated list of strings |
 | `StringSelect` | Comma-separated options; user selects one. Defaults to first item. |
 | `EventTypeList` | Comma-separated [SubathonEventType](https://github.com/WolfwithSword/SubathonManager/tree/main/SubathonManager.Core/Enums/SubathonEventType.cs) values - selected via checkboxes. See [Enums](../Design.md#enums). |
