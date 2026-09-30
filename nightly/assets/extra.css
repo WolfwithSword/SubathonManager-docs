@@ -353,3 +353,16 @@ img[src$=".svg"], img[src$=".SVG"] {
   font-size: 0.75rem;
   color: var(--md-primary-fg-color) !important;
 }
+
+.md-copyright {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 1.5rem;
+  row-gap: 0.25rem;
+}
+
+.md-copyright__legal {
+  display: inline-flex;
+  gap: 0.4rem;
+}
