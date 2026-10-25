@@ -4,7 +4,8 @@ const MARKETPLACE_DEFAULTS = {
   source: "https://assets.subathonmanager.app/presets/overlays/data",
   collection: "overlays",
   hashKey: "overlay",
-  noun: "overlay"
+  noun: "overlay",
+  placeholderIcon: "fa-solid fa-image"
 };
 
 let marketConfig = { ...MARKETPLACE_DEFAULTS };
@@ -36,7 +37,8 @@ function initMarketplace() {
     source: root.dataset.source || MARKETPLACE_DEFAULTS.source,
     collection: root.dataset.collection || MARKETPLACE_DEFAULTS.collection,
     hashKey: root.dataset.hashKey || MARKETPLACE_DEFAULTS.hashKey,
-    noun: root.dataset.noun || MARKETPLACE_DEFAULTS.noun
+    noun: root.dataset.noun || MARKETPLACE_DEFAULTS.noun,
+    placeholderIcon: root.dataset.placeholderIcon || MARKETPLACE_DEFAULTS.placeholderIcon
   };
 
   allThemes = [];
@@ -364,7 +366,9 @@ function cardHtml(t) {
       <div class="card-image-wrapper">
 
         ${isNew(t.created) ? `<div class="badge-new">New</div>` : ""}
-        <img src="${t.preview}" alt="${escAttr(t.name)}" loading="lazy" />
+        ${t.preview
+          ? `<img src="${escAttr(t.preview)}" alt="${escAttr(t.name)}" loading="lazy" />`
+          : placeholderHtml("card-placeholder", t)}
         <div class="download-badge">
           ⬇ ${t.downloads != null && t.downloads >= 0 ? t.downloads : '?'}
         </div>
@@ -378,6 +382,15 @@ function cardHtml(t) {
       </div>
     </div>
   `;
+}
+
+// for items without preview images, like shareable actions
+function placeholderHtml(cls, t) {
+  const steps = Number.isFinite(t.steps) ? `${t.steps} step${t.steps === 1 ? "" : "s"}` : "";
+  return `<div class="${cls}">
+    <i class="${escAttr(marketConfig.placeholderIcon)}"></i>
+    ${steps ? `<span>${esc(steps)}</span>` : ""}
+  </div>`;
 }
 
 function esc(s) {
@@ -653,7 +666,7 @@ function prevPreview() {
 function openModal(index) {
   const t = allThemes[index];
 
-  const previews = t.previews?.length ? t.previews : [t.preview];
+  const previews = t.previews?.length ? t.previews : t.preview ? [t.preview] : [];
 
   currentPreviews = previews;
   currentPreviewIndex = 0;
@@ -702,6 +715,13 @@ function openModal(index) {
 
   const hasMultiple = previews.length > 1;
   let previewsEl = document.getElementById("modal-previews");
+
+  if (!previews.length) {
+    previewsEl.innerHTML = placeholderHtml("modal-placeholder", t);
+    document.getElementById("modal-overlay").style.display = "flex";
+    return;
+  }
+
   previewsEl.innerHTML = `
     <div class="preview-wrapper">
         <img id="modal-main-img"
