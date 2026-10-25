@@ -278,10 +278,19 @@ Prompts have multiple fields. The text is presented in overlay widgets to your v
 | **Target** | The goal to reach. For example: 10 subs, $100, 5 items ordered from Gamersupps, etc. |
 | **Duration** | How long viewers have to complete the goal before it expires. |
 | **Quantity** | How many times the prompt can be successfully completed before it runs out. Expired, failed, or cancelled runs do not count against it. Set to **Infinite** for unlimited completions. |
+| **Optional Action** | A [custom action](actions/index.md) to run when the prompt is **completed**. Leave empty for none. Buttons next to it open the action in the editor, create a new one, or import a `.sma`. |
 
 You can choose to manually run any configured prompt immediately, or run a random one from the list. When the interval runs to choose one, it will run one at random that has a valid quantity. Individual prompts can also be disabled or temporarily excluded with their checkbox.
 
 Prompts auto-running is only available if the timer is *unlocked* and *not paused*.
+
+A prompt can't be edited while it is running.
+
+### Prompt History
+
+The **Prompt History** for the active set shows each run's start time, prompt, progress, **action** and status. You can filter it by status, export it to CSV, or delete the finished history for the set.
+
+If the prompt has an Optional Action, the **Action** column shows whether it is waiting, running, done, or failed. If the action fails part way, press **Play** to run it again - it resumes from the step that failed rather than starting over. See [Action Failures](actions/Editor.md#failures).
 
 You can view the prompt history on the home page, tabbed with recent events.
 
@@ -318,10 +327,23 @@ Each item has an **Action** that determines what happens when it is spun:
 | **Reroll** | Adds new spins owed rather than performing a direct action. Value of 1 is essentially a reroll for dramatic expense. Does not automatiocally roll. |
 | **Manual** | No automatic action. Handled externally by you. |
 | **VTube Studio** | Runs an expression, parameter or hotkey action on your VTube Studio model, with an optional timed follow-up. See [VTube Studio](config/setup/VTubeStudio.md#wheel-spin-rewards). |
+| **OBS** | Shows/hides a source, toggles a filter, mutes/unmutes an input or controls media, with an optional timed follow-up (e.g. show a source for `30s`, then hide it). Requires [OBS](config/OBS.md). |
+| **Custom Action** | Runs any [custom action](actions/index.md) from your library. Buttons next to it open the action in the editor, create a new one, or import a `.sma`. |
+
+Add Time, Subtract Time, Reroll, VTube Studio, OBS and Custom Action items run **automatically** when they are rolled. Multiplier items wait for you to start them from the Spin History.
+
+!!! tip "Convert to Custom Action"
+    VTube Studio and OBS items have a **Convert to Custom Action** button, which copies the item's action into a new [custom action](actions/index.md) and opens it in the editor, so you can chain more steps onto it - such as playing a sound, then changing a scene.
+
+Wheels can also be exported to and imported from CSV with the buttons next to the wheel selector.
 
 ### Spin History
 
 The spin history shows past spins for the active wheel. You can filter and export this list. Each entry shows the **time** of the spin, the **item** selected, the **action** taken, and its **status**, which you can manually change between *Done*, *Pending*, and *Cancelled*.
+
+While an item's action is running (e.g. during a timed follow-up, or a custom action with a Wait step), its status is **Running**. Setting a running spin to *Pending* or *Cancelled* stops the action.
+
+If an action can't finish (OBS isn't connected, a multiplier is already running, a step fails, etc.), the spin goes back to **Pending**. Pending spins with an action have a **Play** button to run it again later. For custom actions, it resumes from the step that failed. See [Action Failures](actions/Editor.md#failures).
 
 ---
 
@@ -359,6 +381,14 @@ The trigger history shows past trigger events, which you can export as CSV. Each
 
 !!! tip "Discord Logging"
     In the [Discord Log Webhook Settings](config/Webhooks.md) page, you can log all wheel spin and wheel trigger history to a Discord channel.
+
+---
+
+## Actions
+
+The **Actions** tab is where you build and manage **custom actions** - automations that chain steps across the subathon, OBS, VTube Studio, Streamer.bot, Mix It Up, web requests and more. They can run from triggers, wheel spins, prompts, chat commands, or each other.
+
+It has three tabs: **Actions Manager**, **Globals & Secrets**, and **Triggers**. See [Actions](actions/index.md) for the full guide.
 
 ---
 
@@ -458,6 +488,12 @@ See [Configuration](config/Commands.md) for the command names. You can change th
     | `!lock` | Lock the subathon, preventing new events from contributing |
     | `!unlock` | Unlock the subathon so all events can be added |
     | `!refresh` | Refresh *all* active browser overlays |
+
+=== "Actions"
+
+    | Command | Description | Example |
+    |---|---|---|
+    | `!runaction` | Run a [custom action](actions/index.md) by its name. Actions that are turned off are not run. | `!runaction Hype Mode` |
 
 ---
 

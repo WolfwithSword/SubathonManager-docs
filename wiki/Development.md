@@ -59,6 +59,9 @@ Push a command as if it came from Twitch/YouTube chat. Commands are processed th
 | `ws_type` | string | WS only | Must be `"Command"` |
 | `user` | string | ❌ | Defaults to `"External"` |
 
+!!! example "Running a custom action"
+    Use the `RunAction` command with the action's name as the `message` to run a [custom action](actions/index.md), e.g. `"command": "RunAction", "message": "Hype Mode"`. Unknown or turned off actions are ignored.
+
 ### ExternalDonation
 
 External donations follow the configured seconds/points per dollar unit of default currency after conversion, with exceptions for certain overrides such as `KoFiDonation`.
@@ -268,7 +271,7 @@ You can send any number of values - only those provided will be modified. `secon
 
 You can update the status of any wheelspin history event if you have its `history id` and a valid status.
 
-Currently, this request is websocket only. For getting the history id, check the [wheelspin result data](./widgets/Data.md#handlewheelspinresult).
+Currently, this request is websocket only. `Running` can't be set this way - setting a running spin to `Pending` or `Cancelled` stops its action. For getting the history id, check the [wheelspin result data](./widgets/Data.md#handlewheelspinresult).
 
 There is an example of this control in the [StreamerBot Extension](./config/setup/StreamerBot.md).
 
@@ -485,6 +488,87 @@ Invalid requests return status `400` with an error message:
 { "error": "Method 'ByItems' is not valid for subscription events" }
 ```
 
+### Globals
+
+Read and change [action globals](actions/Globals.md) - the same values custom actions use as `%global.name%`, and widgets can listen to. [Secrets](actions/Globals.md#secrets) are never available over the API.
+
+#### Reading Globals
+
+`GET /api/data/globals`
+
+| Query Parameter | Description |
+|---|---|
+| `name` | Optional. One or more global names, comma separated. |
+| `widget` | Optional. A widget id - only returns the globals that widget [listens to](widgets/Data.md#globals). `404` if the widget doesn't exist. |
+
+```text
+/api/data/globals?name=deaths,spam_mode
+```
+
+??? example "Example response"
+
+    ```json
+    {
+      "globals": [
+        { "name": "deaths", "type": "number", "value": 12 },
+        { "name": "spam_mode", "type": "boolean", "value": false },
+        { "name": "last_donor", "type": "text", "value": "SomeViewer" }
+      ]
+    }
+    ```
+
+`type` is `text`, `number` or `boolean`, and `value` is a JSON string, number or boolean to match.
+
+#### Changing Globals
+
+`POST /api/data/globals` (`PUT` and `PATCH` work the same)
+
+Fields can be sent in a JSON body, or as query parameters - handy for tools that can only send a simple URL, such as a StreamDeck button or a Mix It Up web request.
+
+=== "JSON body"
+
+    ```json
+    {
+      "name": "deaths",
+      "op": "add",
+      "value": 1
+    }
+    ```
+
+=== "Query string"
+
+    ```text
+    POST /api/data/globals?name=deaths&op=add&value=1
+    ```
+
+| Field | Required | Description |
+|---|---|---|
+| `name` | ✅ | The global's name. Letters, numbers and `_` only. |
+| `op` | ❌ | `set` (default), `add`, `subtract`, or `toggle`. `add` / `subtract` only work on numbers, `toggle` only on booleans. |
+| `value` | For `set`, `add`, `subtract` | The value to set, or the amount to add / subtract. |
+| `type` | ❌ | `text`, `number` or `boolean`. Checked against the global's type, and used to create it if it doesn't exist. |
+
+If the global **doesn't exist yet**, it is created, using `type` if given. Otherwise the type comes from the JSON value (a number or `true`/`false`), or from the `op` (`add`/`subtract` make a number, `toggle` a boolean). A text global needs `"type": "text"` to be created.
+
+The value must match the global's type - setting a number global to `"abc"`, or sending `"type": "text"` for a number global, returns an error.
+
+??? example "Example response"
+
+    ```json
+    {
+      "created": false,
+      "global": { "name": "deaths", "type": "number", "value": 13 }
+    }
+    ```
+
+Invalid requests return status `400` with an error message:
+
+```json
+{ "error": "%global.spam_mode% is true/false, not number" }
+```
+
+Every change is sent to widgets listening to that global straight away, the same as changes made by actions or in the app.
+
 ---
 
 ## WebSocket Notes
@@ -502,3 +586,15 @@ Send a message with a `ws_type` to subscribe to a data stream. A client can hold
 
 !!! info
     See [Widget Development](Widget-Development.md) for details on the overlay WebSocket data format.
+
+### Globals over WebSocket
+
+Clients subscribed as `IntegrationConsumer` (and widgets) receive a `globals_update` message whenever a global changes that a widget [listens to](widgets/Data.md#globals). One message is sent per listening widget, with that widget's id.
+
+To ask for the current values a widget listens to, send:
+
+```json
+{ "ws_type": "globals", "widgetId": "d1c6f6a4-6a0e-4a3b-9a59-0f8e9d1b2c3d" }
+```
+
+and, if the widget listens to any globals, a full `globals_update` for it is sent back. See [Widget Data - Globals](widgets/Data.md#globals) for the message format. To read or change globals without a widget, use the [Globals API](#globals).

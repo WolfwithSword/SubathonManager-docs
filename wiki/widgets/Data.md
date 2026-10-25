@@ -50,6 +50,7 @@ There are two ways for a widget to receive data from SubathonManager.
 | `wheel_spin_start` | [`handleWheelSpinStart(data)`](#handlewheelspinstart) | no | Fires when a wheel spin begins, before the result |
 | `wheel_spin_result` | [`handleWheelSpinResult(data)`](#handlewheelspinresult) | no | Fires when the spin result is determined, after a delay |
 | `wheel_spin_status` | [`handleWheelSpinStatus(data)`](#handlewheelspinstatus) | no | Fires when a spin history entry's status changes from the initial |
+| `globals_update` | [`handleGlobalVars(data)`](#handleglobalvars) | yes | [Globals](#globals) this widget listens to were changed |
 
 See the [Overlay Websocket Data diagram](../Design.md#overlay-websocket-data) for field-level detail.
 
@@ -92,9 +93,80 @@ Subathon.routeId;     // overlay route id, or null
 Subathon.widgetId;    // this widget's id, or null on an overlay page
 Subathon.transport;   // 'relay' | 'socket' | 'pending'
 Subathon.state;       // the whole cache, keyed by type
+Subathon.globals;     // globals this widget listens to, keyed by name
+Subathon.global(name) // one global's value, or undefined
+```
+
+## Globals
+
+Widgets can read [action globals](../actions/Globals.md) - shared values that custom actions, the API, and you in the app can change. Use them for things like a death counter, flags, custom event counters, last X event user, or more.
+
+### Choosing which globals a widget gets
+
+A widget only receives the globals it subscribes to. In the overlay editor, open the widget and expand **Global Vars**:
+
+| Option | Behaviour |
+|---|---|
+| **None** | The widget gets no globals. The default. |
+| **All** | The widget gets every existing and future global |
+| **Selected** | Pick globals to subscribe to |
+
+Widgets can pre-defined globals in their [metadata](Structure.md#globals), so they're set up automatically (and created, if missing) when the widget is added or imported.
+
+### Reading globals
+
+=== "Subathon object"
+
+    ```js
+    // current value, or undefined if not received (yet)
+    const deaths = Subathon.global('deaths');
+    document.querySelector('#deaths').textContent = deaths == undefined ? deaths : 0;
+
+    // react to changes
+    Subathon.on('globals_update', data => {
+        document.querySelector('#deaths').textContent = data.all.deaths?.value ?? 0;
+    });
+    ```
+
+=== "Global function (legacy)"
+
+    ```js
+    function handleGlobalVars(data) {
+        if (data.all.deaths) {
+            document.querySelector('#deaths').textContent = data.all.deaths.value;
+        }
+    }
+    ```
+
+=== "HTTP GET"
+
+    ```js
+    // Not recommended for widgets but doable
+    const res = await fetch(`/api/data/globals?widget=${Subathon.widgetId}`);
+    const { globals } = await res.json();
+    ```
+
+    See [Development - Globals](../Development.md#globals). Without `widget` query param, every global is returned.
+
+Values arrive typed: numbers as numbers, true/false as booleans, text as strings.
+
+### Changing globals
+
+A widget can change a global with the [Globals API](../Development.md#changing-globals). The change is sent back to every widget listening to it, including this one.
+
+This is more for advanced use cases.
+
+```js
+await fetch('/api/data/globals', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name: 'deaths', op: 'add', value: 1 })
+});
 ```
 
 ---
+
+## Message Reference
 
 ### handleSubathonUpdate
 
@@ -521,8 +593,8 @@ Fires when the active wheel state changes, such as when items are updated, or wh
 | `wheel.items[].is_infinite` | Is the quantity infinite? |
 | `wheel.items[].index` | Display order of the item in the wheel |
 | `wheel.items[].action` | `null` for Manual items; otherwise an object with `type` and `parameter` |
-| `wheel.items[].action.type` | `AddTime`, `SubtractTime`, `SetMultiplier`, or `Reroll` |
-| `wheel.items[].action.parameter` | For `AddTime`/`SubtractTime`: a time string (e.g. `"300"`, `"20m"`). For `SetMultiplier`: `"multiplier\|duration\|forPoints\|forTime"` (e.g. `"2\|300s\|False\|True"`). For `Reroll`: number of spins to add (e.g. `"3"`). |
+| `wheel.items[].action.type` | `AddTime`, `SubtractTime`, `SetMultiplier`, `Reroll`, `VTubeStudio`, `OBS`, or `CustomAction` |
+| `wheel.items[].action.parameter` | For `AddTime`/`SubtractTime`: a time string (e.g. `"300"`, `"20m"`). For `SetMultiplier`: `"multiplier\|duration\|forPoints\|forTime"` (e.g. `"2\|300s\|False\|True"`). For `Reroll`: number of spins to add (e.g. `"3"`). For `CustomAction`: the [custom action's](../actions/index.md) id. For `VTubeStudio` and `OBS`: the app's internal settings for the action. |
 
 ---
 
@@ -590,7 +662,7 @@ Fires when the spin result is determined, after the configured delay. Contains t
 | `item` | The winning wheel item. Same as items in `handleWheelData` |
 | `item.action` | `null` for Manual items; see [`handleWheelData`](#handlewheeldata) for action field details |
 | `history.id` | Unique ID for this spin history entry. Useful for automating status changes via [websocket push](../Development.md#wheelspin-control) |
-| `history.status` | Initial status of the spin: `Pending`, `Done`, or `Cancelled` |
+| `history.status` | Initial status of the spin: `Pending`, `Done`, or `Cancelled`. Items whose action runs instantly may already be `Done` |
 | `history.created_at` | When the spin history entry was created |
 | `timestamp` | Time the result was resolved |
 
@@ -600,7 +672,7 @@ Fires when the spin result is determined, after the configured delay. Contains t
 
 `Subathon.on('wheel_spin_status', data => { ... })` / legacy `handleWheelSpinStatus(data)`
 
-Fires when a spin history entry's status is changesd. Only manually by the user action.
+Fires when a spin history entry's status is changed - manually by the user, by [WheelSpin Control](../Development.md#wheelspin-control), or when an item's action starts (`Running`), finishes (`Done`), or can't finish (`Pending`).
 
 ??? example "Example payload"
     ```json
@@ -625,9 +697,41 @@ Fires when a spin history entry's status is changesd. Only manually by the user 
 | Field | Notes |
 |---|---|
 | `history_id` | ID of the spin history entry being updated. Matches `history.id` from [`handleWheelSpinResult`](#handlewheelspinresult) |
-| `status` | New status of the entry: `Pending`, `Done`, or `Cancelled` |
+| `status` | New status of the entry: `Pending`, `Running`, `Done`, or `Cancelled` |
 | `updated_at` | Time the status change was applied |
 | `wheel_item` | The wheel item this history entry is for. Same as items in [`handleWheelData`](#handlewheeldata) |
 
 ---
 
+### handleGlobalVars
+
+`Subathon.on('globals_update', data => { ... })` / legacy `handleGlobalVars(data)`
+
+Fires when the widget connects, and listens for when a [global](#globals) changes, is added, or deleted. This message is replayed, so a late `on()` gets the current values.
+
+??? example "Example payload"
+    ```json
+    {
+      "type": "globals_update",
+      "widgetId": "d1c6f6a4-6a0e-4a3b-9a59-0f8e9d1b2c3d",
+      "full": false,
+      "globals": [
+        { "name": "deaths", "type": "number", "value": 13 }
+      ],
+      "removed": [],
+      "all": {
+        "deaths": { "name": "deaths", "type": "number", "value": 13 },
+        "is_thing_active": { "name": "is_thing_active", "type": "boolean", "value": false }
+      }
+    }
+    ```
+
+| Field | Notes |
+|---|---|
+| `widgetId` | The widget this update is for. Updates for other widgets are filtered out |
+| `full` | `true` when this is every global the widget listens to (on connect), `false` when it is only what changed |
+| `globals` | The globals changed in this update: `name`, `type` (`text`, `number`, `boolean`) and typed `value`. |
+| `removed` | Names of globals that were deleted |
+| `all` | Every global this widget currently has, keyed by name. Usually most useful |
+
+---

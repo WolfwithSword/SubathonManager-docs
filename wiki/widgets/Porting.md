@@ -59,6 +59,8 @@ When importing a `.smo` file, it will instantly create a new overlay named after
 
 Any embedded widget packs are installed into your Widget Browser as well, so they become available for use in your *other* overlays too.
 
+Any [action globals](../actions/Globals.md) the overlay's widgets listen to are created if you don't have them yet, with the types the widgets expect. If you already have one with a different type, you are asked whether to change it.
+
 You can also import via double-clicking a valid `.smo` file, as it will open your latest install of Subathon Manager and auto import. If you already had it imported, it will update any changed files.
 
 ### `.smo` structure

@@ -8,7 +8,7 @@ description: Browse and download overlay themes for SubathonManager.
 <div class="marketplace-intro" markdown>
 Browse and download premade overlays. These overlays can serve as starting points before customization, or be ready to go!
 
-Looking for individual widgets instead of whole overlays? See the [Widget Marketplace](browse-widgets.md).
+Looking for individual widgets instead of whole overlays? See the [Widget Marketplace](browse-widgets.md). For automations, see the [Action Marketplace](browse-actions.md).
 
 To submit your own overlays to be included, please make a forum post in the [discord](https://discord.gg/qp4Te3bQTk).
 </div>

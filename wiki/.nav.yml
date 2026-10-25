@@ -5,6 +5,14 @@ nav:
       - Usage: Usage.md
       - Subathon Summary: SubathonSummary.md
       - Schedule: Schedule.md
+  - Actions:
+      - Overview: actions/index.md
+      - Action Editor: actions/Editor.md
+      - Steps: actions/Steps.md
+      - Variables: actions/Variables.md
+      - Triggers: actions/Triggers.md
+      - Globals & Secrets: actions/Globals.md
+      - SMA Files: actions/Files.md
   - Configuration:
       - Overview: Configuration.md
       - App: config/App.md
@@ -22,6 +30,7 @@ nav:
           - Throne: config/setup/Throne.md
           - Pally.GG: config/setup/Pally.md
           - Tiltify: config/setup/Tiltify.md
+          - Patreon: config/setup/Patreon.md
           - MakeShip: config/setup/MakeShip.md
           - Juniper Creates: config/setup/Juniper.md
           - Custom: config/setup/Custom.md
@@ -57,5 +66,6 @@ nav:
   - Marketplace:
       - Overlay Marketplace: browse.md
       - Widget Marketplace: browse-widgets.md
+      - Action Marketplace: browse-actions.md
   - FAQ: FAQ.md
   - Credits: Credits.md

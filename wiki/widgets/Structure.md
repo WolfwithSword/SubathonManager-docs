@@ -112,6 +112,35 @@ The `Author` field is for documentation purposes only internally, but may have a
 
 Under `Vars`, you can setup all JS variable or Font variable config you need for the widget, which will autopopulate within the overlay widget editor. See [JS Variable Injection](#js-variable-injection) for more details.
 
+### Globals
+
+If your widget reads [action globals](../actions/Globals.md), list them under the `Globals` key. Any values under its `Vars` will be subscribed to change events. If it doesn't exist, it will be added as empty to the app's globals.
+
+```json
+{
+  "Author": "WolfwithSword",
+  "Width": 300,
+  "Height": 100,
+  "Globals": {
+    "All": false,
+    "Vars": {
+      "deaths": "Number",
+      "special_flag": "Boolean",
+      "last_donor": "Text"
+    }
+  }
+}
+```
+
+| Field | Description |
+|---|---|
+| `Globals.All` | `true` to listen to every global. `Vars` is then ignored for listening, but still used to create globals if missing |
+| `Globals.Vars` | The globals the widget uses, followed by their type. `Text`, `Number` or `Boolean` |
+
+If a global already exists with a **different type**, the user is asked whether to change it. See [Type mismatches](../actions/Globals.md#created-automatically).
+
+Exporting a widget or overlay writes its current Global Vars setting, and the types of those globals, back into this metadata. See [Widget Data - Globals](Data.md#globals) for reading them in the widget. Values are not exported.
+
 ### CSS Metadata
 
 For any CSS files with configurable variables (see [CSS](#css)), you can create a sidecar metadata file with the same filename suffixed with `.json`.

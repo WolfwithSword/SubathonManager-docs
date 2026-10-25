@@ -50,6 +50,14 @@ All completely local, opensource, and made with no AI.
 
     [:octicons-arrow-right-24: Usage](Usage.md)
 
+-   :material-sitemap-outline: **Actions**
+
+    ---
+
+    Automate anything with custom actions across OBS, VTube Studio, Streamer.bot, Mix It Up, and more.
+
+    [:octicons-arrow-right-24: Actions](actions/index.md)
+
 -   :material-storefront-outline: **Marketplace**
 
     ---

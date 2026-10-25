@@ -17,6 +17,7 @@ SubathonManager can connect to [VTube Studio](https://denchisoft.com/) as a plug
 - **Sends live subathon data** to VTube Studio as [custom parameters](#parameters-sent-to-vts), such as points, goal progress and whether the timer is paused or locked. You can use these to drive your model.
 - **Reads your current model's** hotkeys, expressions and parameters, so you can test them from SubathonManager and pick them as rewards.
 - **Runs VTube Studio actions as [Wheel Spin](../../Usage.md#wheel-spin) rewards**, for example switching on an expression for 5 minutes or triggering a hotkey.
+- **Runs VTube Studio steps in [custom actions](../../actions/index.md)**, so you can combine them with anything else, such as an OBS scene change or a web request. See [VTube Studio steps](../../actions/Steps.md#vtube-studio).
 
 ---
 
@@ -125,6 +126,9 @@ To set one up, edit a wheel item and set its **Action** to **VTube Studio**:
 | **When Rolled** | What to do when the item is rolled. Depends on the target, see below. |
 | **Duration** | Optional, e.g. `30s` or `5m`. How long to wait before running the **After Timer** action. Leave blank for no timer. |
 | **After Timer** | What to do when the duration ends. Depends on the target, see below. |
+
+!!! tip
+    Use **Convert to Custom Action** to turn a VTube Studio wheel action into a [custom action](../../actions/index.md), where you can add more steps around it.
 
 ### Action Types
 

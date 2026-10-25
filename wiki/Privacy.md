@@ -56,7 +56,7 @@ If you opt out, nothing is sent.
 
 ### OAuth login relay
 
-Some services (such as Twitch, Tiltify, and FourthWall) need a redirect URL to grant the app access to your account. For these, `oauth.subathonmanager.app` acts as the callback/redirect URL.
+Some services (such as Twitch, Tiltify, FourthWall, and Patreon) need a redirect URL to grant the app access to your account. For these, `oauth.subathonmanager.app` acts as the callback/redirect URL.
 
 When you click **Connect**, your browser opens the service's own login page, and you sign in with them, not with us. Once you approve access, the relay passes the resulting tokens back to your install of SubathonManager. Token refreshes work the same way.
 
@@ -74,7 +74,8 @@ Other features that make outbound connections:
 | Update check | GitHub | On launch or when you click **Check for Updates** |
 | DevTunnels | Microsoft Azure DevTunnels | Only if you set it up, to receive webhooks from KoFi, FourthWall, Throne, etc. |
 | Discord logging | Your Discord webhook(s) | Only if you configure them |
-| Widget & overlay downloads | `assets.subathonmanager.app` | When you install something from the Marketplace on this site |
+| Widget, overlay & action downloads | `assets.subathonmanager.app` | When you install something from the Marketplace on this site |
+| Custom action web requests | Any URL you (or an action you import) put in a GET / POST Request step | Only when that action runs |
 
 Each of these services has its own privacy policy, which governs the data they receive. We don't control them and aren't responsible for them.
 

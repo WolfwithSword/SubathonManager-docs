@@ -56,6 +56,14 @@ Configure external service integrations.
 
     [:octicons-arrow-right-24: Tiltify Config](setup/Tiltify.md)
 
+-   :fontawesome-brands-patreon: **Patreon**
+
+    ---
+
+    Connect and configure Patreon memberships.
+
+    [:octicons-arrow-right-24: Patreon Config](setup/Patreon.md)
+
 -   :material-storefront-outline: **MakeShip**
 
     ---

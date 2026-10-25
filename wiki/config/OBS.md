@@ -2,7 +2,7 @@
 description: Connect OBS via WebSocket to automatically import SubathonManager overlay browser sources into your scenes
 ---
 
-SubathonManager can connect to OBS via WebSocket to automatically import overlay browser sources directly into your scenes.
+SubathonManager can connect to OBS via WebSocket to automatically import overlay browser sources directly into your scenes, and to control OBS from [Wheel Spin](../Usage.md#wheel-spin) items and [custom actions](../actions/index.md).
 
 
 ![obs-config](https://assets.subathonmanager.app/docs/config/setup/v1.2.3/obsconfig.png)
@@ -41,6 +41,15 @@ Once OBS is connected, you can manage your imported overlays directly from the *
 
 These controls are only available while OBS is connected. Blending method control is only available with the Lua script.
 
+## Actions & Wheel Spins
+
+Once connected, OBS can be controlled by:
+
+- **[Custom actions](../actions/index.md)**, which have steps for sources, filters, audio, media, refreshing browser sources, and sending any raw OBS WebSocket request. See [OBS steps](../actions/Steps.md#obs). These actions can be chained with others.
+- **Wheel Spin items** with the **OBS** action type. When rolled, it can show or hide a source in a scene, enable or disable a filter, mute or unmute an input, or play, pause, restart or stop media. Set a **Duration** to run an **After Timer** action, e.g. show a source for `30s`, then hide it.
+
+Scenes, sources, filters and inputs are listed from OBS while connected. Sources inside groups and nested scenes work too.
+
 ## Lua Script
 
 An additional Lua script can be imported into OBS to enable an enhanced connection between OBS and SubathonManager. This unlocks capabilities the WebSocket connection alone cannot provide - such as automatically setting the blending method to **SRGB Off** for overlays that require it.
@@ -48,6 +57,8 @@ An additional Lua script can be imported into OBS to enable an enhanced connecti
 With the Lua script installed, SubathonManager can apply these advanced source settings for you automatically when importing and managing overlays, removing the need to configure them manually in OBS.
 
 You can copy the path to the lua script from inside SubathonManager under **Settings** > **External Software** > **OBS**.
+
+It is planned to remove this optional script once OBS-Websocket finally adds blending-method control support.
 
 !!! tip
     To install the script in OBS, go to **Tools -> Scripts**, click the **+** button, and select the SubathonManager Lua script file via path copied above.

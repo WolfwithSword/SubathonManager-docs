@@ -9,6 +9,7 @@ SubathonManager works with [Mix It Up](https://mixitupapp.com/) both ways:
 
 - **Mix It Up -> SubathonManager**: Generate ready-made Mix It Up actions for every SubathonManager command (add time, pause, resume, add points, wheel spins, etc.) and import them into any command or action group.
 - **SubathonManager -> Mix It Up**: Run your own Mix It Up commands when something happens in SubathonManager, such as the timer pausing, a goal completing, or a wheel spin landing.
+- **Custom Actions**: Run Mix It Up commands as a step in any [custom action](../../actions/index.md), with your own special identifiers. See [Mix It Up steps](../../actions/Steps.md#mix-it-up).
 
 Settings are under **Settings** > **External Software** > **Mix It Up**.
 
@@ -68,6 +69,7 @@ Leave a row empty to not run anything for that event.
 | **Timer Resumed** | The subathon timer is resumed |
 | **Timer Locked** | The subathon is locked |
 | **Timer Unlocked** | The subathon is unlocked |
+| **Timer Ended** | The timer reaches 0 |
 | **Multiplier Started** | A multiplier starts |
 | **Multiplier Ended** | A multiplier ends or is stopped |
 | **Goal Completed** | A goal is reached |

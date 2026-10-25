@@ -99,6 +99,7 @@ tags:
     - FourthWall
     - Pally.GG
     - Tiltify
+    - Patreon
     - MakeShip
     - JuniperCreates partnered storefronts
 
@@ -114,6 +115,7 @@ tags:
     - Audit & Event logging to file, export CSV, or discord webhooks  
     - Goals list and progress tracking  
     - Integrated Wheel Spins
+    - Custom Actions - chain steps across OBS, VTube Studio, Streamer.bot, Mix It Up, web requests and more
     - Automated mini goal-like prompts
     - Multiplier modes for time and/or points with optional duration  
     - External API control for pushing custom events, custom integrations, or modifying configuration  
