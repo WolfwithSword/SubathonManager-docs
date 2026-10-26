@@ -60,7 +60,7 @@ Push a command as if it came from Twitch/YouTube chat. Commands are processed th
 | `user` | string | ❌ | Defaults to `"External"` |
 
 !!! example "Running a custom action"
-    Use the `RunAction` command with the action's name as the `message` to run a [custom action](actions/index.md), e.g. `"command": "RunAction", "message": "Hype Mode"`. Unknown or turned off actions are ignored.
+    Use the `RunAction` command with the action's name as the `message` to run a [custom action](actions/index.md), e.g. `"command": "RunAction", "message": "Spam Mode"`. Unknown or turned off actions are ignored.
 
 ### ExternalDonation
 

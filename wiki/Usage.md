@@ -493,7 +493,7 @@ See [Configuration](config/Commands.md) for the command names. You can change th
 
     | Command | Description | Example |
     |---|---|---|
-    | `!runaction` | Run a [custom action](actions/index.md) by its name. Actions that are turned off are not run. | `!runaction Hype Mode` |
+    | `!runaction` | Run a [custom action](actions/index.md) by its name. Actions that are turned off are not run. | `!runaction Spam Mode` |
 
 ---
 
