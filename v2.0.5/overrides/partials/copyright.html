@@ -1,0 +1,18 @@
+<div class="md-copyright">
+  <span class="md-copyright__highlight">
+    &copy; 2025-{{ build_date_utc.year }} WolfwithSword
+  </span>
+  <span class="md-copyright__legal">
+    <a href="{{ 'Privacy/' | url }}">Privacy Policy</a>
+    <span aria-hidden="true">&middot;</span>
+    <a href="{{ 'Terms/' | url }}">Terms of Service</a>
+  </span>
+  {% if not config.extra.generator == false %}
+    <span>
+      Made with
+      <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+        Material for MkDocs
+      </a>
+    </span>
+  {% endif %}
+</div>
